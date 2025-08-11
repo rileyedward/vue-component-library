@@ -50,6 +50,7 @@ const config: SidebarLayoutConfig = {
         { label: 'Dropdown', route: '/dropdown', icon: Layout },
         { label: 'Menu', route: '/menu', icon: Layout },
         { label: 'Tab', route: '/tab', icon: Layout },
+        { label: 'Dropdown Menu', route: '/dropdown-menu', icon: ChevronDown },
       ],
     },
     {
@@ -77,7 +78,6 @@ const config: SidebarLayoutConfig = {
         { label: 'Chart', route: '/chart', icon: BarChart3 },
         { label: 'Tooltip', route: '/tooltip', icon: MessageSquare },
         { label: 'Accordion', route: '/accordion', icon: BarChart3 },
-        { label: 'Dropdown Menu', route: '/dropdown-menu', icon: ChevronDown },
       ],
     },
   ],
