@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref, computed, onBeforeUnmount, nextTick } from 'vue';
-import type { UiDropdownMenuProps as Props, UiDropdownMenuEmits as Emits, DropdownMenuItem } from './ui-dropdown-menu';
+import type {
+  UiDropdownMenuProps as Props,
+  UiDropdownMenuEmits as Emits,
+  DropdownMenuItem,
+} from './ui-dropdown-menu';
 
 const props = withDefaults(defineProps<Props>(), {
   placement: 'bottom',
@@ -138,21 +142,13 @@ onBeforeUnmount(() => {
   <div class="relative inline-block">
     <div
       ref="triggerRef"
-      :class="[
-        'cursor-pointer',
-        { 'opacity-50 cursor-not-allowed': disabled }
-      ]"
+      :class="['cursor-pointer', { 'opacity-50 cursor-not-allowed': disabled }]"
       @click="toggleMenu"
     >
       <slot />
     </div>
 
-    <div
-      ref="menuRef"
-      :class="[menuClasses, menuPosition]"
-      :style="{ maxHeight }"
-      role="menu"
-    >
+    <div ref="menuRef" :class="[menuClasses, menuPosition]" :style="{ maxHeight }" role="menu">
       <div class="py-2">
         <button
           v-for="item in items"
@@ -163,11 +159,7 @@ onBeforeUnmount(() => {
           role="menuitem"
           @click="handleItemClick(item)"
         >
-          <component
-            v-if="item.icon"
-            :is="item.icon"
-            class="h-4 w-4 flex-shrink-0"
-          />
+          <component v-if="item.icon" :is="item.icon" class="h-4 w-4 flex-shrink-0" />
           <span class="flex-1">{{ item.label }}</span>
         </button>
       </div>

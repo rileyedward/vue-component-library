@@ -3,19 +3,19 @@ import { ref } from 'vue';
 import UiDropdownMenu from '@/components/data/dropdown-menu/ui-dropdown-menu.vue';
 import UiButton from '@/components/forms/button/ui-button.vue';
 import type { DropdownMenuItem } from '@/components/data/dropdown-menu/ui-dropdown-menu';
-import { 
-  User, 
-  Settings, 
-  LogOut, 
-  Edit, 
-  Trash2, 
-  Share, 
-  Download, 
-  Copy, 
+import {
+  User,
+  Settings,
+  LogOut,
+  Edit,
+  Trash2,
+  Share,
+  Download,
+  Copy,
   Archive,
   ChevronDown,
   MoreHorizontal,
-  Plus
+  Plus,
 } from 'lucide-vue-next';
 
 const userMenuItems = ref<DropdownMenuItem[]>([
@@ -73,8 +73,8 @@ const onMenuClose = () => {
     <header class="mb-8">
       <h1 class="text-3xl font-bold text-gray-900 mb-2">Dropdown Menu Component</h1>
       <p class="text-gray-600">
-        A flexible dropdown menu component perfect for user menus, action lists, and contextual options. 
-        Ideal for sidebar user information sections and general dropdown functionality.
+        A flexible dropdown menu component perfect for user menus, action lists, and contextual
+        options. Ideal for sidebar user information sections and general dropdown functionality.
       </p>
     </header>
 
@@ -82,16 +82,22 @@ const onMenuClose = () => {
       <!-- User Menu Example -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">User Menu Example</h2>
-        <p class="text-gray-600 mb-4">Perfect for sidebar user information with profile and settings options.</p>
+        <p class="text-gray-600 mb-4">
+          Perfect for sidebar user information with profile and settings options.
+        </p>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu 
-            :items="userMenuItems" 
+          <UiDropdownMenu
+            :items="userMenuItems"
             @select="onMenuSelect"
             @open="onMenuOpen"
             @close="onMenuClose"
           >
-            <div class="flex items-center gap-3 px-4 py-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
-              <div class="h-10 w-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-medium">
+            <div
+              class="flex items-center gap-3 px-4 py-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+            >
+              <div
+                class="h-10 w-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-medium"
+              >
                 JD
               </div>
               <div class="flex-1 min-w-0">
@@ -110,13 +116,13 @@ const onMenuClose = () => {
         <p class="text-gray-600 mb-4">Common action menus with icons and separators.</p>
         <div class="flex flex-wrap gap-6">
           <UiDropdownMenu :items="actionMenuItems" @select="onMenuSelect">
-            <UiButton variant="outline" :suffix-icon="MoreHorizontal">
-              Actions
-            </UiButton>
+            <UiButton variant="outline" :suffix-icon="MoreHorizontal"> Actions </UiButton>
           </UiDropdownMenu>
 
           <UiDropdownMenu :items="actionMenuItems" @select="onMenuSelect">
-            <button class="inline-flex items-center justify-center h-8 w-8 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
+            <button
+              class="inline-flex items-center justify-center h-8 w-8 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
+            >
               <MoreHorizontal class="h-4 w-4 text-gray-600" />
             </button>
           </UiDropdownMenu>
@@ -165,13 +171,11 @@ const onMenuClose = () => {
       <!-- Long Menu with Scroll -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Scrollable Menu</h2>
-        <p class="text-gray-600 mb-4">Menu with many items that scrolls when it exceeds max height.</p>
+        <p class="text-gray-600 mb-4">
+          Menu with many items that scrolls when it exceeds max height.
+        </p>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu 
-            :items="longMenuItems" 
-            max-height="150px" 
-            @select="onMenuSelect"
-          >
+          <UiDropdownMenu :items="longMenuItems" max-height="150px" @select="onMenuSelect">
             <UiButton variant="info">Scrollable Menu</UiButton>
           </UiDropdownMenu>
         </div>
@@ -191,19 +195,11 @@ const onMenuClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Close Behavior</h2>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu 
-            :items="simpleMenuItems" 
-            :close-on-select="true" 
-            @select="onMenuSelect"
-          >
+          <UiDropdownMenu :items="simpleMenuItems" :close-on-select="true" @select="onMenuSelect">
             <UiButton variant="success">Closes on Select</UiButton>
           </UiDropdownMenu>
 
-          <UiDropdownMenu 
-            :items="simpleMenuItems" 
-            :close-on-select="false" 
-            @select="onMenuSelect"
-          >
+          <UiDropdownMenu :items="simpleMenuItems" :close-on-select="false" @select="onMenuSelect">
             <UiButton variant="warning">Stays Open</UiButton>
           </UiDropdownMenu>
         </div>
@@ -215,14 +211,18 @@ const onMenuClose = () => {
         <p class="text-gray-600 mb-4">Dropdown menu can be triggered by any content.</p>
         <div class="flex flex-wrap gap-6 items-center">
           <UiDropdownMenu :items="userMenuItems" @select="onMenuSelect">
-            <div class="flex items-center gap-2 px-3 py-2 text-blue-600 hover:text-blue-800 transition-colors cursor-pointer">
+            <div
+              class="flex items-center gap-2 px-3 py-2 text-blue-600 hover:text-blue-800 transition-colors cursor-pointer"
+            >
               <User class="h-5 w-5" />
               <span>User Menu</span>
             </div>
           </UiDropdownMenu>
 
           <UiDropdownMenu :items="actionMenuItems" @select="onMenuSelect">
-            <div class="h-12 w-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white cursor-pointer hover:shadow-lg transition-shadow">
+            <div
+              class="h-12 w-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white cursor-pointer hover:shadow-lg transition-shadow"
+            >
               <MoreHorizontal class="h-5 w-5" />
             </div>
           </UiDropdownMenu>
@@ -244,10 +244,14 @@ const onMenuClose = () => {
             <div class="text-sm text-gray-300">Navigation items would be here...</div>
             <div class="border-t border-gray-700 pt-4"></div>
           </div>
-          
+
           <UiDropdownMenu :items="userMenuItems" placement="top" @select="onMenuSelect">
-            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer">
-              <div class="h-10 w-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-medium text-sm">
+            <div
+              class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer"
+            >
+              <div
+                class="h-10 w-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-medium text-sm"
+              >
                 AB
               </div>
               <div class="flex-1 min-w-0">
