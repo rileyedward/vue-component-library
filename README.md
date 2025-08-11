@@ -18,7 +18,7 @@ Building UI components from scratch is time-consuming and often leads to inconsi
 
 Ensure you have the following prerequisites installed on your system. You can verify each installation by running the provided commands in your terminal.
 
-1. **Node.js** and **npm** are required for the application. Check if they're installed by running:
+1. **Node** and **NPM** (Node Package Manager) are needed for managing frontend dependencies. Check their installations with:
 
    ```bash
    node --version
@@ -29,54 +29,16 @@ Ensure you have the following prerequisites installed on your system. You can ve
 
 ### Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone <repository-url>
-   cd vue-component-library
-   ```
-
-2. Install dependencies:
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-3. Start the development server:
+2. Compile assets and run the Vue frontend:
 
    ```bash
    npm run dev
    ```
 
-4. Visit `http://localhost:5173` to explore all components and their examples.
-
-### Development Commands
-
-- **Development server**: Start the component showcase
-
-  ```bash
-  npm run dev
-  ```
-
-- **Build for production**: Create optimized build
-
-  ```bash
-  npm run build
-  ```
-
-- **Type checking**: Run TypeScript checks
-
-  ```bash
-  npm run type-check
-  ```
-
-- **Linting**: Check code quality with ESLint
-
-  ```bash
-  npm run lint
-  ```
-
-- **Formatting**: Format code with Prettier
-  ```bash
-  npm run format
-  ```
+3. Visit `http://localhost:5173` to explore all components and their examples.
