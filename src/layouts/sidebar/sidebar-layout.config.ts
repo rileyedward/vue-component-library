@@ -33,6 +33,7 @@ const config: SidebarLayoutConfig = {
         { label: 'Radio', route: '/radio', icon: CheckSquare },
         { label: 'MultiSelect', route: '/multiselect', icon: CheckSquare },
         { label: 'DatePicker', route: '/datepicker', icon: Calendar },
+        { label: 'Slider', route: '/slider', icon: Circle },
       ],
     },
     {

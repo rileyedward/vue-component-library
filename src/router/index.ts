@@ -8,6 +8,7 @@ import CheckboxPage from '@/pages/checkbox-page.vue';
 import RadioPage from '@/pages/radio-page.vue';
 import MultiSelectPage from '@/pages/multiselect-page.vue';
 import DatePickerPage from '@/pages/datepicker-page.vue';
+import SliderPage from '@/pages/slider-page.vue';
 import AlertPage from '@/pages/alert-page.vue';
 import ToastPage from '@/pages/toast-page.vue';
 import ModalPage from '@/pages/modal-page.vue';
@@ -65,6 +66,11 @@ const router = createRouter({
       path: '/datepicker',
       name: 'datepicker',
       component: DatePickerPage,
+    },
+    {
+      path: '/slider',
+      name: 'slider',
+      component: SliderPage,
     },
     {
       path: '/alert',
