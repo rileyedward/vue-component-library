@@ -12,12 +12,19 @@ import {
   BarChart3,
   ChevronDown,
   Table,
+  LogOut,
+  Settings,
 } from 'lucide-vue-next';
 import type { SidebarItem } from '@/components/navigation/sidebar/ui-sidebar';
+import type { DropdownMenuItem } from '@/components/data/dropdown-menu/ui-dropdown-menu';
 
 export interface SidebarLayoutConfig {
   title: string;
   sidebarItems: SidebarItem[];
+  profileMenu: {
+    userName: string;
+    menuItems: DropdownMenuItem[];
+  };
 }
 
 const config: SidebarLayoutConfig = {
@@ -83,6 +90,29 @@ const config: SidebarLayoutConfig = {
       ],
     },
   ],
+  profileMenu: {
+    userName: 'John Doe',
+    menuItems: [
+      {
+        id: 'settings',
+        label: 'Settings',
+        icon: Settings,
+        disabled: false,
+      },
+      {
+        id: 'divider',
+        label: '',
+        separator: true,
+      },
+      {
+        id: 'logout',
+        label: 'Log Out',
+        icon: LogOut,
+        variant: 'danger' as const,
+        disabled: false,
+      },
+    ],
+  },
 };
 
 export default config;

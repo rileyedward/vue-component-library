@@ -23,6 +23,7 @@ const isSidebarOpen = ref(true);
       :items="props.config.sidebarItems"
       :title="props.config.title"
       :default-open="isSidebarOpen"
+      :profile-menu="props.config.profileMenu"
     />
 
     <div

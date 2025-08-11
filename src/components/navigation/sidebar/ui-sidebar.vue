@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, reactive } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import { ChevronDown, ChevronUp, ChevronRight, Menu as MenuIcon } from 'lucide-vue-next';
+import { ChevronDown, ChevronUp, ChevronRight, Menu as MenuIcon, User } from 'lucide-vue-next';
 import type { UiSidebarProps as Props, UiSidebarEmits as Emits, SidebarItem } from './ui-sidebar';
+import UiDropdownMenu from '@/components/data/dropdown-menu/ui-dropdown-menu.vue';
+import type { DropdownMenuItem } from '@/components/data/dropdown-menu/ui-dropdown-menu';
 
 const props = withDefaults(defineProps<Props>(), {
   title: 'Navigation',
@@ -82,12 +84,17 @@ const handleNavigate = (item: SidebarItem): void => {
   }
 };
 
+const handleProfileAction = (item: DropdownMenuItem): void => {
+  emit('profile-action', item);
+};
+
 const sidebarClasses = computed(() => {
   return [
     'bg-white border-r border-gray-200 h-screen',
     'transition-all duration-300 ease-in-out',
     'overflow-y-auto',
     'w-full',
+    'flex flex-col',
   ];
 });
 </script>
@@ -133,8 +140,8 @@ const sidebarClasses = computed(() => {
           </button>
         </div>
 
-        <div class="mt-5 flex-1 h-0 overflow-y-auto">
-          <nav class="px-2">
+        <div class="mt-5 flex-1 flex flex-col h-0">
+          <nav class="flex-1 px-2 overflow-y-auto">
             <div class="space-y-1">
               <div v-for="item in navItems" :key="item.route || item.label">
                 <div
@@ -194,6 +201,20 @@ const sidebarClasses = computed(() => {
               </div>
             </div>
           </nav>
+
+          <div v-if="profileMenu" class="border-t border-gray-200 px-2 py-3">
+            <ui-dropdown-menu
+              :items="profileMenu.menuItems"
+              placement="top"
+              @select="handleProfileAction"
+            >
+              <div class="flex items-center px-2 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-md cursor-pointer">
+                <user class="mr-3 flex-shrink-0 h-6 w-6" />
+                <span class="flex-1">{{ profileMenu.userName }}</span>
+                <chevron-up class="flex-shrink-0 h-5 w-5" />
+              </div>
+            </ui-dropdown-menu>
+          </div>
         </div>
       </div>
     </div>
@@ -217,7 +238,7 @@ const sidebarClasses = computed(() => {
         </div>
 
         <div v-if="isOpen" class="flex-1 flex flex-col overflow-y-auto">
-          <nav class="flex-1 px-4 py-4">
+          <nav class="flex-1 px-4 py-4 overflow-y-auto">
             <div class="space-y-1">
               <div v-for="item in navItems" :key="item.route || item.label">
                 <div
@@ -284,6 +305,20 @@ const sidebarClasses = computed(() => {
               </div>
             </div>
           </nav>
+
+          <div v-if="profileMenu" class="border-t border-gray-200 px-4 py-3 mt-auto">
+            <ui-dropdown-menu
+              :items="profileMenu.menuItems"
+              placement="top"
+              @select="handleProfileAction"
+            >
+              <div class="flex items-center px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-md cursor-pointer">
+                <user class="mr-3 flex-shrink-0 h-5 w-5" />
+                <span class="flex-1">{{ profileMenu.userName }}</span>
+                <chevron-up class="flex-shrink-0 h-4 w-4" />
+              </div>
+            </ui-dropdown-menu>
+          </div>
         </div>
       </div>
     </div>
