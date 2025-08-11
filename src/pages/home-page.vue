@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router';
       <!-- Forms Components -->
       <div class="bg-white rounded-lg shadow-sm border p-6">
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Forms</h3>
-        <p class="text-gray-600 text-sm mb-4">Form inputs and data collection</p>
+        <p class="text-gray-600 text-sm mb-4">Interactive form inputs and controls</p>
         <div class="space-y-2">
           <router-link
             to="/button"
@@ -66,13 +66,43 @@ import { RouterLink } from 'vue-router';
           >
             DatePicker →
           </router-link>
+          <router-link
+            to="/slider"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Slider →
+          </router-link>
+          <router-link
+            to="/range"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Range →
+          </router-link>
+          <router-link
+            to="/counter"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Counter →
+          </router-link>
+          <router-link
+            to="/file-upload"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            File Upload →
+          </router-link>
+          <router-link
+            to="/switch"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Switch →
+          </router-link>
         </div>
       </div>
 
       <!-- Navigation Components -->
       <div class="bg-white rounded-lg shadow-sm border p-6">
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Navigation</h3>
-        <p class="text-gray-600 text-sm mb-4">Navigation and wayfinding</p>
+        <p class="text-gray-600 text-sm mb-4">Navigation and menu components</p>
         <div class="space-y-2">
           <router-link
             to="/breadcrumb"
@@ -87,10 +117,22 @@ import { RouterLink } from 'vue-router';
             Dropdown →
           </router-link>
           <router-link
+            to="/dropdown-menu"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Dropdown Menu →
+          </router-link>
+          <router-link
             to="/menu"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Menu →
+          </router-link>
+          <router-link
+            to="/tab"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Tab →
           </router-link>
         </div>
       </div>
@@ -124,7 +166,7 @@ import { RouterLink } from 'vue-router';
       <!-- Layout Components -->
       <div class="bg-white rounded-lg shadow-sm border p-6">
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Layout</h3>
-        <p class="text-gray-600 text-sm mb-4">Layout and structure components</p>
+        <p class="text-gray-600 text-sm mb-4">Layout and structural components</p>
         <div class="space-y-2">
           <router-link
             to="/card"
@@ -143,6 +185,32 @@ import { RouterLink } from 'vue-router';
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Drawer →
+          </router-link>
+        </div>
+      </div>
+
+      <!-- Data Components -->
+      <div class="bg-white rounded-lg shadow-sm border p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">Data</h3>
+        <p class="text-gray-600 text-sm mb-4">Data display and interaction</p>
+        <div class="space-y-2">
+          <router-link
+            to="/accordion"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Accordion →
+          </router-link>
+          <router-link
+            to="/chart"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Chart →
+          </router-link>
+          <router-link
+            to="/tooltip"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Tooltip →
           </router-link>
         </div>
       </div>
@@ -170,6 +238,36 @@ import { RouterLink } from 'vue-router';
           <div class="flex items-center">
             <div class="w-3 h-3 bg-orange-400 rounded-full mr-2"></div>
             <span>Lucide Icons</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-3 h-3 bg-red-400 rounded-full mr-2"></div>
+            <span>Chart.js</span>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-gray-200">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Component Statistics</h3>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+            <div>
+              <div class="text-2xl font-bold text-purple-600">13</div>
+              <div class="text-sm text-gray-600">Form Components</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-purple-600">5</div>
+              <div class="text-sm text-gray-600">Navigation</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-purple-600">3</div>
+              <div class="text-sm text-gray-600">Feedback</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-purple-600">3</div>
+              <div class="text-sm text-gray-600">Layout</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-purple-600">3</div>
+              <div class="text-sm text-gray-600">Data Display</div>
+            </div>
           </div>
         </div>
       </div>
