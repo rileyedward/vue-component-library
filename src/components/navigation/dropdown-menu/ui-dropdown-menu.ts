@@ -10,7 +10,6 @@ export interface DropdownMenuItem {
 }
 
 export interface UiDropdownMenuProps {
-  z;
   items: DropdownMenuItem[];
   placement?: 'top' | 'bottom' | 'left' | 'right';
   disabled?: boolean;
