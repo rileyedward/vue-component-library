@@ -11,6 +11,8 @@ import DatePickerPage from '@/pages/datepicker-page.vue';
 import AlertPage from '@/pages/alert-page.vue';
 import ToastPage from '@/pages/toast-page.vue';
 import ModalPage from '@/pages/modal-page.vue';
+import CardPage from '@/pages/card-page.vue';
+import ContainerPage from '@/pages/container-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,6 +76,16 @@ const router = createRouter({
       path: '/modal',
       name: 'modal',
       component: ModalPage,
+    },
+    {
+      path: '/card',
+      name: 'card',
+      component: CardPage,
+    },
+    {
+      path: '/container',
+      name: 'container',
+      component: ContainerPage,
     },
   ],
 });
