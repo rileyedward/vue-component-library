@@ -12,14 +12,6 @@ Vue Component Library is a curated set of 28+ Vue 3 components built with TypeSc
 
 Building UI components from scratch is time-consuming and often leads to inconsistencies across your application. This library provides battle-tested, accessible components that you can drop into any Vue 3 project. All components are built with TypeScript for excellent developer experience and include proper event handling, customizable styling, and comprehensive prop interfaces.
 
-### Component Categories
-
-- **Forms (13 components)**: Button, Input, Textarea, Select, Checkbox, Radio, MultiSelect, DatePicker, Slider, Range, Counter, File Upload, Switch
-- **Navigation (5 components)**: Breadcrumb, Dropdown, Dropdown Menu, Menu, Tab
-- **Feedback (3 components)**: Alert, Toast, Modal
-- **Layout (3 components)**: Card, Container, Drawer
-- **Data Display (4 components)**: Accordion, Chart, Table, Tooltip
-
 ## Getting Started
 
 ### Prerequisites
@@ -88,36 +80,3 @@ Ensure you have the following prerequisites installed on your system. You can ve
   ```bash
   npm run format
   ```
-
-## Usage
-
-Each component can be copied directly into your Vue 3 project. Components are organized by category in the `src/components/` directory. Each component includes:
-
-- TypeScript interface definitions (`.ts` file)
-- Vue component implementation (`.vue` file)
-- Comprehensive showcase page with examples
-
-### Example Usage
-
-```vue
-<script setup>
-import UiButton from './components/forms/button/ui-button.vue';
-import UiTable from './components/layout/table/ui-table.vue';
-</script>
-
-<template>
-  <ui-button variant="primary" @click="handleClick"> Click me </ui-button>
-
-  <ui-table :columns="tableColumns" :data="tableData" selectable @row-click="handleRowClick" />
-</template>
-```
-
-## Built With
-
-- **Vue 3** - Progressive JavaScript framework with Composition API
-- **TypeScript** - Type-safe JavaScript for better developer experience
-- **Tailwind CSS** - Utility-first CSS framework for styling
-- **Vite** - Fast build tool and development server
-- **Lucide Vue Next** - Beautiful, customizable icons
-- **Chart.js** - Powerful charting library for data visualization
-- **ESLint & Prettier** - Code quality and formatting tools

@@ -3,7 +3,7 @@ import { ref, h } from 'vue';
 import UiTable from '@/components/layout/table/ui-table.vue';
 import UiButton from '@/components/forms/button/ui-button.vue';
 import type { TableColumn, TableRow } from '@/components/layout/table/ui-table';
-import { Edit, Trash2, Eye, Mail, Phone, Globe, CheckCircle, XCircle } from 'lucide-vue-next';
+import { Edit, Trash2, Eye, Phone, Globe, CheckCircle, XCircle } from 'lucide-vue-next';
 
 const basicColumns: TableColumn[] = [
   { key: 'id', label: 'ID', sortable: true, width: '80px' },
@@ -162,7 +162,7 @@ const getAvatar = (initials: string) => {
   );
 };
 
-const getActionButtons = (row: TableRow) => {
+const getActionButtons = () => {
   return h('div', { class: 'flex items-center justify-center gap-1' }, [
     h(
       'button',
