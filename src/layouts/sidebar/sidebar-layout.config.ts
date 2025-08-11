@@ -9,6 +9,7 @@ import {
   AlertTriangle,
   MessageSquare,
   CreditCard,
+  BarChart3,
 } from 'lucide-vue-next';
 import type { SidebarItem } from '@/components/navigation/sidebar/ui-sidebar';
 
@@ -47,6 +48,7 @@ const config: SidebarLayoutConfig = {
         { label: 'Breadcrumb', route: '/breadcrumb', icon: Layout },
         { label: 'Dropdown', route: '/dropdown', icon: Layout },
         { label: 'Menu', route: '/menu', icon: Layout },
+        { label: 'Tab', route: '/tab', icon: Layout },
       ],
     },
     {
@@ -65,6 +67,13 @@ const config: SidebarLayoutConfig = {
         { label: 'Card', route: '/card', icon: CreditCard },
         { label: 'Container', route: '/container', icon: Layout },
         { label: 'Drawer', route: '/drawer', icon: Layout },
+      ],
+    },
+    {
+      label: 'Data',
+      icon: BarChart3,
+      children: [
+        { label: 'Chart', route: '/chart', icon: BarChart3 },
       ],
     },
   ],

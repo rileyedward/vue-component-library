@@ -22,6 +22,8 @@ import BreadcrumbPage from '@/pages/breadcrumb-page.vue';
 import DropdownPage from '@/pages/dropdown-page.vue';
 import MenuPage from '@/pages/menu-page.vue';
 import DrawerPage from '@/pages/drawer-page.vue';
+import TabPage from '@/pages/tab-page.vue';
+import ChartPage from '@/pages/chart-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -140,6 +142,16 @@ const router = createRouter({
       path: '/drawer',
       name: 'drawer',
       component: DrawerPage,
+    },
+    {
+      path: '/tab',
+      name: 'tab',
+      component: TabPage,
+    },
+    {
+      path: '/chart',
+      name: 'chart',
+      component: ChartPage,
     },
   ],
 });
