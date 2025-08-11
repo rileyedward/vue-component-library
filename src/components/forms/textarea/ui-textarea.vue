@@ -79,10 +79,7 @@ const textareaClasses = computed<string>(() => {
 
   // Error state
   if (props.errorText) {
-    classes.push(
-      'border-red-300 bg-red-50',
-      'focus:border-red-500 focus:ring-red-500',
-    );
+    classes.push('border-red-300 bg-red-50', 'focus:border-red-500 focus:ring-red-500');
   }
 
   return classes.join(' ');
@@ -90,11 +87,11 @@ const textareaClasses = computed<string>(() => {
 
 const wrapperClasses = computed<string>(() => {
   const classes: string[] = ['relative'];
-  
+
   if (props.fullWidth) {
     classes.push('w-full');
   }
-  
+
   return classes.join(' ');
 });
 

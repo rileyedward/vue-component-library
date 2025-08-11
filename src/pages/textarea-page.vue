@@ -3,7 +3,9 @@ import { ref } from 'vue';
 import UiTextarea from '@/components/forms/textarea/ui-textarea.vue';
 
 const basicTextarea = ref('');
-const longTextarea = ref('This is a longer textarea with some initial content. You can edit this text and see how the component behaves with different amounts of content.');
+const longTextarea = ref(
+  'This is a longer textarea with some initial content. You can edit this text and see how the component behaves with different amounts of content.',
+);
 const disabledTextarea = ref('This textarea is disabled and cannot be edited.');
 const readonlyTextarea = ref('This textarea is readonly and cannot be modified.');
 const errorTextarea = ref('');

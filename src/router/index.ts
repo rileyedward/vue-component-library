@@ -3,6 +3,7 @@ import HomePage from '@/pages/home-page.vue';
 import ButtonPage from '@/pages/button-page.vue';
 import InputPage from '@/pages/input-page.vue';
 import TextareaPage from '@/pages/textarea-page.vue';
+import SelectPage from '@/pages/select-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/textarea',
       name: 'textarea',
       component: TextareaPage,
+    },
+    {
+      path: '/select',
+      name: 'select',
+      component: SelectPage,
     },
   ],
 });
