@@ -1,4 +1,4 @@
-import type { ChartConfiguration, ChartType, ChartData, ChartOptions } from 'chart.js';
+import type { ChartType, ChartData, ChartOptions, Chart } from 'chart.js';
 
 export interface UiChartProps {
   type: ChartType;
@@ -11,7 +11,8 @@ export interface UiChartProps {
 }
 
 export interface UiChartEmits {
-  (event: 'chart-created', chart: any): void;
-  (event: 'chart-updated', chart: any): void;
+  (event: 'chart-created', chart: Chart): void;
+
+  (event: 'chart-updated', chart: Chart): void;
   (event: 'chart-destroyed'): void;
 }

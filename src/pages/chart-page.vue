@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import UiChart from '@/components/data/chart/ui-chart.vue';
-import type { ChartData } from 'chart.js';
+import type { Chart, ChartData } from 'chart.js';
 
 const barChartData = ref<ChartData>({
   labels: ['January', 'February', 'March', 'April', 'May', 'June'],
@@ -152,11 +152,11 @@ const doughnutChartOptions = {
   },
 };
 
-const onChartCreated = (chart: any) => {
+const onChartCreated = (chart: Chart) => {
   console.log('Chart created:', chart);
 };
 
-const onChartUpdated = (chart: any) => {
+const onChartUpdated = (chart: Chart) => {
   console.log('Chart updated:', chart);
 };
 

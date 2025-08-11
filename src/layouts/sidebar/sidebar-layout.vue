@@ -14,10 +14,6 @@ const props = withDefaults(defineProps<Props>(), {
 
 const activeRoute = ref('');
 const isSidebarOpen = ref(true);
-
-const toggleSidebar = () => {
-  isSidebarOpen.value = !isSidebarOpen.value;
-};
 </script>
 
 <template>
