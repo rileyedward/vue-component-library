@@ -207,6 +207,12 @@ import { RouterLink } from 'vue-router';
             Chart →
           </router-link>
           <router-link
+            to="/table"
+            class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
+          >
+            Table →
+          </router-link>
+          <router-link
             to="/tooltip"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
@@ -265,7 +271,7 @@ import { RouterLink } from 'vue-router';
               <div class="text-sm text-gray-600">Layout</div>
             </div>
             <div>
-              <div class="text-2xl font-bold text-purple-600">3</div>
+              <div class="text-2xl font-bold text-purple-600">4</div>
               <div class="text-sm text-gray-600">Data Display</div>
             </div>
           </div>
