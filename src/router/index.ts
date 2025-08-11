@@ -16,6 +16,7 @@ import ContainerPage from '@/pages/container-page.vue';
 import BreadcrumbPage from '@/pages/breadcrumb-page.vue';
 import DropdownPage from '@/pages/dropdown-page.vue';
 import MenuPage from '@/pages/menu-page.vue';
+import DrawerPage from '@/pages/drawer-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -104,6 +105,11 @@ const router = createRouter({
       path: '/menu',
       name: 'menu',
       component: MenuPage,
+    },
+    {
+      path: '/drawer',
+      name: 'drawer',
+      component: DrawerPage,
     },
   ],
 });

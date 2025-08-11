@@ -56,6 +56,7 @@ const sidebarItems = [
     children: [
       { label: 'Card', route: '/card', icon: CreditCard },
       { label: 'Container', route: '/container', icon: Layout },
+      { label: 'Drawer', route: '/drawer', icon: Layout },
     ],
   },
 ];
