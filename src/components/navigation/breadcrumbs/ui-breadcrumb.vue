@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Home } from 'lucide-vue-next';
-import type { UiBreadcrumbProps as Props, UiBreadcrumbEmits as Emits, BreadcrumbItem } from './ui-breadcrumb';
+import type {
+  UiBreadcrumbProps as Props,
+  UiBreadcrumbEmits as Emits,
+  BreadcrumbItem,
+} from './ui-breadcrumb';
 
 withDefaults(defineProps<Props>(), {
   separator: '/',
@@ -27,11 +31,7 @@ const handleNavigate = (item: BreadcrumbItem): void => {
         </a>
       </li>
 
-      <li
-        v-for="(item, index) in items"
-        :key="index"
-        class="inline-flex items-center"
-      >
+      <li v-for="(item, index) in items" :key="index" class="inline-flex items-center">
         <span class="mx-1 text-gray-400">{{ separator }}</span>
         <a
           :href="item.href || '#'"

@@ -18,9 +18,12 @@ const activeItemValue = ref(props.activeItem);
 
 const expandedItems = ref<Record<string, boolean>>({});
 
-watch(() => props.activeItem, (newValue) => {
-  activeItemValue.value = newValue;
-});
+watch(
+  () => props.activeItem,
+  (newValue) => {
+    activeItemValue.value = newValue;
+  },
+);
 
 const toggleMenu = (): void => {
   if (props.collapsible) {

@@ -21,7 +21,7 @@ const verticalMenuItems = [
       { label: 'Account', value: 'account' },
       { label: 'Security', value: 'security' },
       { label: 'Notifications', value: 'notifications' },
-    ]
+    ],
   },
   {
     label: 'Messages',
@@ -31,7 +31,7 @@ const verticalMenuItems = [
       { label: 'Inbox', value: 'inbox' },
       { label: 'Sent', value: 'sent' },
       { label: 'Drafts', value: 'drafts', disabled: true },
-    ]
+    ],
   },
   { label: 'Calendar', value: 'calendar', icon: Calendar },
   { label: 'Disabled Item', value: 'disabled', icon: Bell, disabled: true },
@@ -46,7 +46,7 @@ const horizontalMenuItems = [
       { label: 'Category 1', value: 'category1' },
       { label: 'Category 2', value: 'category2' },
       { label: 'Category 3', value: 'category3' },
-    ]
+    ],
   },
   {
     label: 'Services',
@@ -55,7 +55,7 @@ const horizontalMenuItems = [
       { label: 'Consulting', value: 'consulting' },
       { label: 'Development', value: 'development' },
       { label: 'Support', value: 'support' },
-    ]
+    ],
   },
   { label: 'About', value: 'about' },
   { label: 'Contact', value: 'contact' },
@@ -88,30 +88,20 @@ const collapsibleMenuItems = [
             @select="handleSelect"
           />
         </div>
-        <p class="mt-4 text-sm text-gray-600" v-if="activeItem">
-          Active item: {{ activeItem }}
-        </p>
+        <p class="mt-4 text-sm text-gray-600" v-if="activeItem">Active item: {{ activeItem }}</p>
       </section>
 
       <!-- Horizontal Menu -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Horizontal Menu</h2>
-        <UiMenu
-          :items="horizontalMenuItems"
-          variant="horizontal"
-          @select="handleSelect"
-        />
+        <UiMenu :items="horizontalMenuItems" variant="horizontal" @select="handleSelect" />
       </section>
 
       <!-- Menu with Title -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Menu with Title</h2>
         <div class="max-w-xs">
-          <UiMenu
-            :items="verticalMenuItems"
-            title="Navigation"
-            @select="handleSelect"
-          />
+          <UiMenu :items="verticalMenuItems" title="Navigation" @select="handleSelect" />
         </div>
       </section>
 

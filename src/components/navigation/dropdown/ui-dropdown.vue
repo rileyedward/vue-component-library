@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { ChevronDown, ChevronUp } from 'lucide-vue-next';
-import type { UiDropdownProps as Props, UiDropdownEmits as Emits, DropdownItem } from './ui-dropdown';
+import type {
+  UiDropdownProps as Props,
+  UiDropdownEmits as Emits,
+  DropdownItem,
+} from './ui-dropdown';
 
 const props = withDefaults(defineProps<Props>(), {
   modelValue: '',
@@ -13,7 +17,7 @@ const emit = defineEmits<Emits>();
 
 const isOpen = ref(false);
 const selectedItem = computed(() => {
-  return props.items.find(item => item.value === props.modelValue);
+  return props.items.find((item) => item.value === props.modelValue);
 });
 
 const toggleDropdown = (): void => {
@@ -62,8 +66,10 @@ const closeDropdown = (): void => {
           :key="index"
           :class="[
             'px-4 py-2 text-sm cursor-pointer flex items-center',
-            item.disabled ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-purple-100',
-            item.value === modelValue ? 'bg-purple-50 text-purple-700' : ''
+            item.disabled
+              ? 'text-gray-400 cursor-not-allowed'
+              : 'text-gray-700 hover:bg-purple-100',
+            item.value === modelValue ? 'bg-purple-50 text-purple-700' : '',
           ]"
           @click="selectItem(item)"
         >

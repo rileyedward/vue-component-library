@@ -40,9 +40,7 @@ const itemsWithDisabled = [
   <div class="max-w-4xl mx-auto py-8 px-4">
     <header class="mb-8">
       <h1 class="text-3xl font-bold text-gray-900 mb-2">Dropdown Component</h1>
-      <p class="text-gray-600">
-        A versatile dropdown component for selecting options from a list.
-      </p>
+      <p class="text-gray-600">A versatile dropdown component for selecting options from a list.</p>
     </header>
 
     <div class="space-y-12">
