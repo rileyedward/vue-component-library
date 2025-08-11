@@ -11,6 +11,7 @@ import DatePickerPage from '@/pages/datepicker-page.vue';
 import SliderPage from '@/pages/slider-page.vue';
 import RangePage from '@/pages/range-page.vue';
 import CounterPage from '@/pages/counter-page.vue';
+import FileUploadPage from '@/pages/file-upload-page.vue';
 import AlertPage from '@/pages/alert-page.vue';
 import ToastPage from '@/pages/toast-page.vue';
 import ModalPage from '@/pages/modal-page.vue';
@@ -83,6 +84,11 @@ const router = createRouter({
       path: '/counter',
       name: 'counter',
       component: CounterPage,
+    },
+    {
+      path: '/file-upload',
+      name: 'file-upload',
+      component: FileUploadPage,
     },
     {
       path: '/alert',
