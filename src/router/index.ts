@@ -14,6 +14,8 @@ import ModalPage from '@/pages/modal-page.vue';
 import CardPage from '@/pages/card-page.vue';
 import ContainerPage from '@/pages/container-page.vue';
 import BreadcrumbPage from '@/pages/breadcrumb-page.vue';
+import DropdownPage from '@/pages/dropdown-page.vue';
+import MenuPage from '@/pages/menu-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -92,6 +94,16 @@ const router = createRouter({
       path: '/breadcrumb',
       name: 'breadcrumb',
       component: BreadcrumbPage,
+    },
+    {
+      path: '/dropdown',
+      name: 'dropdown',
+      component: DropdownPage,
+    },
+    {
+      path: '/menu',
+      name: 'menu',
+      component: MenuPage,
     },
   ],
 });
