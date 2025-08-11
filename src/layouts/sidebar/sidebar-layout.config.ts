@@ -98,6 +98,7 @@ const config: SidebarLayoutConfig = {
         label: 'Settings',
         icon: Settings,
         disabled: false,
+        href: '/settings',
       },
       {
         id: 'divider',
@@ -110,6 +111,9 @@ const config: SidebarLayoutConfig = {
         icon: LogOut,
         variant: 'danger' as const,
         disabled: false,
+        action: () => {
+          alert('Logout clicked...');
+        },
       },
     ],
   },

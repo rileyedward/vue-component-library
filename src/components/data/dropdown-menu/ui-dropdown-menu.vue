@@ -105,6 +105,12 @@ const handleKeydown = (event: KeyboardEvent): void => {
 const handleItemClick = (item: DropdownMenuItem): void => {
   if (item.disabled || item.separator) return;
 
+  if (item.action) {
+    item.action();
+  } else if (item.href) {
+    window.location.href = item.href;
+  }
+
   emit('select', item);
 
   if (props.closeOnSelect) {

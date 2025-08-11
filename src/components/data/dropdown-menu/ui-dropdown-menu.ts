@@ -7,6 +7,8 @@ export interface DropdownMenuItem {
   disabled?: boolean;
   separator?: boolean;
   variant?: 'default' | 'danger';
+  href?: string;
+  action?: () => void;
 }
 
 export interface UiDropdownMenuProps {
