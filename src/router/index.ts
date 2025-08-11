@@ -6,6 +6,8 @@ import TextareaPage from '@/pages/textarea-page.vue';
 import SelectPage from '@/pages/select-page.vue';
 import CheckboxPage from '@/pages/checkbox-page.vue';
 import RadioPage from '@/pages/radio-page.vue';
+import MultiSelectPage from '@/pages/multiselect-page.vue';
+import DatePickerPage from '@/pages/datepicker-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +46,16 @@ const router = createRouter({
       path: '/radio',
       name: 'radio',
       component: RadioPage,
+    },
+    {
+      path: '/multiselect',
+      name: 'multiselect',
+      component: MultiSelectPage,
+    },
+    {
+      path: '/datepicker',
+      name: 'datepicker',
+      component: DatePickerPage,
     },
   ],
 });

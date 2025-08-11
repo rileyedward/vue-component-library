@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits<Emits>();
 
-const isSelected = computed(() => props.modelValue === props.value);
+const isSelected = computed<boolean>(() => props.modelValue === props.value);
 
 const radioClasses = computed<string>(() => {
   const classes: string[] = [
