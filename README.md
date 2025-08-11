@@ -4,13 +4,7 @@ A fully thought-out Vue component library.
 
 ## Overview
 
-### What is Vue Component Library?
-
 Vue Component Library is a curated set of 28+ Vue 3 components built with TypeScript and Tailwind CSS. It provides everything you need to build beautiful, consistent user interfaces - from basic form inputs and buttons to advanced data tables and interactive charts. Each component follows modern design patterns and includes comprehensive documentation and examples.
-
-### Why Use Vue Component Library?
-
-Building UI components from scratch is time-consuming and often leads to inconsistencies across your application. This library provides battle-tested, accessible components that you can drop into any Vue 3 project. All components are built with TypeScript for excellent developer experience and include proper event handling, customizable styling, and comprehensive prop interfaces.
 
 ## Getting Started
 
