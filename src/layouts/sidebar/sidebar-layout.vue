@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import UiSidebar from '@/components/navigation/sidebar/ui-sidebar.vue';
-import UiNavbar from '@/components/navigation/navbar/ui-navbar.vue';
-import defaultConfig from './main-layout.config';
-import type { MainLayoutConfig } from './main-layout.config';
+import defaultConfig from './sidebar-layout.config';
+import type { SidebarLayoutConfig } from './sidebar-layout.config';
 
 interface Props {
-  config?: MainLayoutConfig;
+  config?: SidebarLayoutConfig;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -16,6 +15,8 @@ const props = withDefaults(defineProps<Props>(), {
 const activeRoute = ref('');
 const isSidebarOpen = ref(true);
 
+// This function is kept for future use when we need to toggle the sidebar
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value;
 };
@@ -30,23 +31,10 @@ const toggleSidebar = () => {
       :default-open="isSidebarOpen"
     />
 
-    <div class="flex flex-col flex-1">
-      <UiNavbar :title="props.config.title" @toggle-sidebar="toggleSidebar">
-        <template #right>
-          <div class="flex items-center space-x-4">
-            <button
-              v-for="(item, index) in props.config.navbarRightItems"
-              :key="index"
-              class="p-2 rounded-full text-gray-500 hover:bg-gray-100"
-              :aria-label="item.ariaLabel"
-              @click="item.onClick && item.onClick()"
-            >
-              <component :is="item.icon" class="h-5 w-5" />
-            </button>
-          </div>
-        </template>
-      </UiNavbar>
-
+    <div
+      class="flex flex-col flex-1 transition-all duration-300 ease-in-out"
+      :class="isSidebarOpen ? 'md:ml-[250px]' : 'md:ml-[60px]'"
+    >
       <main class="flex-1 p-4">
         <div class="max-w-7xl mx-auto">
           <slot />
@@ -57,7 +45,6 @@ const toggleSidebar = () => {
 </template>
 
 <style scoped>
-/* Mobile layout adjustments */
 @media (max-width: 768px) {
   .min-h-screen {
     flex-direction: column;

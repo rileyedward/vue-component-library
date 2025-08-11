@@ -86,7 +86,8 @@ const sidebarClasses = computed(() => {
   return [
     'bg-white border-r border-gray-200 h-screen',
     'transition-all duration-300 ease-in-out',
-    isOpen.value ? `w-[${props.width}]` : 'w-0 overflow-hidden',
+    'overflow-y-auto',
+    'w-full', // Use full width of the container
   ];
 });
 </script>
@@ -198,8 +199,8 @@ const sidebarClasses = computed(() => {
     </div>
 
     <div
-      class="hidden md:flex md:flex-col md:h-screen"
-      :style="{ width: isOpen ? props.width : 'auto' }"
+      class="hidden md:flex md:flex-col md:h-screen md:fixed md:top-0 md:left-0 md:z-20 transition-all duration-300 ease-in-out"
+      :class="isOpen ? 'w-[250px]' : 'w-[60px]'"
     >
       <div :class="sidebarClasses">
         <div

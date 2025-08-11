@@ -9,25 +9,15 @@ import {
   AlertTriangle,
   MessageSquare,
   CreditCard,
-  Search,
-  User,
 } from 'lucide-vue-next';
 import type { SidebarItem } from '@/components/navigation/sidebar/ui-sidebar';
-import type { LucideIcon } from 'lucide-vue-next';
 
-export interface MainLayoutConfig {
+export interface SidebarLayoutConfig {
   title: string;
   sidebarItems: SidebarItem[];
-  navbarRightItems: NavbarRightItem[];
 }
 
-export interface NavbarRightItem {
-  icon: LucideIcon;
-  ariaLabel: string;
-  onClick?: () => void;
-}
-
-const config: MainLayoutConfig = {
+const config: SidebarLayoutConfig = {
   title: 'Component Library',
   sidebarItems: [
     { label: 'Home', route: '/', icon: Home },
@@ -71,16 +61,6 @@ const config: MainLayoutConfig = {
         { label: 'Container', route: '/container', icon: Layout },
         { label: 'Drawer', route: '/drawer', icon: Layout },
       ],
-    },
-  ],
-  navbarRightItems: [
-    {
-      icon: Search,
-      ariaLabel: 'Search',
-    },
-    {
-      icon: User,
-      ariaLabel: 'User profile',
     },
   ],
 };

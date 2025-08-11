@@ -1,0 +1,45 @@
+<script setup lang="ts">
+import UiNavbar from '@/components/navigation/navbar/ui-navbar.vue';
+import defaultConfig from './navbar-layout.config';
+import type { NavbarLayoutConfig } from './navbar-layout.config';
+
+interface Props {
+  config?: NavbarLayoutConfig;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  config: () => defaultConfig,
+});
+
+const toggleSidebar = () => {
+  // This is a placeholder function for the navbar's toggle-sidebar event
+  // In a real implementation, this would toggle a sidebar if one existed
+  console.log('Toggle sidebar event received');
+};
+</script>
+
+<template>
+  <div class="min-h-screen bg-gray-50 flex flex-col">
+    <UiNavbar :title="props.config.title" @toggle-sidebar="toggleSidebar">
+      <template #right>
+        <div class="flex items-center space-x-4">
+          <button
+            v-for="(item, index) in props.config.navbarRightItems"
+            :key="index"
+            class="p-2 rounded-full text-gray-500 hover:bg-gray-100"
+            :aria-label="item.ariaLabel"
+            @click="item.onClick && item.onClick()"
+          >
+            <component :is="item.icon" class="h-5 w-5" />
+          </button>
+        </div>
+      </template>
+    </UiNavbar>
+
+    <main class="flex-1 p-4">
+      <div class="max-w-7xl mx-auto">
+        <slot />
+      </div>
+    </main>
+  </div>
+</template>

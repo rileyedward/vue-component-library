@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import './app.css';
-import MainLayout from '@/layouts/main/main-layout.vue';
+import SidebarLayout from '@/layouts/sidebar/sidebar-layout.vue';
 </script>
 
 <template>
-  <MainLayout>
+  <SidebarLayout>
     <RouterView />
-  </MainLayout>
+  </SidebarLayout>
 </template>
