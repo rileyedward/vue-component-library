@@ -112,7 +112,7 @@ const config: SidebarLayoutConfig = {
         variant: 'danger' as const,
         disabled: false,
         action: () => {
-          alert('Logout clicked...');
+          // TODO...
         },
       },
     ],
