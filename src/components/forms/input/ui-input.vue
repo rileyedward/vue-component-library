@@ -22,7 +22,6 @@ const inputClasses = computed<string>(() => {
     'placeholder:text-gray-400',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'default':
       classes.push(
@@ -47,7 +46,6 @@ const inputClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('h-8 px-3 text-sm rounded-md');
@@ -60,7 +58,6 @@ const inputClasses = computed<string>(() => {
       break;
   }
 
-  // Error state
   if (props.errorText) {
     classes.push('border-red-300 bg-red-50', 'focus:border-red-500 focus:ring-red-500');
   }
@@ -127,15 +124,12 @@ const handleKeydown = (event: KeyboardEvent): void => {
 
 <template>
   <div :class="wrapperClasses">
-    <!-- Label -->
     <label v-if="label" class="block text-sm font-medium text-gray-700 mb-1">
       {{ label }}
       <span v-if="required" class="text-red-500 ml-1">*</span>
     </label>
 
-    <!-- Input Container -->
     <div class="relative">
-      <!-- Prefix Icon -->
       <component
         v-if="prefixIcon"
         :is="prefixIcon"
@@ -145,7 +139,6 @@ const handleKeydown = (event: KeyboardEvent): void => {
         ]"
       />
 
-      <!-- Input Field -->
       <input
         :type="type"
         :value="modelValue"
@@ -172,7 +165,6 @@ const handleKeydown = (event: KeyboardEvent): void => {
         @keydown="handleKeydown"
       />
 
-      <!-- Suffix Icon -->
       <component
         v-if="suffixIcon"
         :is="suffixIcon"
@@ -183,12 +175,10 @@ const handleKeydown = (event: KeyboardEvent): void => {
       />
     </div>
 
-    <!-- Helper Text -->
     <p v-if="helperText && !errorText" class="mt-1 text-sm text-gray-500">
       {{ helperText }}
     </p>
 
-    <!-- Error Text -->
     <p v-if="errorText" class="mt-1 text-sm text-red-600">
       {{ errorText }}
     </p>

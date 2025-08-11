@@ -23,7 +23,6 @@ const checkboxClasses = computed<string>(() => {
     'cursor-pointer',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'default':
       if (props.modelValue || props.indeterminate) {
@@ -53,7 +52,6 @@ const checkboxClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('w-4 h-4 rounded');
@@ -66,7 +64,6 @@ const checkboxClasses = computed<string>(() => {
       break;
   }
 
-  // Error state
   if (props.errorText) {
     classes.push('border-red-500', 'focus:ring-red-500');
   }
@@ -141,7 +138,6 @@ const handleBlur = (event: FocusEvent): void => {
 
 <template>
   <label :class="labelClasses">
-    <!-- Hidden Input -->
     <input
       type="checkbox"
       :checked="modelValue"
@@ -154,16 +150,12 @@ const handleBlur = (event: FocusEvent): void => {
       @blur="handleBlur"
     />
 
-    <!-- Custom Checkbox -->
     <div :class="checkboxClasses">
-      <!-- Check Icon -->
       <Check v-if="modelValue && !indeterminate" :class="iconSize" />
 
-      <!-- Indeterminate Icon -->
       <Minus v-else-if="indeterminate" :class="iconSize" />
     </div>
 
-    <!-- Label Content -->
     <div v-if="label || description" class="flex-1 min-w-0">
       <div v-if="label" :class="textClasses">
         {{ label }}

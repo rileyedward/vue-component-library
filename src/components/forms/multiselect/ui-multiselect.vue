@@ -27,7 +27,6 @@ const selectClasses = computed<string>(() => {
     'flex flex-wrap items-center gap-2',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'default':
       classes.push(
@@ -52,7 +51,6 @@ const selectClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('min-h-8 px-3 text-sm rounded-md');
@@ -65,7 +63,6 @@ const selectClasses = computed<string>(() => {
       break;
   }
 
-  // Error state
   if (props.errorText) {
     classes.push('border-red-300 bg-red-50', 'focus:border-red-500 focus:ring-red-500');
   }
@@ -233,15 +230,12 @@ const handleBlur = (event: FocusEvent): void => {
 
 <template>
   <div :class="wrapperClasses">
-    <!-- Label -->
     <label v-if="label" class="block text-sm font-medium text-gray-700 mb-1">
       {{ label }}
       <span v-if="required" class="text-red-500 ml-1">*</span>
     </label>
 
-    <!-- Select Container -->
     <div class="relative">
-      <!-- Select Button -->
       <button
         type="button"
         :class="selectClasses"
@@ -250,14 +244,12 @@ const handleBlur = (event: FocusEvent): void => {
         @focus="handleFocus"
         @blur="handleBlur"
       >
-        <!-- Prefix Icon -->
         <component
           v-if="prefixIcon"
           :is="prefixIcon"
           :class="[iconClasses, 'text-gray-400 flex-shrink-0']"
         />
 
-        <!-- Selected Tags -->
         <div
           v-if="selectedOptions.length > 0"
           class="flex flex-wrap items-center gap-1 flex-1 min-w-0"
@@ -274,12 +266,10 @@ const handleBlur = (event: FocusEvent): void => {
           </span>
         </div>
 
-        <!-- Placeholder -->
         <span v-else class="text-gray-400 flex-1 text-left truncate">
           {{ displayText }}
         </span>
 
-        <!-- Suffix Icon or Chevron -->
         <div class="flex items-center gap-2 flex-shrink-0 ml-2">
           <component v-if="suffixIcon" :is="suffixIcon" :class="[iconClasses, 'text-gray-400']" />
           <ChevronDown
@@ -292,9 +282,7 @@ const handleBlur = (event: FocusEvent): void => {
         </div>
       </button>
 
-      <!-- Dropdown Options -->
       <div v-if="isOpen" :class="dropdownClasses">
-        <!-- Search Input -->
         <div v-if="searchable" class="p-2 border-b border-gray-200">
           <input
             v-model="searchQuery"
@@ -305,7 +293,6 @@ const handleBlur = (event: FocusEvent): void => {
           />
         </div>
 
-        <!-- Select All Option -->
         <button
           v-if="showSelectAll && filteredOptions.length > 0"
           type="button"
@@ -318,7 +305,6 @@ const handleBlur = (event: FocusEvent): void => {
           </div>
         </button>
 
-        <!-- Options List -->
         <button
           v-for="option in filteredOptions"
           :key="option.value"
@@ -340,7 +326,6 @@ const handleBlur = (event: FocusEvent): void => {
           />
         </button>
 
-        <!-- No Options Message -->
         <div
           v-if="filteredOptions.length === 0"
           class="px-4 py-2 text-sm text-gray-500 text-center"
@@ -350,17 +335,14 @@ const handleBlur = (event: FocusEvent): void => {
       </div>
     </div>
 
-    <!-- Helper Text -->
     <p v-if="helperText && !errorText" class="mt-1 text-sm text-gray-500">
       {{ helperText }}
     </p>
 
-    <!-- Error Text -->
     <p v-if="errorText" class="mt-1 text-sm text-red-600">
       {{ errorText }}
     </p>
 
-    <!-- Selection Count -->
     <p v-if="maxSelections" class="mt-1 text-xs text-gray-500">
       {{ modelValue?.length || 0 }} / {{ maxSelections }} selected
     </p>

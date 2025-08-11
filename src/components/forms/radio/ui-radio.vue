@@ -22,7 +22,6 @@ const radioClasses = computed<string>(() => {
     'cursor-pointer',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'default':
       if (isSelected.value) {
@@ -52,7 +51,6 @@ const radioClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('w-4 h-4');
@@ -65,7 +63,6 @@ const radioClasses = computed<string>(() => {
       break;
   }
 
-  // Error state
   if (props.errorText) {
     classes.push('border-red-500', 'focus:ring-red-500');
   }
@@ -76,7 +73,6 @@ const radioClasses = computed<string>(() => {
 const dotClasses = computed<string>(() => {
   const classes: string[] = ['rounded-full transition-all duration-200'];
 
-  // Size-based dot styles
   switch (props.size) {
     case 'sm':
       classes.push('w-1.5 h-1.5');
@@ -89,7 +85,6 @@ const dotClasses = computed<string>(() => {
       break;
   }
 
-  // Color based on variant and selection
   if (isSelected.value) {
     if (props.variant === 'default') {
       classes.push('bg-white');
@@ -161,7 +156,6 @@ const handleBlur = (event: FocusEvent): void => {
 
 <template>
   <label :class="labelClasses">
-    <!-- Hidden Input -->
     <input
       type="radio"
       :name="name"
@@ -175,13 +169,10 @@ const handleBlur = (event: FocusEvent): void => {
       @blur="handleBlur"
     />
 
-    <!-- Custom Radio -->
     <div :class="radioClasses">
-      <!-- Inner Dot -->
       <div :class="dotClasses" />
     </div>
 
-    <!-- Label Content -->
     <div v-if="label || description" class="flex-1 min-w-0">
       <div v-if="label" :class="textClasses">
         {{ label }}

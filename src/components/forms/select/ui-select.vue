@@ -25,7 +25,6 @@ const selectClasses = computed<string>(() => {
     'flex items-center justify-between',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'default':
       classes.push(
@@ -50,7 +49,6 @@ const selectClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('h-8 px-3 text-sm rounded-md');
@@ -63,7 +61,6 @@ const selectClasses = computed<string>(() => {
       break;
   }
 
-  // Error state
   if (props.errorText) {
     classes.push('border-red-300 bg-red-50', 'focus:border-red-500 focus:ring-red-500');
   }
@@ -134,7 +131,6 @@ const handleFocus = (event: FocusEvent): void => {
 const handleBlur = (event: FocusEvent): void => {
   if (!props.disabled) {
     emit('blur', event);
-    // Close dropdown when focus is lost
     setTimeout(() => {
       isOpen.value = false;
       emit('close');
@@ -145,15 +141,12 @@ const handleBlur = (event: FocusEvent): void => {
 
 <template>
   <div :class="wrapperClasses">
-    <!-- Label -->
     <label v-if="label" class="block text-sm font-medium text-gray-700 mb-1">
       {{ label }}
       <span v-if="required" class="text-red-500 ml-1">*</span>
     </label>
 
-    <!-- Select Container -->
     <div class="relative">
-      <!-- Select Button -->
       <button
         type="button"
         :class="selectClasses"
@@ -162,19 +155,16 @@ const handleBlur = (event: FocusEvent): void => {
         @focus="handleFocus"
         @blur="handleBlur"
       >
-        <!-- Prefix Icon -->
         <component
           v-if="prefixIcon"
           :is="prefixIcon"
           :class="[iconClasses, 'text-gray-400 mr-2']"
         />
 
-        <!-- Display Value -->
         <span :class="['flex-1 text-left', !selectedOption ? 'text-gray-400' : 'text-gray-900']">
           {{ displayValue }}
         </span>
 
-        <!-- Suffix Icon or Chevron -->
         <component
           v-if="suffixIcon"
           :is="suffixIcon"
@@ -190,7 +180,6 @@ const handleBlur = (event: FocusEvent): void => {
         />
       </button>
 
-      <!-- Dropdown Options -->
       <div v-if="isOpen" :class="dropdownClasses">
         <button
           v-for="option in options"
@@ -210,12 +199,10 @@ const handleBlur = (event: FocusEvent): void => {
       </div>
     </div>
 
-    <!-- Helper Text -->
     <p v-if="helperText && !errorText" class="mt-1 text-sm text-gray-500">
       {{ helperText }}
     </p>
 
-    <!-- Error Text -->
     <p v-if="errorText" class="mt-1 text-sm text-red-600">
       {{ errorText }}
     </p>

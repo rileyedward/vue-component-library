@@ -14,7 +14,6 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits<Emits>();
 
 const buttonClasses = computed<string>(() => {
-  // Base Classes
   const classes: string[] = [
     'inline-flex items-center justify-center gap-2',
     'font-medium text-sm',
@@ -25,7 +24,6 @@ const buttonClasses = computed<string>(() => {
     'select-none',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'primary':
       classes.push(
@@ -78,7 +76,6 @@ const buttonClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('h-8 px-3 text-xs rounded-md');
@@ -94,7 +91,6 @@ const buttonClasses = computed<string>(() => {
       break;
   }
 
-  // Full Width Styles
   if (props.fullWidth) {
     classes.push('w-full');
   }
@@ -144,7 +140,6 @@ const handleKeydown = (event: KeyboardEvent): void => {
     @keyup="handleKeyup"
     @keydown="handleKeydown"
   >
-    <!-- Prefix Icon -->
     <component
       v-if="prefixIcon && !loading"
       :is="prefixIcon"
@@ -156,7 +151,6 @@ const handleKeydown = (event: KeyboardEvent): void => {
       }"
     />
 
-    <!-- Loading Icon Icon -->
     <div
       v-if="loading"
       :class="{
@@ -168,12 +162,10 @@ const handleKeydown = (event: KeyboardEvent): void => {
       class="animate-spin rounded-full border-2 border-current border-t-transparent"
     />
 
-    <!-- Label -->
     <span v-if="label || $slots.default">
       <slot>{{ label }}</slot>
     </span>
 
-    <!-- Suffix Icon -->
     <component
       v-if="suffixIcon && !loading"
       :is="suffixIcon"

@@ -23,7 +23,6 @@ const textareaClasses = computed<string>(() => {
     'placeholder:text-gray-400',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'default':
       classes.push(
@@ -48,7 +47,6 @@ const textareaClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('p-2 text-sm rounded-md');
@@ -61,7 +59,6 @@ const textareaClasses = computed<string>(() => {
       break;
   }
 
-  // Resize Styles
   switch (props.resize) {
     case 'none':
       classes.push('resize-none');
@@ -77,7 +74,6 @@ const textareaClasses = computed<string>(() => {
       break;
   }
 
-  // Error state
   if (props.errorText) {
     classes.push('border-red-300 bg-red-50', 'focus:border-red-500 focus:ring-red-500');
   }
@@ -132,13 +128,11 @@ const handleKeydown = (event: KeyboardEvent): void => {
 
 <template>
   <div :class="wrapperClasses">
-    <!-- Label -->
     <label v-if="label" class="block text-sm font-medium text-gray-700 mb-1">
       {{ label }}
       <span v-if="required" class="text-red-500 ml-1">*</span>
     </label>
 
-    <!-- Textarea Field -->
     <textarea
       :value="modelValue"
       :placeholder="placeholder"
@@ -159,12 +153,10 @@ const handleKeydown = (event: KeyboardEvent): void => {
       @keydown="handleKeydown"
     />
 
-    <!-- Helper Text -->
     <p v-if="helperText && !errorText" class="mt-1 text-sm text-gray-500">
       {{ helperText }}
     </p>
 
-    <!-- Error Text -->
     <p v-if="errorText" class="mt-1 text-sm text-red-600">
       {{ errorText }}
     </p>

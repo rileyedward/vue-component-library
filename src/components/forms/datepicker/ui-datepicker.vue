@@ -30,7 +30,6 @@ const inputClasses = computed<string>(() => {
     'flex items-center justify-between',
   ];
 
-  // Variant Styles
   switch (props.variant) {
     case 'default':
       classes.push(
@@ -55,7 +54,6 @@ const inputClasses = computed<string>(() => {
       break;
   }
 
-  // Size Styles
   switch (props.size) {
     case 'sm':
       classes.push('h-8 px-3 text-sm rounded-md');
@@ -68,7 +66,6 @@ const inputClasses = computed<string>(() => {
       break;
   }
 
-  // Error state
   if (props.errorText) {
     classes.push('border-red-300 bg-red-50', 'focus:border-red-500 focus:ring-red-500');
   }
@@ -102,7 +99,6 @@ const calendarClasses = computed<string>(() => {
   ].join(' ');
 });
 
-// Date utilities
 const formatDate = (date: Date | null): string => {
   if (!date) return '';
 
@@ -193,7 +189,6 @@ const calendarDays = computed(() => {
   const days = [];
   const current = new Date(startDate);
 
-  // Generate 42 days (6 weeks) for consistent calendar grid
   for (let i = 0; i < 42; i++) {
     days.push({
       date: new Date(current),
@@ -219,14 +214,12 @@ const isSameDay = (date1: Date, date2: Date): boolean => {
 const isDateDisabled = (date: Date): boolean => {
   if (props.disabled) return true;
 
-  // Check min/max dates
   const minDate = normalizeDate(props.minDate);
   const maxDate = normalizeDate(props.maxDate);
 
   if (minDate && date < minDate) return true;
   if (maxDate && date > maxDate) return true;
 
-  // Check disabled dates
   if (props.disabledDates) {
     return props.disabledDates.some((disabledDate) => {
       const normalized = normalizeDate(disabledDate);
@@ -234,7 +227,6 @@ const isDateDisabled = (date: Date): boolean => {
     });
   }
 
-  // Check enabled dates (if specified, only these dates are allowed)
   if (props.enabledDates) {
     return !props.enabledDates.some((enabledDate) => {
       const normalized = normalizeDate(enabledDate);
@@ -274,7 +266,6 @@ const toggleCalendar = (): void => {
   isOpen.value = !isOpen.value;
 
   if (isOpen.value) {
-    // Set current month to selected date's month if available
     if (selectedDate.value) {
       currentMonth.value = new Date(
         selectedDate.value.getFullYear(),
@@ -299,7 +290,6 @@ const handleBlur = (event: FocusEvent): void => {
   }
 };
 
-// Close calendar when clicking outside
 const handleClickOutside = (event: MouseEvent): void => {
   if (
     calendarRef.value &&
@@ -323,13 +313,11 @@ onUnmounted(() => {
 
 <template>
   <div :class="wrapperClasses">
-    <!-- Label -->
     <label v-if="label" class="block text-sm font-medium text-gray-700 mb-1">
       {{ label }}
       <span v-if="required" class="text-red-500 ml-1">*</span>
     </label>
 
-    <!-- Date Input -->
     <div class="relative">
       <button
         ref="inputRef"
@@ -341,19 +329,16 @@ onUnmounted(() => {
         @focus="handleFocus"
         @blur="handleBlur"
       >
-        <!-- Prefix Icon -->
         <component
           v-if="prefixIcon"
           :is="prefixIcon"
           :class="[iconClasses, 'text-gray-400 mr-2']"
         />
 
-        <!-- Display Value -->
         <span :class="['flex-1 text-left', !selectedDate ? 'text-gray-400' : 'text-gray-900']">
           {{ displayValue }}
         </span>
 
-        <!-- Suffix Icon or Calendar -->
         <component
           v-if="suffixIcon"
           :is="suffixIcon"
@@ -362,9 +347,7 @@ onUnmounted(() => {
         <Calendar v-else :class="[iconClasses, 'text-gray-400 ml-2']" />
       </button>
 
-      <!-- Calendar Popup -->
       <div v-if="isOpen" ref="calendarRef" :class="calendarClasses">
-        <!-- Calendar Header -->
         <div class="flex items-center justify-between mb-4">
           <button
             type="button"
@@ -387,9 +370,7 @@ onUnmounted(() => {
           </button>
         </div>
 
-        <!-- Calendar Grid -->
         <div class="grid grid-cols-7 gap-1">
-          <!-- Day Headers -->
           <div
             v-for="dayName in adjustedDayNames"
             :key="dayName"
@@ -398,7 +379,6 @@ onUnmounted(() => {
             {{ dayName }}
           </div>
 
-          <!-- Calendar Days -->
           <button
             v-for="day in calendarDays"
             :key="day.date.toISOString()"
@@ -421,7 +401,6 @@ onUnmounted(() => {
           </button>
         </div>
 
-        <!-- Footer with Today Button -->
         <div class="mt-4 pt-3 border-t border-gray-200">
           <button
             type="button"
@@ -434,12 +413,10 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <!-- Helper Text -->
     <p v-if="helperText && !errorText" class="mt-1 text-sm text-gray-500">
       {{ helperText }}
     </p>
 
-    <!-- Error Text -->
     <p v-if="errorText" class="mt-1 text-sm text-red-600">
       {{ errorText }}
     </p>
