@@ -22,9 +22,12 @@ const endThumbRef = ref<HTMLDivElement | null>(null);
 const startTooltipRef = ref<HTMLDivElement | null>(null);
 const endTooltipRef = ref<HTMLDivElement | null>(null);
 
-watch(() => props.modelValue, (newValue) => {
-  localValue.value = [...newValue];
-});
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    localValue.value = [...newValue];
+  },
+);
 
 const startPercentage = computed(() => {
   const range = props.max - props.min;
@@ -37,10 +40,7 @@ const endPercentage = computed(() => {
 });
 
 const trackClasses = computed(() => {
-  const classes = [
-    'h-2 rounded-full bg-gray-200',
-    'relative',
-  ];
+  const classes = ['h-2 rounded-full bg-gray-200', 'relative'];
 
   if (props.disabled) {
     classes.push('opacity-50 cursor-not-allowed');
@@ -52,10 +52,9 @@ const trackClasses = computed(() => {
 });
 
 const filledTrackClasses = computed(() => {
-  return [
-    'absolute h-full rounded-full',
-    props.disabled ? 'bg-gray-400' : 'bg-purple-500',
-  ].join(' ');
+  return ['absolute h-full rounded-full', props.disabled ? 'bg-gray-400' : 'bg-purple-500'].join(
+    ' ',
+  );
 });
 
 const thumbClasses = computed(() => {
@@ -248,17 +247,13 @@ const handleEndKeyDown = (event: KeyboardEvent) => {
     </div>
 
     <div class="flex items-center gap-4">
-      <div
-        ref="rangeRef"
-        class="flex-1"
-        @click="handleTrackClick"
-      >
+      <div ref="rangeRef" class="flex-1" @click="handleTrackClick">
         <div :class="trackClasses">
           <div
             :class="filledTrackClasses"
             :style="{
               left: `${startPercentage}%`,
-              width: `${endPercentage - startPercentage}%`
+              width: `${endPercentage - startPercentage}%`,
             }"
           ></div>
 

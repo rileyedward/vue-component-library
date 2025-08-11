@@ -123,11 +123,7 @@ const iconClasses = computed(() => {
 
     <div :class="containerClasses" @click="toggle">
       <div v-if="leftText || leftIcon" class="mr-2">
-        <component
-          v-if="leftIcon"
-          :is="leftIcon"
-          :class="iconClasses"
-        />
+        <component v-if="leftIcon" :is="leftIcon" :class="iconClasses" />
         <span v-else-if="leftText" :class="textClasses">{{ leftText }}</span>
       </div>
 
@@ -140,18 +136,11 @@ const iconClasses = computed(() => {
         :class="switchClasses"
         @click.stop="toggle"
       >
-        <span
-          aria-hidden="true"
-          :class="thumbClasses"
-        ></span>
+        <span aria-hidden="true" :class="thumbClasses"></span>
       </button>
 
       <div v-if="rightText || rightIcon" class="ml-2">
-        <component
-          v-if="rightIcon"
-          :is="rightIcon"
-          :class="iconClasses"
-        />
+        <component v-if="rightIcon" :is="rightIcon" :class="iconClasses" />
         <span v-else-if="rightText" :class="textClasses">{{ rightText }}</span>
       </div>
     </div>

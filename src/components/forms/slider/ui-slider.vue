@@ -19,9 +19,12 @@ const sliderRef = ref<HTMLDivElement | null>(null);
 const thumbRef = ref<HTMLDivElement | null>(null);
 const tooltipRef = ref<HTMLDivElement | null>(null);
 
-watch(() => props.modelValue, (newValue) => {
-  localValue.value = newValue;
-});
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    localValue.value = newValue;
+  },
+);
 
 const percentage = computed(() => {
   const range = props.max - props.min;
@@ -29,10 +32,7 @@ const percentage = computed(() => {
 });
 
 const trackClasses = computed(() => {
-  const classes = [
-    'h-2 rounded-full bg-gray-200',
-    'relative',
-  ];
+  const classes = ['h-2 rounded-full bg-gray-200', 'relative'];
 
   if (props.disabled) {
     classes.push('opacity-50 cursor-not-allowed');
@@ -157,16 +157,9 @@ const handleKeyDown = (event: KeyboardEvent) => {
     </div>
 
     <div class="flex items-center gap-4">
-      <div
-        ref="sliderRef"
-        class="flex-1"
-        @click="handleTrackClick"
-      >
+      <div ref="sliderRef" class="flex-1" @click="handleTrackClick">
         <div :class="trackClasses">
-          <div
-            :class="filledTrackClasses"
-            :style="{ width: `${percentage}%` }"
-          ></div>
+          <div :class="filledTrackClasses" :style="{ width: `${percentage}%` }"></div>
 
           <div
             ref="thumbRef"

@@ -21,31 +21,38 @@ const fileInputRef = ref<HTMLInputElement | null>(null);
 const isDragging = ref(false);
 const files = ref<File[]>([]);
 
-watch(() => props.modelValue, (newValue) => {
-  if (newValue) {
-    if (Array.isArray(newValue)) {
-      files.value = [...newValue];
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    if (newValue) {
+      if (Array.isArray(newValue)) {
+        files.value = [...newValue];
+      } else {
+        files.value = [newValue];
+      }
     } else {
-      files.value = [newValue];
+      files.value = [];
     }
-  } else {
-    files.value = [];
-  }
-}, { immediate: true });
+  },
+  { immediate: true },
+);
 
-watch(files, (newFiles) => {
-  if (props.multiple) {
-    emit('update:modelValue', [...newFiles]);
-  } else {
-    emit('update:modelValue', newFiles.length > 0 ? newFiles[0] : undefined);
-  }
-}, { deep: true });
+watch(
+  files,
+  (newFiles) => {
+    if (props.multiple) {
+      emit('update:modelValue', [...newFiles]);
+    } else {
+      emit('update:modelValue', newFiles.length > 0 ? newFiles[0] : undefined);
+    }
+  },
+  { deep: true },
+);
 
 const containerClasses = computed(() => {
-  return [
-    'w-full',
-    props.disabled ? 'opacity-60 cursor-not-allowed' : '',
-  ].filter(Boolean).join(' ');
+  return ['w-full', props.disabled ? 'opacity-60 cursor-not-allowed' : '']
+    .filter(Boolean)
+    .join(' ');
 });
 
 const dropzoneClasses = computed(() => {
@@ -56,7 +63,9 @@ const dropzoneClasses = computed(() => {
     isDragging.value ? 'border-purple-500 bg-purple-50' : 'border-gray-300 hover:border-purple-400',
     props.error ? 'border-red-500 bg-red-50' : '',
     props.disabled ? 'cursor-not-allowed' : 'cursor-pointer',
-  ].filter(Boolean).join(' ');
+  ]
+    .filter(Boolean)
+    .join(' ');
 });
 
 const handleClick = () => {
@@ -100,14 +109,15 @@ const handleFileInput = (event: Event) => {
 const handleFiles = (newFiles: File[]) => {
   if (props.disabled) return;
 
-  let validFiles = props.accept
-    ? newFiles.filter(file => isFileTypeAccepted(file))
-    : newFiles;
+  let validFiles = props.accept ? newFiles.filter((file) => isFileTypeAccepted(file)) : newFiles;
 
-  validFiles = validFiles.filter(file => {
+  validFiles = validFiles.filter((file) => {
     const isValid = file.size <= props.maxSize;
     if (!isValid) {
-      emit('error', `File "${file.name}" exceeds the maximum size of ${formatFileSize(props.maxSize)}`);
+      emit(
+        'error',
+        `File "${file.name}" exceeds the maximum size of ${formatFileSize(props.maxSize)}`,
+      );
     }
     return isValid;
   });
@@ -118,7 +128,7 @@ const handleFiles = (newFiles: File[]) => {
       validFiles = validFiles.slice(0, props.maxFiles - files.value.length);
     }
 
-    validFiles.forEach(file => {
+    validFiles.forEach((file) => {
       files.value.push(file);
       emit('file-added', file);
     });
@@ -130,7 +140,7 @@ const handleFiles = (newFiles: File[]) => {
     }
   }
 
-  emit('change', props.multiple ? files.value : (files.value[0] || null));
+  emit('change', props.multiple ? files.value : files.value[0] || null);
 };
 
 const removeFile = (index: number) => {
@@ -139,17 +149,17 @@ const removeFile = (index: number) => {
   const file = files.value[index];
   files.value.splice(index, 1);
   emit('file-removed', file);
-  emit('change', props.multiple ? files.value : (files.value[0] || null));
+  emit('change', props.multiple ? files.value : files.value[0] || null);
 };
 
 const isFileTypeAccepted = (file: File): boolean => {
   if (!props.accept) return true;
 
-  const acceptedTypes = props.accept.split(',').map(type => type.trim().toLowerCase());
+  const acceptedTypes = props.accept.split(',').map((type) => type.trim().toLowerCase());
   const fileType = file.type.toLowerCase();
   const fileExtension = `.${file.name.split('.').pop()?.toLowerCase()}`;
 
-  return acceptedTypes.some(type => {
+  return acceptedTypes.some((type) => {
     if (fileType === type) return true;
 
     if (type.endsWith('/*') && fileType.startsWith(type.replace('*', ''))) return true;
@@ -244,11 +254,7 @@ const getFilePreview = (file: File) => {
             class="w-10 h-10 object-cover rounded"
             alt="File preview"
           />
-          <component
-            v-else
-            :is="getFileIcon(file)"
-            class="w-10 h-10 text-gray-400"
-          />
+          <component v-else :is="getFileIcon(file)" class="w-10 h-10 text-gray-400" />
         </div>
 
         <div class="flex-1 min-w-0">

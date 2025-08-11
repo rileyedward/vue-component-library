@@ -47,9 +47,7 @@ const handleDecrement = () => {
             @increment="handleIncrement"
             @decrement="handleDecrement"
           />
-          <div class="mt-4 text-sm text-gray-500">
-            Current value: {{ basicValue }}
-          </div>
+          <div class="mt-4 text-sm text-gray-500">Current value: {{ basicValue }}</div>
         </div>
       </section>
 
@@ -57,12 +55,7 @@ const handleDecrement = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Range</h2>
         <div>
-          <UiCounter
-            v-model="minMaxValue"
-            :min="10"
-            :max="50"
-            @change="handleChange"
-          />
+          <UiCounter v-model="minMaxValue" :min="10" :max="50" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ minMaxValue }} (Range: 10-50)
           </div>
@@ -73,14 +66,8 @@ const handleDecrement = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Step Size</h2>
         <div>
-          <UiCounter
-            v-model="stepValue"
-            :step="5"
-            @change="handleChange"
-          />
-          <div class="mt-4 text-sm text-gray-500">
-            Current value: {{ stepValue }} (Step: 5)
-          </div>
+          <UiCounter v-model="stepValue" :step="5" @change="handleChange" />
+          <div class="mt-4 text-sm text-gray-500">Current value: {{ stepValue }} (Step: 5)</div>
         </div>
       </section>
 
@@ -88,10 +75,7 @@ const handleDecrement = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Counter</h2>
         <div>
-          <UiCounter
-            v-model="disabledValue"
-            disabled
-          />
+          <UiCounter v-model="disabledValue" disabled />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ disabledValue }} (Disabled)
           </div>
@@ -102,14 +86,8 @@ const handleDecrement = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Counter with Label</h2>
         <div>
-          <UiCounter
-            v-model="labeledValue"
-            label="Quantity"
-            @change="handleChange"
-          />
-          <div class="mt-4 text-sm text-gray-500">
-            Current value: {{ labeledValue }}
-          </div>
+          <UiCounter v-model="labeledValue" label="Quantity" @change="handleChange" />
+          <div class="mt-4 text-sm text-gray-500">Current value: {{ labeledValue }}</div>
         </div>
       </section>
 
@@ -119,35 +97,19 @@ const handleDecrement = () => {
         <div class="space-y-6">
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Small</h3>
-            <UiCounter
-              v-model="sizesValues.sm"
-              size="sm"
-              @change="handleChange"
-            />
+            <UiCounter v-model="sizesValues.sm" size="sm" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Medium (Default)</h3>
-            <UiCounter
-              v-model="sizesValues.md"
-              size="md"
-              @change="handleChange"
-            />
+            <UiCounter v-model="sizesValues.md" size="md" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Large</h3>
-            <UiCounter
-              v-model="sizesValues.lg"
-              size="lg"
-              @change="handleChange"
-            />
+            <UiCounter v-model="sizesValues.lg" size="lg" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Extra Large</h3>
-            <UiCounter
-              v-model="sizesValues.xl"
-              size="xl"
-              @change="handleChange"
-            />
+            <UiCounter v-model="sizesValues.xl" size="xl" @change="handleChange" />
           </div>
         </div>
       </section>

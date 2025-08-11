@@ -33,7 +33,8 @@ const handleChange = (value: boolean) => {
     <header class="mb-8">
       <h1 class="text-3xl font-bold text-gray-900 mb-2">Switch Component</h1>
       <p class="text-gray-600">
-        A customizable switch component for toggling between true/false values, with support for text and icons.
+        A customizable switch component for toggling between true/false values, with support for
+        text and icons.
       </p>
     </header>
 
@@ -53,12 +54,7 @@ const handleChange = (value: boolean) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Switch with Text</h2>
         <div>
-          <UiSwitch
-            v-model="withTextValue"
-            leftText="Off"
-            rightText="On"
-            @change="handleChange"
-          />
+          <UiSwitch v-model="withTextValue" leftText="Off" rightText="On" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ withTextValue ? 'On' : 'Off' }}
           </div>
@@ -87,27 +83,15 @@ const handleChange = (value: boolean) => {
         <div class="space-y-6">
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Small</h3>
-            <UiSwitch
-              v-model="sizesValue.sm"
-              size="sm"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="sizesValue.sm" size="sm" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Medium (Default)</h3>
-            <UiSwitch
-              v-model="sizesValue.md"
-              size="md"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="sizesValue.md" size="md" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Large</h3>
-            <UiSwitch
-              v-model="sizesValue.lg"
-              size="lg"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="sizesValue.lg" size="lg" @change="handleChange" />
           </div>
         </div>
       </section>
@@ -118,43 +102,23 @@ const handleChange = (value: boolean) => {
         <div class="space-y-6">
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Primary (Default)</h3>
-            <UiSwitch
-              v-model="colorsValue.primary"
-              color="primary"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="colorsValue.primary" color="primary" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Success</h3>
-            <UiSwitch
-              v-model="colorsValue.success"
-              color="success"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="colorsValue.success" color="success" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Danger</h3>
-            <UiSwitch
-              v-model="colorsValue.danger"
-              color="danger"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="colorsValue.danger" color="danger" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Warning</h3>
-            <UiSwitch
-              v-model="colorsValue.warning"
-              color="warning"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="colorsValue.warning" color="warning" @change="handleChange" />
           </div>
           <div>
             <h3 class="text-sm font-medium text-gray-700 mb-2">Info</h3>
-            <UiSwitch
-              v-model="colorsValue.info"
-              color="info"
-              @change="handleChange"
-            />
+            <UiSwitch v-model="colorsValue.info" color="info" @change="handleChange" />
           </div>
         </div>
       </section>
@@ -163,10 +127,7 @@ const handleChange = (value: boolean) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Switch</h2>
         <div>
-          <UiSwitch
-            v-model="disabledValue"
-            disabled
-          />
+          <UiSwitch v-model="disabledValue" disabled />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ disabledValue ? 'On' : 'Off' }} (Disabled)
           </div>

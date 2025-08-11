@@ -15,9 +15,12 @@ const emit = defineEmits<Emits>();
 
 const localValue = ref(props.modelValue);
 
-watch(() => props.modelValue, (newValue) => {
-  localValue.value = newValue;
-});
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    localValue.value = newValue;
+  },
+);
 
 const increment = () => {
   if (props.disabled) return;
@@ -81,11 +84,7 @@ const buttonClasses = computed(() => {
 });
 
 const valueClasses = computed(() => {
-  const classes = [
-    'flex items-center justify-center',
-    'px-3 text-center',
-    'border-x',
-  ];
+  const classes = ['flex items-center justify-center', 'px-3 text-center', 'border-x'];
 
   switch (props.size) {
     case 'sm':

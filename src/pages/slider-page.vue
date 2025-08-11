@@ -30,9 +30,7 @@ const handleChange = (value: number) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Slider</h2>
         <div class="max-w-md">
           <UiSlider v-model="basicValue" @change="handleChange" />
-          <div class="mt-4 text-sm text-gray-500">
-            Current value: {{ basicValue }}
-          </div>
+          <div class="mt-4 text-sm text-gray-500">Current value: {{ basicValue }}</div>
         </div>
       </section>
 
@@ -52,9 +50,7 @@ const handleChange = (value: number) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Step Size</h2>
         <div class="max-w-md">
           <UiSlider v-model="stepValue" :step="5" @change="handleChange" />
-          <div class="mt-4 text-sm text-gray-500">
-            Current value: {{ stepValue }} (Step: 5)
-          </div>
+          <div class="mt-4 text-sm text-gray-500">Current value: {{ stepValue }} (Step: 5)</div>
         </div>
       </section>
 
@@ -74,9 +70,7 @@ const handleChange = (value: number) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Slider with Label</h2>
         <div class="max-w-md">
           <UiSlider v-model="labeledValue" label="Volume" @change="handleChange" />
-          <div class="mt-4 text-sm text-gray-500">
-            Current value: {{ labeledValue }}
-          </div>
+          <div class="mt-4 text-sm text-gray-500">Current value: {{ labeledValue }}</div>
         </div>
       </section>
 
@@ -96,9 +90,7 @@ const handleChange = (value: number) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Slider with Value Display</h2>
         <div class="max-w-md">
           <UiSlider v-model="showValueValue" :show-value="true" @change="handleChange" />
-          <div class="mt-4 text-sm text-gray-500">
-            Current value: {{ showValueValue }}
-          </div>
+          <div class="mt-4 text-sm text-gray-500">Current value: {{ showValueValue }}</div>
         </div>
       </section>
     </div>
