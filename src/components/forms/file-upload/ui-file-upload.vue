@@ -6,7 +6,7 @@ import { Upload, X, File as FileIcon, Image as ImageIcon } from 'lucide-vue-next
 const props = withDefaults(defineProps<Props>(), {
   multiple: false,
   accept: '',
-  maxSize: 5 * 1024 * 1024, // 5MB default
+  maxSize: 5 * 1024 * 1024,
   maxFiles: 10,
   disabled: false,
   placeholder: 'Select file(s) or drag and drop here',

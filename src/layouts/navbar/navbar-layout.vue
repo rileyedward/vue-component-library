@@ -12,8 +12,6 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const toggleSidebar = () => {
-  // This is a placeholder function for the navbar's toggle-sidebar event
-  // In a real implementation, this would toggle a sidebar if one existed
   console.log('Toggle sidebar event received');
 };
 </script>

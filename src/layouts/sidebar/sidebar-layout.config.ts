@@ -48,9 +48,9 @@ const config: SidebarLayoutConfig = {
       children: [
         { label: 'Breadcrumb', route: '/breadcrumb', icon: Layout },
         { label: 'Dropdown', route: '/dropdown', icon: Layout },
+        { label: 'Dropdown Menu', route: '/dropdown-menu', icon: ChevronDown },
         { label: 'Menu', route: '/menu', icon: Layout },
         { label: 'Tab', route: '/tab', icon: Layout },
-        { label: 'Dropdown Menu', route: '/dropdown-menu', icon: ChevronDown },
       ],
     },
     {
@@ -75,9 +75,9 @@ const config: SidebarLayoutConfig = {
       label: 'Data',
       icon: BarChart3,
       children: [
+        { label: 'Accordion', route: '/accordion', icon: BarChart3 },
         { label: 'Chart', route: '/chart', icon: BarChart3 },
         { label: 'Tooltip', route: '/tooltip', icon: MessageSquare },
-        { label: 'Accordion', route: '/accordion', icon: BarChart3 },
       ],
     },
   ],

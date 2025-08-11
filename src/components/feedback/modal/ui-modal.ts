@@ -12,7 +12,7 @@ export interface UiModalProps {
 }
 
 export interface UiModalEmits {
-  close: [];
-  open: [];
-  'update:show': [show: boolean];
+  (event: 'close'): void;
+  (event: 'open'): void;
+  (event: 'update:show', show: boolean): void;
 }

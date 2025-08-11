@@ -15,8 +15,6 @@ const props = withDefaults(defineProps<Props>(), {
 const activeRoute = ref('');
 const isSidebarOpen = ref(true);
 
-// This function is kept for future use when we need to toggle the sidebar
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value;
 };

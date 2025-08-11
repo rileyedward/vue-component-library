@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<Props>(), {
   readonly: false,
   format: 'MM/dd/yyyy',
   showWeekNumbers: false,
-  firstDayOfWeek: 0, // Sunday
+  firstDayOfWeek: 0,
 });
 
 const emit = defineEmits<Emits>();

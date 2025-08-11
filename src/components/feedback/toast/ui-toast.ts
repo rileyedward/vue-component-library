@@ -19,6 +19,6 @@ export interface UiToastProps {
 }
 
 export interface UiToastEmits {
-  close: [];
-  dismiss: [];
+  (event: 'close'): void;
+  (event: 'dismiss'): void;
 }

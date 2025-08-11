@@ -11,6 +11,6 @@ export interface UiAlertProps {
 }
 
 export interface UiAlertEmits {
-  close: [];
-  dismiss: [];
+  (event: 'close'): void;
+  (event: 'dismiss'): void;
 }

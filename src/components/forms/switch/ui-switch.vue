@@ -32,16 +32,14 @@ const switchClasses = computed(() => {
     'focus:outline-none focus:ring-2 focus:ring-offset-2',
   ];
 
-  // Size classes
   if (props.size === 'sm') {
     baseClasses.push('h-5 w-9');
   } else if (props.size === 'lg') {
     baseClasses.push('h-7 w-14');
   } else {
-    baseClasses.push('h-6 w-11'); // Default: md
+    baseClasses.push('h-6 w-11');
   }
 
-  // Color classes
   if (props.modelValue) {
     switch (props.color) {
       case 'success':
@@ -57,7 +55,7 @@ const switchClasses = computed(() => {
         baseClasses.push('bg-blue-500 focus:ring-blue-500');
         break;
       default:
-        baseClasses.push('bg-purple-500 focus:ring-purple-500'); // Default: primary
+        baseClasses.push('bg-purple-500 focus:ring-purple-500');
         break;
     }
   } else {
@@ -77,7 +75,6 @@ const thumbClasses = computed(() => {
     'transition ease-in-out duration-200',
   ];
 
-  // Size classes
   if (props.size === 'sm') {
     baseClasses.push('h-4 w-4');
     baseClasses.push(props.modelValue ? 'translate-x-4' : 'translate-x-0');
@@ -85,7 +82,7 @@ const thumbClasses = computed(() => {
     baseClasses.push('h-6 w-6');
     baseClasses.push(props.modelValue ? 'translate-x-7' : 'translate-x-0');
   } else {
-    baseClasses.push('h-5 w-5'); // Default: md
+    baseClasses.push('h-5 w-5');
     baseClasses.push(props.modelValue ? 'translate-x-5' : 'translate-x-0');
   }
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import UiDropdownMenu from '@/components/navigation/dropdown-menu/ui-dropdown-menu.vue';
+import UiDropdownMenu from '@/components/data/dropdown-menu/ui-dropdown-menu.vue';
 import UiButton from '@/components/forms/button/ui-button.vue';
-import type { DropdownMenuItem } from '@/components/navigation/dropdown-menu/ui-dropdown-menu';
+import type { DropdownMenuItem } from '@/components/data/dropdown-menu/ui-dropdown-menu';
 import {
   User,
   Settings,

@@ -16,10 +16,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits<Emits>();
 
-// Track which items are open
 const openItems = ref<Record<number, boolean>>({});
 
-// Initialize default open state
 for (let i = 0; i < props.items.length; i++) {
   if (props.items[i].defaultOpen) {
     openItems.value[i] = true;
@@ -34,14 +32,11 @@ const toggleItem = (index: number, item: AccordionItem): void => {
   const isCurrentlyOpen = !!openItems.value[index];
 
   if (!props.multiple) {
-    // Close all other items if not multiple mode
     openItems.value = {};
   }
 
-  // Toggle the current item
   openItems.value[index] = !isCurrentlyOpen;
 
-  // Emit the toggle event
   emit('toggle', item, !isCurrentlyOpen);
 };
 
