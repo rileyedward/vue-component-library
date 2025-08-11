@@ -37,6 +37,7 @@ const config: SidebarLayoutConfig = {
         { label: 'Range', route: '/range', icon: Circle },
         { label: 'Counter', route: '/counter', icon: Circle },
         { label: 'File Upload', route: '/file-upload', icon: Circle },
+        { label: 'Switch', route: '/switch', icon: Circle },
       ],
     },
     {
