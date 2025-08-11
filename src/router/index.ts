@@ -26,6 +26,7 @@ import TabPage from '@/pages/tab-page.vue';
 import ChartPage from '@/pages/chart-page.vue';
 import AccordionPage from '@/pages/accordion-page.vue';
 import TooltipPage from '@/pages/tooltip-page.vue';
+import DropdownMenuPage from '@/pages/dropdown-menu-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -164,6 +165,11 @@ const router = createRouter({
       path: '/tooltip',
       name: 'tooltip',
       component: TooltipPage,
+    },
+    {
+      path: '/dropdown-menu',
+      name: 'dropdown-menu',
+      component: DropdownMenuPage,
     },
   ],
 });

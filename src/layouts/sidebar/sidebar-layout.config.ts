@@ -10,6 +10,7 @@ import {
   MessageSquare,
   CreditCard,
   BarChart3,
+  ChevronDown,
 } from 'lucide-vue-next';
 import type { SidebarItem } from '@/components/navigation/sidebar/ui-sidebar';
 
@@ -76,6 +77,7 @@ const config: SidebarLayoutConfig = {
         { label: 'Chart', route: '/chart', icon: BarChart3 },
         { label: 'Tooltip', route: '/tooltip', icon: MessageSquare },
         { label: 'Accordion', route: '/accordion', icon: BarChart3 },
+        { label: 'Dropdown Menu', route: '/dropdown-menu', icon: ChevronDown },
       ],
     },
   ],
