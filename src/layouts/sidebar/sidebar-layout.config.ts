@@ -35,6 +35,7 @@ const config: SidebarLayoutConfig = {
         { label: 'DatePicker', route: '/datepicker', icon: Calendar },
         { label: 'Slider', route: '/slider', icon: Circle },
         { label: 'Range', route: '/range', icon: Circle },
+        { label: 'Counter', route: '/counter', icon: Circle },
       ],
     },
     {
