@@ -136,7 +136,6 @@ const sidebarClasses = computed(() => {
           <nav class="px-2">
             <div class="space-y-1">
               <div v-for="item in navItems" :key="item.route || item.label">
-                <!-- Parent item -->
                 <div
                   :class="[
                     'group flex items-center justify-between px-2 py-2 text-base font-medium rounded-md',
@@ -166,7 +165,6 @@ const sidebarClasses = computed(() => {
                   />
                 </div>
 
-                <!-- Children items -->
                 <div
                   v-if="item.children && item.children.length > 0"
                   :class="['mt-1 space-y-1 pl-4', expandedItems[item.label] ? 'block' : 'hidden']"
@@ -200,7 +198,7 @@ const sidebarClasses = computed(() => {
     </div>
 
     <div
-      class="hidden md:flex md:flex-col md:fixed md:inset-y-0"
+      class="hidden md:flex md:flex-col md:h-screen"
       :style="{ width: isOpen ? props.width : 'auto' }"
     >
       <div :class="sidebarClasses">
@@ -221,7 +219,6 @@ const sidebarClasses = computed(() => {
           <nav class="flex-1 px-4 py-4">
             <div class="space-y-1">
               <div v-for="item in navItems" :key="item.route || item.label">
-                <!-- Parent item -->
                 <div
                   :class="[
                     'group flex items-center justify-between px-2 py-2 text-sm font-medium rounded-md',
@@ -251,7 +248,6 @@ const sidebarClasses = computed(() => {
                   />
                 </div>
 
-                <!-- Children items -->
                 <div
                   v-if="item.children && item.children.length > 0"
                   :class="['mt-1 space-y-1 pl-4', expandedItems[item.label] ? 'block' : 'hidden']"
