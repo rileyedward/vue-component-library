@@ -20,9 +20,9 @@ const expandedItems = ref<Record<string, boolean>>({});
 
 watch(
   () => props.activeItem,
-  (newValue) => {
+  newValue => {
     activeItemValue.value = newValue;
-  },
+  }
 );
 
 const toggleMenu = (): void => {
@@ -95,18 +95,18 @@ const menuClasses = computed(() => {
                 : !item.disabled && handleSelect(item)
             "
           >
-            <component v-if="item.icon" :is="item.icon" class="w-4 h-4 mr-2" />
+            <component :is="item.icon" v-if="item.icon" class="w-4 h-4 mr-2" />
             <span>{{ item.label }}</span>
 
             <component
-              v-if="item.children && item.children.length > 0 && variant === 'vertical'"
               :is="expandedItems[item.value] ? ChevronUp : ChevronDown"
+              v-if="item.children && item.children.length > 0 && variant === 'vertical'"
               class="w-4 h-4 ml-auto"
             />
 
             <component
-              v-if="item.children && item.children.length > 0 && variant === 'horizontal'"
               :is="ChevronRight"
+              v-if="item.children && item.children.length > 0 && variant === 'horizontal'"
               class="w-4 h-4 ml-2"
             />
           </a>
@@ -140,7 +140,7 @@ const menuClasses = computed(() => {
                   ]"
                   @click.prevent="!child.disabled && handleSelect(child)"
                 >
-                  <component v-if="child.icon" :is="child.icon" class="w-4 h-4 mr-2" />
+                  <component :is="child.icon" v-if="child.icon" class="w-4 h-4 mr-2" />
                   <span>{{ child.label }}</span>
                 </a>
               </li>
@@ -171,7 +171,7 @@ const menuClasses = computed(() => {
                 ]"
                 @click.prevent="!child.disabled && handleSelect(child)"
               >
-                <component v-if="child.icon" :is="child.icon" class="w-4 h-4 mr-2" />
+                <component :is="child.icon" v-if="child.icon" class="w-4 h-4 mr-2" />
                 <span>{{ child.label }}</span>
               </a>
             </li>

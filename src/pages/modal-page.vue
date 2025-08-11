@@ -74,11 +74,11 @@ const handleDelete = () => {
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Modal Sizes</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openModal('small')" size="sm">Small Modal</UiButton>
-          <UiButton @click="openModal('medium')" size="sm">Medium Modal</UiButton>
-          <UiButton @click="openModal('large')" size="sm">Large Modal</UiButton>
-          <UiButton @click="openModal('xlarge')" size="sm">X-Large Modal</UiButton>
-          <UiButton @click="openModal('fullscreen')" size="sm" variant="outline"
+          <UiButton size="sm" @click="openModal('small')">Small Modal</UiButton>
+          <UiButton size="sm" @click="openModal('medium')">Medium Modal</UiButton>
+          <UiButton size="sm" @click="openModal('large')">Large Modal</UiButton>
+          <UiButton size="sm" @click="openModal('xlarge')">X-Large Modal</UiButton>
+          <UiButton size="sm" variant="outline" @click="openModal('fullscreen')"
             >Fullscreen Modal</UiButton
           >
         </div>
@@ -87,21 +87,21 @@ const handleDelete = () => {
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Modal Features</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openModal('centered')" variant="outline">Centered Modal</UiButton>
-          <UiButton @click="openModal('scrollable')" variant="outline">Scrollable Modal</UiButton>
-          <UiButton @click="openModal('persistent')" variant="outline">Persistent Modal</UiButton>
-          <UiButton @click="openModal('noClose')" variant="outline">Non-closeable Modal</UiButton>
+          <UiButton variant="outline" @click="openModal('centered')">Centered Modal</UiButton>
+          <UiButton variant="outline" @click="openModal('scrollable')">Scrollable Modal</UiButton>
+          <UiButton variant="outline" @click="openModal('persistent')">Persistent Modal</UiButton>
+          <UiButton variant="outline" @click="openModal('noClose')">Non-closeable Modal</UiButton>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openModal('form')" variant="success">Form Modal</UiButton>
-          <UiButton @click="openModal('confirmation')" variant="danger"
+          <UiButton variant="success" @click="openModal('form')">Form Modal</UiButton>
+          <UiButton variant="danger" @click="openModal('confirmation')"
             >Confirmation Modal</UiButton
           >
-          <UiButton @click="openModal('richContent')" variant="secondary"
+          <UiButton variant="secondary" @click="openModal('richContent')"
             >Rich Content Modal</UiButton
           >
         </div>
@@ -264,7 +264,7 @@ const handleDelete = () => {
       title="User Registration"
       description="Fill out the form below to create a new account."
     >
-      <form @submit.prevent="handleFormSubmit" class="space-y-4">
+      <form class="space-y-4" @submit.prevent="handleFormSubmit">
         <UiInput
           v-model="formData.name"
           label="Full Name"

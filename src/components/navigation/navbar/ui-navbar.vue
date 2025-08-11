@@ -23,16 +23,16 @@ const route = useRoute();
 
 watch(
   () => props.activeRoute,
-  (newValue) => {
+  newValue => {
     activeRouteValue.value = newValue;
-  },
+  }
 );
 
 watch(
   () => route.path,
-  (newPath) => {
+  newPath => {
     activeRouteValue.value = newPath;
-  },
+  }
 );
 
 const toggleSidebar = (): void => {
@@ -56,8 +56,8 @@ const navbarClasses = computed(() => {
           <div class="flex items-center md:hidden">
             <button
               v-if="showMobileMenuButton"
-              @click="toggleSidebar"
               class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
+              @click="toggleSidebar"
             >
               <span class="sr-only">Toggle sidebar</span>
               <MenuIcon class="h-6 w-6" />

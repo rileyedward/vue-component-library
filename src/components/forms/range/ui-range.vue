@@ -24,9 +24,9 @@ const endTooltipRef = ref<HTMLDivElement | null>(null);
 
 watch(
   () => props.modelValue,
-  (newValue) => {
+  newValue => {
     localValue.value = [...newValue];
-  },
+  }
 );
 
 const startPercentage = computed(() => {
@@ -53,7 +53,7 @@ const trackClasses = computed(() => {
 
 const filledTrackClasses = computed(() => {
   return ['absolute h-full rounded-full', props.disabled ? 'bg-gray-400' : 'bg-purple-500'].join(
-    ' ',
+    ' '
   );
 });
 

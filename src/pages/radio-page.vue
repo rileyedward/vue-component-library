@@ -259,7 +259,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
       <!-- Form Example -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
-        <form @submit.prevent="console.log('Form submitted!', formData)" class="space-y-8">
+        <form class="space-y-8" @submit.prevent="console.log('Form submitted!', formData)">
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Gender</h3>
             <div class="flex flex-wrap gap-6">

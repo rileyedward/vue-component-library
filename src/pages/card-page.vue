@@ -309,6 +309,6 @@ import UiCard from '../components/layout/card/ui-card.vue';
 import UiButton from '../components/forms/button/ui-button.vue';
 
 const showClickAlert = () => {
-  alert('Card clicked!');
+  console.log('Card clicked!');
 };
 </script>

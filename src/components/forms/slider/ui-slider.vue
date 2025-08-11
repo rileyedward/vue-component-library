@@ -21,9 +21,9 @@ const tooltipRef = ref<HTMLDivElement | null>(null);
 
 watch(
   () => props.modelValue,
-  (newValue) => {
+  newValue => {
     localValue.value = newValue;
-  },
+  }
 );
 
 const percentage = computed(() => {

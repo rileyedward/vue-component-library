@@ -52,7 +52,7 @@ const generateEnabledDates = (): Date[] => {
   const today = new Date();
 
   // Enable specific dates: today, +3 days, +7 days, +14 days
-  [0, 3, 7, 14, 21].forEach((dayOffset) => {
+  [0, 3, 7, 14, 21].forEach(dayOffset => {
     const date = new Date(today);
     date.setDate(today.getDate() + dayOffset);
     dates.push(new Date(date));
@@ -341,7 +341,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <!-- Form Example -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
-        <form @submit.prevent="console.log('Form submitted!', formDate)" class="space-y-6">
+        <form class="space-y-6" @submit.prevent="console.log('Form submitted!', formDate)">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <UiDatePicker
               v-model="formDate"

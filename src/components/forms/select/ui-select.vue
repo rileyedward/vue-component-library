@@ -30,21 +30,21 @@ const selectClasses = computed<string>(() => {
       classes.push(
         'border-gray-300 bg-white',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'outlined':
       classes.push(
         'border-gray-300 bg-transparent',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'filled':
       classes.push(
         'border-gray-200 bg-gray-50',
         'hover:bg-gray-100 hover:border-gray-300',
-        'focus:bg-white focus:border-purple-500 focus:ring-purple-500',
+        'focus:bg-white focus:border-purple-500 focus:ring-purple-500'
       );
       break;
   }
@@ -96,7 +96,7 @@ const dropdownClasses = computed<string>(() => {
 });
 
 const selectedOption = computed(() => {
-  return props.options.find((option) => option.value === props.modelValue);
+  return props.options.find(option => option.value === props.modelValue);
 });
 
 const displayValue = computed(() => {
@@ -156,8 +156,8 @@ const handleBlur = (event: FocusEvent): void => {
         @blur="handleBlur"
       >
         <component
-          v-if="prefixIcon"
           :is="prefixIcon"
+          v-if="prefixIcon"
           :class="[iconClasses, 'text-gray-400 mr-2']"
         />
 
@@ -166,8 +166,8 @@ const handleBlur = (event: FocusEvent): void => {
         </span>
 
         <component
-          v-if="suffixIcon"
           :is="suffixIcon"
+          v-if="suffixIcon"
           :class="[iconClasses, 'text-gray-400 ml-2']"
         />
         <ChevronDown

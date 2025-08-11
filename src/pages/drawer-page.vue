@@ -18,10 +18,10 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Drawer Widths</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openDrawer('small')" size="sm">Small Drawer</UiButton>
-          <UiButton @click="openDrawer('medium')" size="sm">Medium Drawer</UiButton>
-          <UiButton @click="openDrawer('large')" size="sm">Large Drawer</UiButton>
-          <UiButton @click="openDrawer('fullWidth')" size="sm" variant="outline"
+          <UiButton size="sm" @click="openDrawer('small')">Small Drawer</UiButton>
+          <UiButton size="sm" @click="openDrawer('medium')">Medium Drawer</UiButton>
+          <UiButton size="sm" @click="openDrawer('large')">Large Drawer</UiButton>
+          <UiButton size="sm" variant="outline" @click="openDrawer('fullWidth')"
             >Full Width Drawer</UiButton
           >
         </div>
@@ -30,16 +30,16 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Drawer Features</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openDrawer('persistent')" variant="outline">Persistent Drawer</UiButton>
-          <UiButton @click="openDrawer('noClose')" variant="outline">Non-closeable Drawer</UiButton>
+          <UiButton variant="outline" @click="openDrawer('persistent')">Persistent Drawer</UiButton>
+          <UiButton variant="outline" @click="openDrawer('noClose')">Non-closeable Drawer</UiButton>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openDrawer('form')" variant="success">Form Drawer</UiButton>
-          <UiButton @click="openDrawer('richContent')" variant="secondary"
+          <UiButton variant="success" @click="openDrawer('form')">Form Drawer</UiButton>
+          <UiButton variant="secondary" @click="openDrawer('richContent')"
             >Rich Content Drawer</UiButton
           >
         </div>
@@ -160,7 +160,7 @@
       title="User Profile"
       description="Update your profile information."
     >
-      <form @submit.prevent="handleFormSubmit" class="space-y-4">
+      <form class="space-y-4" @submit.prevent="handleFormSubmit">
         <UiInput
           v-model="formData.name"
           label="Full Name"

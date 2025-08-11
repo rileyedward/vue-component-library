@@ -23,7 +23,7 @@ const files = ref<File[]>([]);
 
 watch(
   () => props.modelValue,
-  (newValue) => {
+  newValue => {
     if (newValue) {
       if (Array.isArray(newValue)) {
         files.value = [...newValue];
@@ -34,19 +34,19 @@ watch(
       files.value = [];
     }
   },
-  { immediate: true },
+  { immediate: true }
 );
 
 watch(
   files,
-  (newFiles) => {
+  newFiles => {
     if (props.multiple) {
       emit('update:modelValue', [...newFiles]);
     } else {
       emit('update:modelValue', newFiles.length > 0 ? newFiles[0] : undefined);
     }
   },
-  { deep: true },
+  { deep: true }
 );
 
 const containerClasses = computed(() => {
@@ -109,14 +109,14 @@ const handleFileInput = (event: Event) => {
 const handleFiles = (newFiles: File[]) => {
   if (props.disabled) return;
 
-  let validFiles = props.accept ? newFiles.filter((file) => isFileTypeAccepted(file)) : newFiles;
+  let validFiles = props.accept ? newFiles.filter(file => isFileTypeAccepted(file)) : newFiles;
 
-  validFiles = validFiles.filter((file) => {
+  validFiles = validFiles.filter(file => {
     const isValid = file.size <= props.maxSize;
     if (!isValid) {
       emit(
         'error',
-        `File "${file.name}" exceeds the maximum size of ${formatFileSize(props.maxSize)}`,
+        `File "${file.name}" exceeds the maximum size of ${formatFileSize(props.maxSize)}`
       );
     }
     return isValid;
@@ -128,7 +128,7 @@ const handleFiles = (newFiles: File[]) => {
       validFiles = validFiles.slice(0, props.maxFiles - files.value.length);
     }
 
-    validFiles.forEach((file) => {
+    validFiles.forEach(file => {
       files.value.push(file);
       emit('file-added', file);
     });
@@ -155,11 +155,11 @@ const removeFile = (index: number) => {
 const isFileTypeAccepted = (file: File): boolean => {
   if (!props.accept) return true;
 
-  const acceptedTypes = props.accept.split(',').map((type) => type.trim().toLowerCase());
+  const acceptedTypes = props.accept.split(',').map(type => type.trim().toLowerCase());
   const fileType = file.type.toLowerCase();
   const fileExtension = `.${file.name.split('.').pop()?.toLowerCase()}`;
 
-  return acceptedTypes.some((type) => {
+  return acceptedTypes.some(type => {
     if (fileType === type) return true;
 
     if (type.endsWith('/*') && fileType.startsWith(type.replace('*', ''))) return true;
@@ -254,7 +254,7 @@ const getFilePreview = (file: File) => {
             class="w-10 h-10 object-cover rounded"
             alt="File preview"
           />
-          <component v-else :is="getFileIcon(file)" class="w-10 h-10 text-gray-400" />
+          <component :is="getFileIcon(file)" v-else class="w-10 h-10 text-gray-400" />
         </div>
 
         <div class="flex-1 min-w-0">

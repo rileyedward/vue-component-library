@@ -54,7 +54,12 @@ const handleChange = (value: boolean) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Switch with Text</h2>
         <div>
-          <UiSwitch v-model="withTextValue" leftText="Off" rightText="On" @change="handleChange" />
+          <UiSwitch
+            v-model="withTextValue"
+            left-text="Off"
+            right-text="On"
+            @change="handleChange"
+          />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ withTextValue ? 'On' : 'Off' }}
           </div>
@@ -67,8 +72,8 @@ const handleChange = (value: boolean) => {
         <div>
           <UiSwitch
             v-model="withIconsValue"
-            :leftIcon="Moon"
-            :rightIcon="Sun"
+            :left-icon="Moon"
+            :right-icon="Sun"
             @change="handleChange"
           />
           <div class="mt-4 text-sm text-gray-500">
@@ -141,8 +146,8 @@ const handleChange = (value: boolean) => {
           <UiSwitch
             v-model="withLabelValue"
             label="Enable notifications"
-            :leftIcon="BellOff"
-            :rightIcon="Bell"
+            :left-icon="BellOff"
+            :right-icon="Bell"
             @change="handleChange"
           />
           <div class="mt-4 text-sm text-gray-500">
@@ -158,9 +163,9 @@ const handleChange = (value: boolean) => {
           <UiSwitch
             v-model="withHelperTextValue"
             label="Enable Wi-Fi"
-            :leftIcon="WifiOff"
-            :rightIcon="Wifi"
-            helperText="Toggle to enable or disable Wi-Fi connection"
+            :left-icon="WifiOff"
+            :right-icon="Wifi"
+            helper-text="Toggle to enable or disable Wi-Fi connection"
             @change="handleChange"
           />
           <div class="mt-4 text-sm text-gray-500">
@@ -176,8 +181,8 @@ const handleChange = (value: boolean) => {
           <UiSwitch
             v-model="withErrorValue"
             label="Accept terms and conditions"
-            :leftIcon="X"
-            :rightIcon="Check"
+            :left-icon="X"
+            :right-icon="Check"
             error="You must accept the terms and conditions to continue"
             @change="handleChange"
           />

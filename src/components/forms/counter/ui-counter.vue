@@ -17,9 +17,9 @@ const localValue = ref(props.modelValue);
 
 watch(
   () => props.modelValue,
-  (newValue) => {
+  newValue => {
     localValue.value = newValue;
-  },
+  }
 );
 
 const increment = () => {

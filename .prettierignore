@@ -1,0 +1,15 @@
+dist/
+dist-ssr/
+coverage/
+node_modules/
+.git/
+build/
+.vite/
+.nuxt/
+*.min.js
+*.d.ts
+public/
+.DS_Store
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

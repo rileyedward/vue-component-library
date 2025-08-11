@@ -38,7 +38,7 @@ const handleNavigate = (item: BreadcrumbItem): void => {
           class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-purple-600"
           @click.prevent="handleNavigate(item)"
         >
-          <component v-if="item.icon" :is="item.icon" class="w-4 h-4 mr-1" />
+          <component :is="item.icon" v-if="item.icon" class="w-4 h-4 mr-1" />
           {{ item.label }}
         </a>
       </li>

@@ -4,7 +4,7 @@ import UiTextarea from '@/components/forms/textarea/ui-textarea.vue';
 
 const basicTextarea = ref('');
 const longTextarea = ref(
-  'This is a longer textarea with some initial content. You can edit this text and see how the component behaves with different amounts of content.',
+  'This is a longer textarea with some initial content. You can edit this text and see how the component behaves with different amounts of content.'
 );
 const disabledTextarea = ref('This textarea is disabled and cannot be edited.');
 const readonlyTextarea = ref('This textarea is readonly and cannot be modified.');
@@ -219,7 +219,7 @@ const handleInput = (value: string) => {
       <!-- Form Example -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
-        <form @submit.prevent="console.log('Form submitted!')" class="space-y-6">
+        <form class="space-y-6" @submit.prevent="console.log('Form submitted!')">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <UiTextarea
               v-model="basicTextarea"

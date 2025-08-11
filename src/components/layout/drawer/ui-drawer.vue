@@ -56,14 +56,14 @@ const handleEscapeKey = (event: KeyboardEvent): void => {
 
 watch(
   () => props.show,
-  (newShow) => {
+  newShow => {
     if (newShow) {
       emit('open');
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
-  },
+  }
 );
 
 onMounted(() => {

@@ -54,7 +54,7 @@ const itemsWithDisabled = [
             placeholder="Select an option"
             @select="handleSelect"
           />
-          <p class="mt-4 text-sm text-gray-600" v-if="selectedValue">
+          <p v-if="selectedValue" class="mt-4 text-sm text-gray-600">
             Selected value: {{ selectedValue }}
           </p>
         </div>
@@ -71,7 +71,7 @@ const itemsWithDisabled = [
             placeholder="Select with icon"
             @select="handleSelect"
           />
-          <p class="mt-4 text-sm text-gray-600" v-if="selectedIconValue">
+          <p v-if="selectedIconValue" class="mt-4 text-sm text-gray-600">
             Selected value: {{ selectedIconValue }}
           </p>
         </div>
@@ -87,7 +87,7 @@ const itemsWithDisabled = [
             placeholder="Some options disabled"
             @select="handleSelect"
           />
-          <p class="mt-4 text-sm text-gray-600" v-if="selectedDisabledValue">
+          <p v-if="selectedDisabledValue" class="mt-4 text-sm text-gray-600">
             Selected value: {{ selectedDisabledValue }}
           </p>
         </div>

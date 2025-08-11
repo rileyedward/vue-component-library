@@ -27,21 +27,21 @@ const inputClasses = computed<string>(() => {
       classes.push(
         'border-gray-300 bg-white',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'outlined':
       classes.push(
         'border-gray-300 bg-transparent',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'filled':
       classes.push(
         'border-gray-200 bg-gray-50',
         'hover:bg-gray-100 hover:border-gray-300',
-        'focus:bg-white focus:border-purple-500 focus:ring-purple-500',
+        'focus:bg-white focus:border-purple-500 focus:ring-purple-500'
       );
       break;
   }
@@ -131,8 +131,8 @@ const handleKeydown = (event: KeyboardEvent): void => {
 
     <div class="relative">
       <component
-        v-if="prefixIcon"
         :is="prefixIcon"
+        v-if="prefixIcon"
         :class="[
           iconClasses,
           'absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none',
@@ -166,8 +166,8 @@ const handleKeydown = (event: KeyboardEvent): void => {
       />
 
       <component
-        v-if="suffixIcon"
         :is="suffixIcon"
+        v-if="suffixIcon"
         :class="[
           iconClasses,
           'absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none',

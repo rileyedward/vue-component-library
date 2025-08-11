@@ -29,13 +29,13 @@ const handleChange = (value: boolean, event: Event) => {
 };
 
 const selectAll = () => {
-  Object.keys(multipleCheckboxes.value).forEach((key) => {
+  Object.keys(multipleCheckboxes.value).forEach(key => {
     multipleCheckboxes.value[key as keyof typeof multipleCheckboxes.value] = true;
   });
 };
 
 const selectNone = () => {
-  Object.keys(multipleCheckboxes.value).forEach((key) => {
+  Object.keys(multipleCheckboxes.value).forEach(key => {
     multipleCheckboxes.value[key as keyof typeof multipleCheckboxes.value] = false;
   });
 };
@@ -220,7 +220,7 @@ const selectNone = () => {
       <!-- Form Example -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
-        <form @submit.prevent="console.log('Form submitted!', formCheckboxes)" class="space-y-6">
+        <form class="space-y-6" @submit.prevent="console.log('Form submitted!', formCheckboxes)">
           <div class="space-y-4">
             <UiCheckbox
               v-model="formCheckboxes.newsletter"

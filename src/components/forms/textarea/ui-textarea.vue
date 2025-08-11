@@ -28,21 +28,21 @@ const textareaClasses = computed<string>(() => {
       classes.push(
         'border-gray-300 bg-white',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'outlined':
       classes.push(
         'border-gray-300 bg-transparent',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'filled':
       classes.push(
         'border-gray-200 bg-gray-50',
         'hover:bg-gray-100 hover:border-gray-300',
-        'focus:bg-white focus:border-purple-500 focus:ring-purple-500',
+        'focus:bg-white focus:border-purple-500 focus:ring-purple-500'
       );
       break;
   }

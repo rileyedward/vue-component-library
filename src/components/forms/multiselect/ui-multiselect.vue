@@ -32,21 +32,21 @@ const selectClasses = computed<string>(() => {
       classes.push(
         'border-gray-300 bg-white',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'outlined':
       classes.push(
         'border-gray-300 bg-transparent',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'filled':
       classes.push(
         'border-gray-200 bg-gray-50',
         'hover:bg-gray-100 hover:border-gray-300',
-        'focus:bg-white focus:border-purple-500 focus:ring-purple-500',
+        'focus:bg-white focus:border-purple-500 focus:ring-purple-500'
       );
       break;
   }
@@ -110,13 +110,13 @@ const filteredOptions = computed(() => {
   if (!props.searchable || !searchQuery.value) {
     return props.options;
   }
-  return props.options.filter((option) =>
-    option.label.toLowerCase().includes(searchQuery.value.toLowerCase()),
+  return props.options.filter(option =>
+    option.label.toLowerCase().includes(searchQuery.value.toLowerCase())
   );
 });
 
 const selectedOptions = computed(() => {
-  return props.options.filter((option) => props.modelValue?.includes(option.value));
+  return props.options.filter(option => props.modelValue?.includes(option.value));
 });
 
 const displayText = computed(() => {
@@ -139,7 +139,7 @@ const canSelectMore = computed(() => {
 const allFilteredSelected = computed(() => {
   return (
     filteredOptions.value.length > 0 &&
-    filteredOptions.value.every((option) => isSelected(option.value))
+    filteredOptions.value.every(option => isSelected(option.value))
   );
 });
 
@@ -150,7 +150,7 @@ const handleSelect = (value: string | number): void => {
   let newValues: (string | number)[];
 
   if (currentValues.includes(value)) {
-    newValues = currentValues.filter((v) => v !== value);
+    newValues = currentValues.filter(v => v !== value);
     emit('deselect', value);
   } else {
     if (!canSelectMore.value) return;
@@ -165,7 +165,7 @@ const handleSelect = (value: string | number): void => {
 const handleRemove = (value: string | number): void => {
   if (props.disabled) return;
 
-  const newValues = (props.modelValue || []).filter((v) => v !== value);
+  const newValues = (props.modelValue || []).filter(v => v !== value);
   emit('update:modelValue', newValues);
   emit('change', newValues);
   emit('deselect', value);
@@ -174,18 +174,18 @@ const handleRemove = (value: string | number): void => {
 const handleSelectAll = (): void => {
   if (props.disabled) return;
 
-  const availableOptions = filteredOptions.value.filter((option) => !option.disabled);
+  const availableOptions = filteredOptions.value.filter(option => !option.disabled);
 
   if (allFilteredSelected.value) {
-    const valuesToRemove = availableOptions.map((option) => option.value);
-    const newValues = (props.modelValue || []).filter((v) => !valuesToRemove.includes(v));
+    const valuesToRemove = availableOptions.map(option => option.value);
+    const newValues = (props.modelValue || []).filter(v => !valuesToRemove.includes(v));
     emit('update:modelValue', newValues);
     emit('change', newValues);
   } else {
     const currentValues = props.modelValue || [];
     const valuesToAdd = availableOptions
-      .filter((option) => !currentValues.includes(option.value))
-      .map((option) => option.value);
+      .filter(option => !currentValues.includes(option.value))
+      .map(option => option.value);
 
     let newValues = [...currentValues, ...valuesToAdd];
 
@@ -245,8 +245,8 @@ const handleBlur = (event: FocusEvent): void => {
         @blur="handleBlur"
       >
         <component
-          v-if="prefixIcon"
           :is="prefixIcon"
+          v-if="prefixIcon"
           :class="[iconClasses, 'text-gray-400 flex-shrink-0']"
         />
 
@@ -271,7 +271,7 @@ const handleBlur = (event: FocusEvent): void => {
         </span>
 
         <div class="flex items-center gap-2 flex-shrink-0 ml-2">
-          <component v-if="suffixIcon" :is="suffixIcon" :class="[iconClasses, 'text-gray-400']" />
+          <component :is="suffixIcon" v-if="suffixIcon" :class="[iconClasses, 'text-gray-400']" />
           <ChevronDown
             :class="[
               iconClasses,

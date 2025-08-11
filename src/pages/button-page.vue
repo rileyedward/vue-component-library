@@ -85,7 +85,7 @@ const handleLoadingClick = () => {
       <!-- Button Types -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Button Types</h2>
-        <form @submit.prevent="console.log('Form submitted!')" class="space-y-4">
+        <form class="space-y-4" @submit.prevent="console.log('Form submitted!')">
           <div class="flex gap-4">
             <UiButton type="submit" variant="primary">Submit</UiButton>
             <UiButton type="reset" variant="outline">Reset</UiButton>

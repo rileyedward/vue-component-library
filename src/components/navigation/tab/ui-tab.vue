@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits<Emits>();
 
 const activeTab = computed(() => {
-  return props.items.find((item) => item.value === props.modelValue);
+  return props.items.find(item => item.value === props.modelValue);
 });
 
 const selectTab = (item: TabItem): void => {
@@ -73,10 +73,10 @@ const getTabClasses = (item: TabItem) => {
       :key="index"
       type="button"
       :class="getTabClasses(item)"
-      @click="selectTab(item)"
       :disabled="disabled || item.disabled"
+      @click="selectTab(item)"
     >
-      <component v-if="item.icon" :is="item.icon" class="w-4 h-4 mr-2" />
+      <component :is="item.icon" v-if="item.icon" class="w-4 h-4 mr-2" />
       {{ item.label }}
     </button>
   </div>

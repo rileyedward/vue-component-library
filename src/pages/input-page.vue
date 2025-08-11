@@ -193,7 +193,7 @@ const handleEnter = () => {
       <!-- Form Example -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
-        <form @submit.prevent="console.log('Form submitted!')" class="space-y-6">
+        <form class="space-y-6" @submit.prevent="console.log('Form submitted!')">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <UiInput v-model="basicInput" label="First Name" placeholder="John" required />
             <UiInput v-model="basicInput" label="Last Name" placeholder="Doe" required />

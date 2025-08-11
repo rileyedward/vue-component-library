@@ -19,8 +19,8 @@ const isSidebarOpen = ref(true);
 <template>
   <div class="min-h-screen bg-gray-50 flex">
     <UiSidebar
+      v-model:active-route="activeRoute"
       :items="props.config.sidebarItems"
-      v-model:activeRoute="activeRoute"
       :title="props.config.title"
       :default-open="isSidebarOpen"
     />

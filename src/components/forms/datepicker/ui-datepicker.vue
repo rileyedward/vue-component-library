@@ -35,21 +35,21 @@ const inputClasses = computed<string>(() => {
       classes.push(
         'border-gray-300 bg-white',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'outlined':
       classes.push(
         'border-gray-300 bg-transparent',
         'hover:border-gray-400',
-        'focus:border-purple-500 focus:ring-purple-500',
+        'focus:border-purple-500 focus:ring-purple-500'
       );
       break;
     case 'filled':
       classes.push(
         'border-gray-200 bg-gray-50',
         'hover:bg-gray-100 hover:border-gray-300',
-        'focus:bg-white focus:border-purple-500 focus:ring-purple-500',
+        'focus:bg-white focus:border-purple-500 focus:ring-purple-500'
       );
       break;
   }
@@ -220,14 +220,14 @@ const isDateDisabled = (date: Date): boolean => {
   if (maxDate && date > maxDate) return true;
 
   if (props.disabledDates) {
-    return props.disabledDates.some((disabledDate) => {
+    return props.disabledDates.some(disabledDate => {
       const normalized = normalizeDate(disabledDate);
       return normalized ? isSameDay(date, normalized) : false;
     });
   }
 
   if (props.enabledDates) {
-    return !props.enabledDates.some((enabledDate) => {
+    return !props.enabledDates.some(enabledDate => {
       const normalized = normalizeDate(enabledDate);
       return normalized ? isSameDay(date, normalized) : false;
     });
@@ -248,14 +248,14 @@ const handleDateSelect = (date: Date): void => {
 const handlePreviousMonth = (): void => {
   currentMonth.value = new Date(
     currentMonth.value.getFullYear(),
-    currentMonth.value.getMonth() - 1,
+    currentMonth.value.getMonth() - 1
   );
 };
 
 const handleNextMonth = (): void => {
   currentMonth.value = new Date(
     currentMonth.value.getFullYear(),
-    currentMonth.value.getMonth() + 1,
+    currentMonth.value.getMonth() + 1
   );
 };
 
@@ -268,7 +268,7 @@ const toggleCalendar = (): void => {
     if (selectedDate.value) {
       currentMonth.value = new Date(
         selectedDate.value.getFullYear(),
-        selectedDate.value.getMonth(),
+        selectedDate.value.getMonth()
       );
     }
     emit('open');
@@ -329,8 +329,8 @@ onUnmounted(() => {
         @blur="handleBlur"
       >
         <component
-          v-if="prefixIcon"
           :is="prefixIcon"
+          v-if="prefixIcon"
           :class="[iconClasses, 'text-gray-400 mr-2']"
         />
 
@@ -339,8 +339,8 @@ onUnmounted(() => {
         </span>
 
         <component
-          v-if="suffixIcon"
           :is="suffixIcon"
+          v-if="suffixIcon"
           :class="[iconClasses, 'text-gray-400 ml-2']"
         />
         <Calendar v-else :class="[iconClasses, 'text-gray-400 ml-2']" />

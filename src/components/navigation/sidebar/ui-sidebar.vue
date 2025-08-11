@@ -25,8 +25,8 @@ const route = useRoute();
 const routes = computed(() => {
   return router
     .getRoutes()
-    .filter((route) => route.name && route.path !== '/' && !route.path.includes(':'))
-    .map((route) => ({
+    .filter(route => route.name && route.path !== '/' && !route.path.includes(':'))
+    .map(route => ({
       label: route.name.toString().charAt(0).toUpperCase() + route.name.toString().slice(1),
       route: route.path,
     }));
@@ -38,16 +38,16 @@ const navItems = computed(() => {
 
 watch(
   () => props.activeRoute,
-  (newValue) => {
+  newValue => {
     activeRouteValue.value = newValue;
-  },
+  }
 );
 
 watch(
   () => route.path,
-  (newPath) => {
+  newPath => {
     activeRouteValue.value = newPath;
-  },
+  }
 );
 
 onMounted(() => {
@@ -97,8 +97,8 @@ const sidebarClasses = computed(() => {
     <div class="md:hidden p-4 flex items-center justify-between bg-white border-b border-gray-200">
       <h1 class="text-xl font-bold text-gray-900">{{ title }}</h1>
       <button
-        @click="toggleMobileMenu"
         class="p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100"
+        @click="toggleMobileMenu"
       >
         <MenuIcon class="w-6 h-6" />
       </button>
@@ -111,8 +111,8 @@ const sidebarClasses = computed(() => {
         <div class="px-4 pt-5 pb-4 flex items-center justify-between">
           <h2 class="text-lg font-medium text-gray-900">{{ title }}</h2>
           <button
-            @click="isMobileMenuOpen = false"
             class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
+            @click="isMobileMenuOpen = false"
           >
             <span class="sr-only">Close sidebar</span>
             <svg
@@ -153,15 +153,15 @@ const sidebarClasses = computed(() => {
                 >
                   <div class="flex items-center">
                     <component
-                      v-if="item.icon"
                       :is="item.icon"
+                      v-if="item.icon"
                       class="mr-3 flex-shrink-0 h-6 w-6"
                     />
                     {{ item.label }}
                   </div>
                   <component
-                    v-if="item.children && item.children.length > 0"
                     :is="expandedItems[item.label] ? ChevronUp : ChevronDown"
+                    v-if="item.children && item.children.length > 0"
                     class="flex-shrink-0 h-5 w-5"
                   />
                 </div>
@@ -184,8 +184,8 @@ const sidebarClasses = computed(() => {
                     @click.prevent="!child.disabled && handleNavigate(child)"
                   >
                     <component
-                      v-if="child.icon"
                       :is="child.icon"
+                      v-if="child.icon"
                       class="mr-3 flex-shrink-0 h-5 w-5"
                     />
                     {{ child.label }}
@@ -209,8 +209,8 @@ const sidebarClasses = computed(() => {
         >
           <h2 v-if="isOpen" class="text-lg font-medium text-gray-900">{{ title }}</h2>
           <button
-            @click="toggleSidebar"
             class="p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100"
+            @click="toggleSidebar"
           >
             <component :is="isOpen ? ChevronUp : ChevronDown" class="w-5 h-5" />
           </button>
@@ -236,15 +236,15 @@ const sidebarClasses = computed(() => {
                 >
                   <div class="flex items-center">
                     <component
-                      v-if="item.icon"
                       :is="item.icon"
+                      v-if="item.icon"
                       class="mr-3 flex-shrink-0 h-5 w-5"
                     />
                     {{ item.label }}
                   </div>
                   <component
-                    v-if="item.children && item.children.length > 0"
                     :is="expandedItems[item.label] ? ChevronUp : ChevronDown"
+                    v-if="item.children && item.children.length > 0"
                     class="flex-shrink-0 h-4 w-4"
                   />
                 </div>
@@ -267,14 +267,14 @@ const sidebarClasses = computed(() => {
                     @click.prevent="!child.disabled && handleNavigate(child)"
                   >
                     <component
-                      v-if="child.icon"
                       :is="child.icon"
+                      v-if="child.icon"
                       class="mr-3 flex-shrink-0 h-4 w-4"
                     />
                     <span class="flex items-center">
                       <component
-                        v-if="child.children && child.children.length > 0"
                         :is="ChevronRight"
+                        v-if="child.children && child.children.length > 0"
                         class="mr-1 h-3 w-3"
                       />
                       {{ child.label }}

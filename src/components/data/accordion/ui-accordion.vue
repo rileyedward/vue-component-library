@@ -71,11 +71,11 @@ const getHeaderClasses = (index: number, item: AccordionItem) => {
       <button
         type="button"
         :class="getHeaderClasses(index, item)"
-        @click="toggleItem(index, item)"
         :disabled="disabled || item.disabled"
+        @click="toggleItem(index, item)"
       >
         <div class="flex items-center">
-          <component v-if="item.icon" :is="item.icon" class="w-4 h-4 mr-2" />
+          <component :is="item.icon" v-if="item.icon" class="w-4 h-4 mr-2" />
           <span>{{ item.title }}</span>
         </div>
         <component :is="openItems[index] ? ChevronUp : ChevronDown" class="w-4 h-4 ml-2" />

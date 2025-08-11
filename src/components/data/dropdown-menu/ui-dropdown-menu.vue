@@ -159,7 +159,7 @@ onBeforeUnmount(() => {
           role="menuitem"
           @click="handleItemClick(item)"
         >
-          <component v-if="item.icon" :is="item.icon" class="h-4 w-4 flex-shrink-0" />
+          <component :is="item.icon" v-if="item.icon" class="h-4 w-4 flex-shrink-0" />
           <span class="flex-1">{{ item.label }}</span>
         </button>
       </div>

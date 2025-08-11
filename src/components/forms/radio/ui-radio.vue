@@ -28,7 +28,7 @@ const radioClasses = computed<string>(() => {
         classes.push(
           'bg-purple-500 border-purple-500',
           'hover:bg-purple-600 hover:border-purple-600',
-          'focus:ring-purple-500',
+          'focus:ring-purple-500'
         );
       } else {
         classes.push('bg-white border-gray-300', 'hover:border-gray-400', 'focus:ring-purple-500');
@@ -39,13 +39,13 @@ const radioClasses = computed<string>(() => {
         classes.push(
           'bg-transparent border-purple-500',
           'hover:bg-purple-50',
-          'focus:ring-purple-500',
+          'focus:ring-purple-500'
         );
       } else {
         classes.push(
           'bg-transparent border-gray-300',
           'hover:border-gray-400',
-          'focus:ring-purple-500',
+          'focus:ring-purple-500'
         );
       }
       break;

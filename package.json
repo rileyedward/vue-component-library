@@ -25,7 +25,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write .",
+    "prepare": "npm run lint && npm run format && npm run type-check"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -36,7 +37,10 @@
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
+    "@types/eslint": "^9.6.1",
     "@types/node": "^22.16.5",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",

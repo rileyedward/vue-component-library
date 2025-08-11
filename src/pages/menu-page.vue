@@ -83,12 +83,12 @@ const collapsibleMenuItems = [
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Vertical Menu</h2>
         <div class="max-w-xs">
           <UiMenu
+            v-model:active-item="activeItem"
             :items="verticalMenuItems"
-            v-model:activeItem="activeItem"
             @select="handleSelect"
           />
         </div>
-        <p class="mt-4 text-sm text-gray-600" v-if="activeItem">Active item: {{ activeItem }}</p>
+        <p v-if="activeItem" class="mt-4 text-sm text-gray-600">Active item: {{ activeItem }}</p>
       </section>
 
       <!-- Horizontal Menu -->

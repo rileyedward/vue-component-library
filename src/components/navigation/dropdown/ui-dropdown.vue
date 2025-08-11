@@ -17,7 +17,7 @@ const emit = defineEmits<Emits>();
 
 const isOpen = ref(false);
 const selectedItem = computed(() => {
-  return props.items.find((item) => item.value === props.modelValue);
+  return props.items.find(item => item.value === props.modelValue);
 });
 
 const toggleDropdown = (): void => {
@@ -49,7 +49,7 @@ const closeDropdown = (): void => {
       @blur="closeDropdown"
     >
       <div class="flex items-center">
-        <component v-if="icon" :is="icon" class="w-4 h-4 mr-2" />
+        <component :is="icon" v-if="icon" class="w-4 h-4 mr-2" />
         <span v-if="selectedItem">{{ selectedItem.label }}</span>
         <span v-else class="text-gray-400">{{ placeholder }}</span>
       </div>
@@ -73,7 +73,7 @@ const closeDropdown = (): void => {
           ]"
           @click="selectItem(item)"
         >
-          <component v-if="item.icon" :is="item.icon" class="w-4 h-4 mr-2" />
+          <component :is="item.icon" v-if="item.icon" class="w-4 h-4 mr-2" />
           {{ item.label }}
         </li>
       </ul>
