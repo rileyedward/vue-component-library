@@ -86,7 +86,7 @@ const onMenuClose = () => {
           Perfect for sidebar user information with profile and settings options.
         </p>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu
+          <ui-dropdown-menu
             :items="userMenuItems"
             @select="onMenuSelect"
             @open="onMenuOpen"
@@ -104,9 +104,9 @@ const onMenuClose = () => {
                 <p class="text-sm font-medium text-gray-900 truncate">John Doe</p>
                 <p class="text-sm text-gray-500 truncate">john@example.com</p>
               </div>
-              <ChevronDown class="h-4 w-4 text-gray-400" />
+              <chevron-down class="h-4 w-4 text-gray-400" />
             </div>
-          </UiDropdownMenu>
+          </ui-dropdown-menu>
         </div>
       </section>
 
@@ -115,17 +115,17 @@ const onMenuClose = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Action Menu</h2>
         <p class="text-gray-600 mb-4">Common action menus with icons and separators.</p>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu :items="actionMenuItems" @select="onMenuSelect">
-            <UiButton variant="outline" :suffix-icon="MoreHorizontal"> Actions </UiButton>
-          </UiDropdownMenu>
+          <ui-dropdown-menu :items="actionMenuItems" @select="onMenuSelect">
+            <ui-button variant="outline" :suffix-icon="MoreHorizontal"> Actions </ui-button>
+          </ui-dropdown-menu>
 
-          <UiDropdownMenu :items="actionMenuItems" @select="onMenuSelect">
+          <ui-dropdown-menu :items="actionMenuItems" @select="onMenuSelect">
             <button
               class="inline-flex items-center justify-center h-8 w-8 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
             >
-              <MoreHorizontal class="h-4 w-4 text-gray-600" />
+              <more-horizontal class="h-4 w-4 text-gray-600" />
             </button>
-          </UiDropdownMenu>
+          </ui-dropdown-menu>
         </div>
       </section>
 
@@ -135,23 +135,23 @@ const onMenuClose = () => {
         <div class="flex justify-center">
           <div class="grid grid-cols-3 gap-8 items-center">
             <div></div>
-            <UiDropdownMenu :items="simpleMenuItems" placement="top" @select="onMenuSelect">
-              <UiButton variant="outline">Top</UiButton>
-            </UiDropdownMenu>
+            <ui-dropdown-menu :items="simpleMenuItems" placement="top" @select="onMenuSelect">
+              <ui-button variant="outline">Top</ui-button>
+            </ui-dropdown-menu>
             <div></div>
 
-            <UiDropdownMenu :items="simpleMenuItems" placement="left" @select="onMenuSelect">
-              <UiButton variant="outline">Left</UiButton>
-            </UiDropdownMenu>
+            <ui-dropdown-menu :items="simpleMenuItems" placement="left" @select="onMenuSelect">
+              <ui-button variant="outline">Left</ui-button>
+            </ui-dropdown-menu>
             <div class="text-center text-gray-500 text-sm">Click to open</div>
-            <UiDropdownMenu :items="simpleMenuItems" placement="right" @select="onMenuSelect">
-              <UiButton variant="outline">Right</UiButton>
-            </UiDropdownMenu>
+            <ui-dropdown-menu :items="simpleMenuItems" placement="right" @select="onMenuSelect">
+              <ui-button variant="outline">Right</ui-button>
+            </ui-dropdown-menu>
 
             <div></div>
-            <UiDropdownMenu :items="simpleMenuItems" placement="bottom" @select="onMenuSelect">
-              <UiButton variant="outline">Bottom</UiButton>
-            </UiDropdownMenu>
+            <ui-dropdown-menu :items="simpleMenuItems" placement="bottom" @select="onMenuSelect">
+              <ui-button variant="outline">Bottom</ui-button>
+            </ui-dropdown-menu>
             <div></div>
           </div>
         </div>
@@ -162,9 +162,9 @@ const onMenuClose = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Simple Menu</h2>
         <p class="text-gray-600 mb-4">Basic menu without icons, including disabled state.</p>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu :items="simpleMenuItems" @select="onMenuSelect">
-            <UiButton variant="secondary">Simple Menu</UiButton>
-          </UiDropdownMenu>
+          <ui-dropdown-menu :items="simpleMenuItems" @select="onMenuSelect">
+            <ui-button variant="secondary">Simple Menu</ui-button>
+          </ui-dropdown-menu>
         </div>
       </section>
 
@@ -175,9 +175,9 @@ const onMenuClose = () => {
           Menu with many items that scrolls when it exceeds max height.
         </p>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu :items="longMenuItems" max-height="150px" @select="onMenuSelect">
-            <UiButton variant="info">Scrollable Menu</UiButton>
-          </UiDropdownMenu>
+          <ui-dropdown-menu :items="longMenuItems" max-height="150px" @select="onMenuSelect">
+            <ui-button variant="info">Scrollable Menu</ui-button>
+          </ui-dropdown-menu>
         </div>
       </section>
 
@@ -185,9 +185,9 @@ const onMenuClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Menu</h2>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu :items="simpleMenuItems" :disabled="true" @select="onMenuSelect">
-            <UiButton variant="secondary" disabled>Disabled Menu</UiButton>
-          </UiDropdownMenu>
+          <ui-dropdown-menu :items="simpleMenuItems" :disabled="true" @select="onMenuSelect">
+            <ui-button variant="secondary" disabled>Disabled Menu</ui-button>
+          </ui-dropdown-menu>
         </div>
       </section>
 
@@ -195,13 +195,17 @@ const onMenuClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Close Behavior</h2>
         <div class="flex flex-wrap gap-6">
-          <UiDropdownMenu :items="simpleMenuItems" :close-on-select="true" @select="onMenuSelect">
-            <UiButton variant="success">Closes on Select</UiButton>
-          </UiDropdownMenu>
+          <ui-dropdown-menu :items="simpleMenuItems" :close-on-select="true" @select="onMenuSelect">
+            <ui-button variant="success">Closes on Select</ui-button>
+          </ui-dropdown-menu>
 
-          <UiDropdownMenu :items="simpleMenuItems" :close-on-select="false" @select="onMenuSelect">
-            <UiButton variant="warning">Stays Open</UiButton>
-          </UiDropdownMenu>
+          <ui-dropdown-menu
+            :items="simpleMenuItems"
+            :close-on-select="false"
+            @select="onMenuSelect"
+          >
+            <ui-button variant="warning">Stays Open</ui-button>
+          </ui-dropdown-menu>
         </div>
       </section>
 
@@ -210,28 +214,28 @@ const onMenuClose = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Trigger Content</h2>
         <p class="text-gray-600 mb-4">Dropdown menu can be triggered by any content.</p>
         <div class="flex flex-wrap gap-6 items-center">
-          <UiDropdownMenu :items="userMenuItems" @select="onMenuSelect">
+          <ui-dropdown-menu :items="userMenuItems" @select="onMenuSelect">
             <div
               class="flex items-center gap-2 px-3 py-2 text-blue-600 hover:text-blue-800 transition-colors cursor-pointer"
             >
-              <User class="h-5 w-5" />
+              <user class="h-5 w-5" />
               <span>User Menu</span>
             </div>
-          </UiDropdownMenu>
+          </ui-dropdown-menu>
 
-          <UiDropdownMenu :items="actionMenuItems" @select="onMenuSelect">
+          <ui-dropdown-menu :items="actionMenuItems" @select="onMenuSelect">
             <div
               class="h-12 w-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white cursor-pointer hover:shadow-lg transition-shadow"
             >
-              <MoreHorizontal class="h-5 w-5" />
+              <more-horizontal class="h-5 w-5" />
             </div>
-          </UiDropdownMenu>
+          </ui-dropdown-menu>
 
-          <UiDropdownMenu :items="simpleMenuItems" @select="onMenuSelect">
+          <ui-dropdown-menu :items="simpleMenuItems" @select="onMenuSelect">
             <span class="text-gray-600 underline cursor-pointer hover:text-gray-800">
               Click me for options
             </span>
-          </UiDropdownMenu>
+          </ui-dropdown-menu>
         </div>
       </section>
 
@@ -245,7 +249,7 @@ const onMenuClose = () => {
             <div class="border-t border-gray-700 pt-4"></div>
           </div>
 
-          <UiDropdownMenu :items="userMenuItems" placement="top" @select="onMenuSelect">
+          <ui-dropdown-menu :items="userMenuItems" placement="top" @select="onMenuSelect">
             <div
               class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer"
             >
@@ -258,9 +262,9 @@ const onMenuClose = () => {
                 <p class="text-sm font-medium text-white truncate">Alex Brown</p>
                 <p class="text-xs text-gray-400 truncate">alex@company.com</p>
               </div>
-              <MoreHorizontal class="h-4 w-4 text-gray-400" />
+              <more-horizontal class="h-4 w-4 text-gray-400" />
             </div>
-          </UiDropdownMenu>
+          </ui-dropdown-menu>
         </div>
       </section>
     </div>

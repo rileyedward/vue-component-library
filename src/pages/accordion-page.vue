@@ -101,43 +101,43 @@ const disabledItems = [
       <!-- Basic Accordion -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Accordion</h2>
-        <UiAccordion :items="basicItems" @toggle="handleToggle" />
+        <ui-accordion :items="basicItems" @toggle="handleToggle" />
       </section>
 
       <!-- Accordion with Icons -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Accordion with Icons</h2>
-        <UiAccordion :items="iconItems" @toggle="handleToggle" />
+        <ui-accordion :items="iconItems" @toggle="handleToggle" />
       </section>
 
       <!-- Multiple Open Accordion -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Multiple Open Accordion</h2>
-        <UiAccordion :items="multipleItems" :multiple="true" @toggle="handleToggle" />
+        <ui-accordion :items="multipleItems" :multiple="true" @toggle="handleToggle" />
       </section>
 
       <!-- Filled Variant -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Filled Variant</h2>
-        <UiAccordion :items="basicItems" variant="filled" @toggle="handleToggle" />
+        <ui-accordion :items="basicItems" variant="filled" @toggle="handleToggle" />
       </section>
 
       <!-- Borderless Accordion -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Borderless Accordion</h2>
-        <UiAccordion :items="iconItems" :bordered="false" @toggle="handleToggle" />
+        <ui-accordion :items="iconItems" :bordered="false" @toggle="handleToggle" />
       </section>
 
       <!-- Disabled Items -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Items</h2>
-        <UiAccordion :items="disabledItems" @toggle="handleToggle" />
+        <ui-accordion :items="disabledItems" @toggle="handleToggle" />
       </section>
 
       <!-- Fully Disabled Accordion -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Accordion</h2>
-        <UiAccordion :items="basicItems" :disabled="true" @toggle="handleToggle" />
+        <ui-accordion :items="basicItems" :disabled="true" @toggle="handleToggle" />
       </section>
     </div>
   </div>

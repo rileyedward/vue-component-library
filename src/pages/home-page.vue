@@ -18,54 +18,54 @@ import { RouterLink } from 'vue-router';
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Forms</h3>
         <p class="text-gray-600 text-sm mb-4">Form inputs and data collection</p>
         <div class="space-y-2">
-          <RouterLink
+          <router-link
             to="/button"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Button →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/input"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Input →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/textarea"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Textarea →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/select"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Select →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/checkbox"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Checkbox →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/radio"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Radio →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/multiselect"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             MultiSelect →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/datepicker"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             DatePicker →
-          </RouterLink>
+          </router-link>
         </div>
       </div>
 
@@ -74,24 +74,24 @@ import { RouterLink } from 'vue-router';
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Navigation</h3>
         <p class="text-gray-600 text-sm mb-4">Navigation and wayfinding</p>
         <div class="space-y-2">
-          <RouterLink
+          <router-link
             to="/breadcrumb"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Breadcrumb →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/dropdown"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Dropdown →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/menu"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Menu →
-          </RouterLink>
+          </router-link>
         </div>
       </div>
 
@@ -100,24 +100,24 @@ import { RouterLink } from 'vue-router';
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Feedback</h3>
         <p class="text-gray-600 text-sm mb-4">User feedback and notifications</p>
         <div class="space-y-2">
-          <RouterLink
+          <router-link
             to="/alert"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Alert →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/toast"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Toast →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/modal"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Modal →
-          </RouterLink>
+          </router-link>
         </div>
       </div>
 
@@ -126,24 +126,24 @@ import { RouterLink } from 'vue-router';
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Layout</h3>
         <p class="text-gray-600 text-sm mb-4">Layout and structure components</p>
         <div class="space-y-2">
-          <RouterLink
+          <router-link
             to="/card"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Card →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/container"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Container →
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/drawer"
             class="block text-purple-600 hover:text-purple-800 text-sm font-medium"
           >
             Drawer →
-          </RouterLink>
+          </router-link>
         </div>
       </div>
     </div>

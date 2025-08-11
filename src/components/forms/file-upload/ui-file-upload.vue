@@ -218,7 +218,7 @@ const getFilePreview = (file: File) => {
         @change="handleFileInput"
       />
 
-      <Upload class="w-10 h-10 text-gray-400 mb-2" />
+      <upload class="w-10 h-10 text-gray-400 mb-2" />
 
       <div class="text-sm text-center">
         <p class="font-medium text-gray-700">{{ isDragging ? dropzoneText : placeholder }}</p>
@@ -272,7 +272,7 @@ const getFilePreview = (file: File) => {
           class="ml-2 text-gray-400 hover:text-gray-500 focus:outline-none"
           @click.stop="removeFile(index)"
         >
-          <X class="w-5 h-5" />
+          <x class="w-5 h-5" />
         </button>
       </div>
     </div>

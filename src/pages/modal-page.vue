@@ -67,19 +67,19 @@ const handleDelete = () => {
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Basic Modal</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openModal('basic')"> Open Basic Modal </UiButton>
+          <ui-button @click="openModal('basic')"> Open Basic Modal </ui-button>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Modal Sizes</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton size="sm" @click="openModal('small')">Small Modal</UiButton>
-          <UiButton size="sm" @click="openModal('medium')">Medium Modal</UiButton>
-          <UiButton size="sm" @click="openModal('large')">Large Modal</UiButton>
-          <UiButton size="sm" @click="openModal('xlarge')">X-Large Modal</UiButton>
-          <UiButton size="sm" variant="outline" @click="openModal('fullscreen')"
-            >Fullscreen Modal</UiButton
+          <ui-button size="sm" @click="openModal('small')">Small Modal</ui-button>
+          <ui-button size="sm" @click="openModal('medium')">Medium Modal</ui-button>
+          <ui-button size="sm" @click="openModal('large')">Large Modal</ui-button>
+          <ui-button size="sm" @click="openModal('xlarge')">X-Large Modal</ui-button>
+          <ui-button size="sm" variant="outline" @click="openModal('fullscreen')"
+            >Fullscreen Modal</ui-button
           >
         </div>
       </section>
@@ -87,28 +87,28 @@ const handleDelete = () => {
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Modal Features</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="outline" @click="openModal('centered')">Centered Modal</UiButton>
-          <UiButton variant="outline" @click="openModal('scrollable')">Scrollable Modal</UiButton>
-          <UiButton variant="outline" @click="openModal('persistent')">Persistent Modal</UiButton>
-          <UiButton variant="outline" @click="openModal('noClose')">Non-closeable Modal</UiButton>
+          <ui-button variant="outline" @click="openModal('centered')">Centered Modal</ui-button>
+          <ui-button variant="outline" @click="openModal('scrollable')">Scrollable Modal</ui-button>
+          <ui-button variant="outline" @click="openModal('persistent')">Persistent Modal</ui-button>
+          <ui-button variant="outline" @click="openModal('noClose')">Non-closeable Modal</ui-button>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="success" @click="openModal('form')">Form Modal</UiButton>
-          <UiButton variant="danger" @click="openModal('confirmation')"
-            >Confirmation Modal</UiButton
+          <ui-button variant="success" @click="openModal('form')">Form Modal</ui-button>
+          <ui-button variant="danger" @click="openModal('confirmation')"
+            >Confirmation Modal</ui-button
           >
-          <UiButton variant="secondary" @click="openModal('richContent')"
-            >Rich Content Modal</UiButton
+          <ui-button variant="secondary" @click="openModal('richContent')"
+            >Rich Content Modal</ui-button
           >
         </div>
       </section>
     </div>
 
-    <UiModal
+    <ui-modal
       v-model:show="modals.basic"
       title="Basic Modal"
       description="This is a simple modal with basic content."
@@ -118,12 +118,12 @@ const handleDelete = () => {
         or other components.
       </p>
       <template #footer>
-        <UiButton variant="outline" @click="modals.basic = false">Cancel</UiButton>
-        <UiButton @click="modals.basic = false">Save Changes</UiButton>
+        <ui-button variant="outline" @click="modals.basic = false">Cancel</ui-button>
+        <ui-button @click="modals.basic = false">Save Changes</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal
+    <ui-modal
       v-model:show="modals.small"
       size="sm"
       title="Small Modal"
@@ -133,18 +133,18 @@ const handleDelete = () => {
         This is a small modal perfect for simple confirmations or brief messages.
       </p>
       <template #footer>
-        <UiButton @click="modals.small = false">OK</UiButton>
+        <ui-button @click="modals.small = false">OK</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal v-model:show="modals.medium" size="md" title="Medium Modal">
+    <ui-modal v-model:show="modals.medium" size="md" title="Medium Modal">
       <p class="text-gray-700">This is a medium-sized modal, which is the default size.</p>
       <template #footer>
-        <UiButton variant="outline" @click="modals.medium = false">Close</UiButton>
+        <ui-button variant="outline" @click="modals.medium = false">Close</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal v-model:show="modals.large" size="lg" title="Large Modal">
+    <ui-modal v-model:show="modals.large" size="lg" title="Large Modal">
       <p class="text-gray-700">This is a large modal that provides more space for content.</p>
       <div class="mt-4 p-4 bg-gray-50 rounded-lg">
         <h4 class="font-medium text-gray-900">Example Content Area</h4>
@@ -153,11 +153,11 @@ const handleDelete = () => {
         </p>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="modals.large = false">Close</UiButton>
+        <ui-button variant="outline" @click="modals.large = false">Close</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal v-model:show="modals.xlarge" size="xl" title="X-Large Modal">
+    <ui-modal v-model:show="modals.xlarge" size="xl" title="X-Large Modal">
       <p class="text-gray-700">This is an extra-large modal for when you need maximum space.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <div class="p-4 bg-blue-50 rounded-lg">
@@ -170,11 +170,11 @@ const handleDelete = () => {
         </div>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="modals.xlarge = false">Close</UiButton>
+        <ui-button variant="outline" @click="modals.xlarge = false">Close</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal v-model:show="modals.fullscreen" size="full" title="Fullscreen Modal">
+    <ui-modal v-model:show="modals.fullscreen" size="full" title="Fullscreen Modal">
       <p class="text-gray-700">This modal takes up the entire viewport.</p>
       <div class="mt-6 space-y-4">
         <div
@@ -190,18 +190,18 @@ const handleDelete = () => {
         </div>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="modals.fullscreen = false">Close</UiButton>
+        <ui-button variant="outline" @click="modals.fullscreen = false">Close</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal v-model:show="modals.centered" centered title="Centered Modal">
+    <ui-modal v-model:show="modals.centered" centered title="Centered Modal">
       <p class="text-gray-700">This modal is centered vertically in the viewport.</p>
       <template #footer>
-        <UiButton @click="modals.centered = false">Close</UiButton>
+        <ui-button @click="modals.centered = false">Close</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal
+    <ui-modal
       v-model:show="modals.scrollable"
       scrollable
       title="Scrollable Modal"
@@ -223,11 +223,11 @@ const handleDelete = () => {
         </div>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="modals.scrollable = false">Close</UiButton>
+        <ui-button variant="outline" @click="modals.scrollable = false">Close</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal
+    <ui-modal
       v-model:show="modals.persistent"
       persistent
       :close-on-overlay-click="false"
@@ -240,11 +240,11 @@ const handleDelete = () => {
         the modal or pressing Escape will not close it.
       </p>
       <template #footer>
-        <UiButton @click="modals.persistent = false">Close Modal</UiButton>
+        <ui-button @click="modals.persistent = false">Close Modal</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal
+    <ui-modal
       v-model:show="modals.noClose"
       :closeable="false"
       title="Non-closeable Modal"
@@ -255,45 +255,45 @@ const handleDelete = () => {
         to close it.
       </p>
       <template #footer>
-        <UiButton @click="modals.noClose = false">Done</UiButton>
+        <ui-button @click="modals.noClose = false">Done</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal
+    <ui-modal
       v-model:show="modals.form"
       title="User Registration"
       description="Fill out the form below to create a new account."
     >
       <form class="space-y-4" @submit.prevent="handleFormSubmit">
-        <UiInput
+        <ui-input
           v-model="formData.name"
           label="Full Name"
           placeholder="Enter your full name"
           required
         />
-        <UiInput
+        <ui-input
           v-model="formData.email"
           type="email"
           label="Email Address"
           placeholder="Enter your email"
           required
         />
-        <UiInput
+        <ui-input
           v-model="formData.password"
           type="password"
           label="Password"
           placeholder="Enter a secure password"
           required
         />
-        <UiSelect v-model="formData.role" label="Role" :options="roleOptions" required />
+        <ui-select v-model="formData.role" label="Role" :options="roleOptions" required />
       </form>
       <template #footer>
-        <UiButton variant="outline" @click="modals.form = false">Cancel</UiButton>
-        <UiButton @click="handleFormSubmit">Create Account</UiButton>
+        <ui-button variant="outline" @click="modals.form = false">Cancel</ui-button>
+        <ui-button @click="handleFormSubmit">Create Account</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal
+    <ui-modal
       v-model:show="modals.confirmation"
       title="Delete Account"
       description="This action cannot be undone."
@@ -305,12 +305,12 @@ const handleDelete = () => {
         </p>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="modals.confirmation = false">Cancel</UiButton>
-        <UiButton variant="danger" @click="handleDelete">Delete Account</UiButton>
+        <ui-button variant="outline" @click="modals.confirmation = false">Cancel</ui-button>
+        <ui-button variant="danger" @click="handleDelete">Delete Account</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
 
-    <UiModal v-model:show="modals.richContent" size="lg" title="Rich Content Modal">
+    <ui-modal v-model:show="modals.richContent" size="lg" title="Rich Content Modal">
       <div class="space-y-6">
         <div>
           <h4 class="text-lg font-medium text-gray-900 mb-3">Image Gallery</h4>
@@ -357,9 +357,9 @@ const handleDelete = () => {
         </div>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="modals.richContent = false">Close</UiButton>
-        <UiButton>Export Data</UiButton>
+        <ui-button variant="outline" @click="modals.richContent = false">Close</ui-button>
+        <ui-button>Export Data</ui-button>
       </template>
-    </UiModal>
+    </ui-modal>
   </div>
 </template>

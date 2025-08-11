@@ -100,7 +100,7 @@ const sidebarClasses = computed(() => {
         class="p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100"
         @click="toggleMobileMenu"
       >
-        <MenuIcon class="w-6 h-6" />
+        <menu-icon class="w-6 h-6" />
       </button>
     </div>
 

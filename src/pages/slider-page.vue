@@ -29,7 +29,7 @@ const handleChange = (value: number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Slider</h2>
         <div class="max-w-md">
-          <UiSlider v-model="basicValue" @change="handleChange" />
+          <ui-slider v-model="basicValue" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">Current value: {{ basicValue }}</div>
         </div>
       </section>
@@ -38,7 +38,7 @@ const handleChange = (value: number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Range</h2>
         <div class="max-w-md">
-          <UiSlider v-model="minMaxValue" :min="10" :max="50" @change="handleChange" />
+          <ui-slider v-model="minMaxValue" :min="10" :max="50" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ minMaxValue }} (Range: 10-50)
           </div>
@@ -49,7 +49,7 @@ const handleChange = (value: number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Step Size</h2>
         <div class="max-w-md">
-          <UiSlider v-model="stepValue" :step="5" @change="handleChange" />
+          <ui-slider v-model="stepValue" :step="5" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">Current value: {{ stepValue }} (Step: 5)</div>
         </div>
       </section>
@@ -58,7 +58,7 @@ const handleChange = (value: number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Slider</h2>
         <div class="max-w-md">
-          <UiSlider v-model="disabledValue" disabled />
+          <ui-slider v-model="disabledValue" disabled />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ disabledValue }} (Disabled)
           </div>
@@ -69,7 +69,7 @@ const handleChange = (value: number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Slider with Label</h2>
         <div class="max-w-md">
-          <UiSlider v-model="labeledValue" label="Volume" @change="handleChange" />
+          <ui-slider v-model="labeledValue" label="Volume" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">Current value: {{ labeledValue }}</div>
         </div>
       </section>
@@ -78,7 +78,7 @@ const handleChange = (value: number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Slider with Tooltip</h2>
         <div class="max-w-md">
-          <UiSlider v-model="tooltipValue" :tooltip="true" @change="handleChange" />
+          <ui-slider v-model="tooltipValue" :tooltip="true" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">
             Current value: {{ tooltipValue }} (Drag to see tooltip)
           </div>
@@ -89,7 +89,7 @@ const handleChange = (value: number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Slider with Value Display</h2>
         <div class="max-w-md">
-          <UiSlider v-model="showValueValue" :show-value="true" @change="handleChange" />
+          <ui-slider v-model="showValueValue" :show-value="true" @change="handleChange" />
           <div class="mt-4 text-sm text-gray-500">Current value: {{ showValueValue }}</div>
         </div>
       </section>

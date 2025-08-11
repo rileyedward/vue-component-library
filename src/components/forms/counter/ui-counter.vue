@@ -133,7 +133,7 @@ const iconSize = computed(() => {
         :disabled="disabled || localValue <= min"
         @click="decrement"
       >
-        <Minus :class="iconSize" />
+        <minus :class="iconSize" />
       </button>
 
       <div :class="valueClasses">
@@ -146,7 +146,7 @@ const iconSize = computed(() => {
         :disabled="disabled || localValue >= max"
         @click="increment"
       >
-        <Plus :class="iconSize" />
+        <plus :class="iconSize" />
       </button>
     </div>
   </div>

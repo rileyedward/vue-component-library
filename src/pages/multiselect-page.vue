@@ -109,7 +109,7 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic MultiSelect</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="basicOptions"
             label="Basic MultiSelect"
@@ -119,7 +119,7 @@ const handleDeselect = (value: string | number) => {
             @select="handleSelect"
             @deselect="handleDeselect"
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="preselectedItems"
             :options="basicOptions"
             label="Pre-selected Items"
@@ -132,21 +132,21 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">MultiSelect Variants</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="basicOptions"
             variant="default"
             label="Default"
             placeholder="Default variant..."
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="basicOptions"
             variant="outlined"
             label="Outlined"
             placeholder="Outlined variant..."
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="basicOptions"
             variant="filled"
@@ -160,21 +160,21 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">MultiSelect Sizes</h2>
         <div class="space-y-4">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="basicOptions"
             size="sm"
             label="Small"
             placeholder="Small multiselect..."
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="basicOptions"
             size="md"
             label="Medium"
             placeholder="Medium multiselect..."
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="basicOptions"
             size="lg"
@@ -188,7 +188,7 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">MultiSelect with Icons</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="categoriesSelection"
             :options="categoryOptions"
             label="Categories"
@@ -196,7 +196,7 @@ const handleDeselect = (value: string | number) => {
             :prefix-icon="Tags"
             helper-text="Choose relevant categories"
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="countriesSelection"
             :options="countryOptions"
             label="Countries"
@@ -212,7 +212,7 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Advanced Features</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="searchableSelection"
             :options="skillOptions"
             label="Searchable MultiSelect"
@@ -221,7 +221,7 @@ const handleDeselect = (value: string | number) => {
             searchable
             helper-text="Type to search through options"
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="limitedSelection"
             :options="basicOptions"
             label="Limited Selection"
@@ -236,7 +236,7 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Select All Feature</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="categoriesSelection"
             :options="categoryOptions"
             label="Categories with Select All"
@@ -244,7 +244,7 @@ const handleDeselect = (value: string | number) => {
             show-select-all
             helper-text="Use 'Select All' to choose all options"
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="skillsSelection"
             :options="skillOptions"
             label="Searchable with Select All"
@@ -260,14 +260,14 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">MultiSelect States</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="disabledSelection"
             :options="basicOptions"
             label="Disabled"
             disabled
             helper-text="This multiselect is disabled"
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="errorSelection"
             :options="basicOptions"
             label="Error State"
@@ -282,7 +282,7 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Long Options List</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="longOptions"
             label="Many Options"
@@ -291,7 +291,7 @@ const handleDeselect = (value: string | number) => {
             show-select-all
             helper-text="50 options with search and select all"
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="statusOptions"
             label="With Disabled Options"
@@ -304,7 +304,7 @@ const handleDeselect = (value: string | number) => {
       <!-- Full Width MultiSelect -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Full Width MultiSelect</h2>
-        <UiMultiSelect
+        <ui-multi-select
           v-model="countriesSelection"
           :options="countryOptions"
           label="Full Width MultiSelect"
@@ -322,7 +322,7 @@ const handleDeselect = (value: string | number) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
         <form class="space-y-6" @submit.prevent="console.log('Form submitted!', formSelection)">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UiMultiSelect
+            <ui-multi-select
               v-model="formSelection"
               :options="categoryOptions"
               label="Interests"
@@ -333,7 +333,7 @@ const handleDeselect = (value: string | number) => {
                 formSelection.length === 0 ? 'Please select at least one interest' : undefined
               "
             />
-            <UiMultiSelect
+            <ui-multi-select
               v-model="skillsSelection"
               :options="skillOptions"
               label="Skills"
@@ -344,7 +344,7 @@ const handleDeselect = (value: string | number) => {
               helper-text="Choose up to 5 skills"
             />
           </div>
-          <UiMultiSelect
+          <ui-multi-select
             v-model="countriesSelection"
             :options="countryOptions"
             label="Target Markets"
@@ -371,7 +371,7 @@ const handleDeselect = (value: string | number) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Performance Test</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="longOptions"
             label="50 Options"
@@ -381,7 +381,7 @@ const handleDeselect = (value: string | number) => {
             :prefix-icon="Users"
             helper-text="Testing with 50 options"
           />
-          <UiMultiSelect
+          <ui-multi-select
             v-model="basicSelection"
             :options="longOptions"
             label="Limited with Search"

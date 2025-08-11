@@ -4,7 +4,7 @@ import SidebarLayout from '@/layouts/sidebar/sidebar-layout.vue';
 </script>
 
 <template>
-  <SidebarLayout>
-    <RouterView />
-  </SidebarLayout>
+  <sidebar-layout>
+    <router-view />
+  </sidebar-layout>
 </template>

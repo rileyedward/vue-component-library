@@ -261,7 +261,7 @@ const handleBlur = (event: FocusEvent): void => {
               class="hover:bg-purple-200 rounded-full p-0.5 flex-shrink-0"
               @click.stop="handleRemove(option.value)"
             >
-              <X class="w-3 h-3" />
+              <x class="w-3 h-3" />
             </button>
           </span>
         </div>
@@ -272,7 +272,7 @@ const handleBlur = (event: FocusEvent): void => {
 
         <div class="flex items-center gap-2 flex-shrink-0 ml-2">
           <component :is="suffixIcon" v-if="suffixIcon" :class="[iconClasses, 'text-gray-400']" />
-          <ChevronDown
+          <chevron-down
             :class="[
               iconClasses,
               'text-gray-400 transition-transform duration-200',
@@ -301,7 +301,7 @@ const handleBlur = (event: FocusEvent): void => {
         >
           <div class="flex items-center justify-between">
             <span>{{ allFilteredSelected ? 'Deselect All' : 'Select All' }}</span>
-            <Check v-if="allFilteredSelected" class="w-4 h-4 text-purple-600" />
+            <check v-if="allFilteredSelected" class="w-4 h-4 text-purple-600" />
           </div>
         </button>
 
@@ -320,7 +320,7 @@ const handleBlur = (event: FocusEvent): void => {
           @click="handleSelect(option.value)"
         >
           <span class="truncate">{{ option.label }}</span>
-          <Check
+          <check
             v-if="isSelected(option.value)"
             class="w-4 h-4 text-purple-600 flex-shrink-0 ml-2"
           />

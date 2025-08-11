@@ -9,151 +9,151 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Basic Cards</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <UiCard>
+          <ui-card>
             <h3 class="text-lg font-medium text-gray-900 mb-2">Simple Card</h3>
             <p class="text-gray-600">This is a basic card with default styling.</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard>
+          <ui-card>
             <template #header>
               <h3 class="text-lg font-medium text-gray-900">Card with Header</h3>
             </template>
             <p class="text-gray-600">This card includes a header section.</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard>
+          <ui-card>
             <h3 class="text-lg font-medium text-gray-900 mb-2">Card with Footer</h3>
             <p class="text-gray-600">This card includes a footer section.</p>
             <template #footer>
               <p class="text-sm text-gray-500">Footer content</p>
             </template>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Card Variants</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <UiCard variant="default">
+          <ui-card variant="default">
             <h3 class="text-lg font-medium text-gray-900 mb-2">Default</h3>
             <p class="text-gray-600">Standard card appearance</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard variant="outlined">
+          <ui-card variant="outlined">
             <h3 class="text-lg font-medium text-gray-900 mb-2">Outlined</h3>
             <p class="text-gray-600">Card with emphasized border</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard variant="elevated" shadow="lg">
+          <ui-card variant="elevated" shadow="lg">
             <h3 class="text-lg font-medium text-gray-900 mb-2">Elevated</h3>
             <p class="text-gray-600">Card with enhanced shadow</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard variant="filled">
+          <ui-card variant="filled">
             <h3 class="text-lg font-medium text-gray-900 mb-2">Filled</h3>
             <p class="text-gray-600">Card with background fill</p>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Shadow Options</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <UiCard shadow="none">
+          <ui-card shadow="none">
             <h4 class="font-medium mb-2">No Shadow</h4>
             <p class="text-sm text-gray-600">shadow="none"</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard shadow="sm">
+          <ui-card shadow="sm">
             <h4 class="font-medium mb-2">Small Shadow</h4>
             <p class="text-sm text-gray-600">shadow="sm"</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard shadow="md">
+          <ui-card shadow="md">
             <h4 class="font-medium mb-2">Medium Shadow</h4>
             <p class="text-sm text-gray-600">shadow="md"</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard shadow="lg">
+          <ui-card shadow="lg">
             <h4 class="font-medium mb-2">Large Shadow</h4>
             <p class="text-sm text-gray-600">shadow="lg"</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard shadow="xl">
+          <ui-card shadow="xl">
             <h4 class="font-medium mb-2">XL Shadow</h4>
             <p class="text-sm text-gray-600">shadow="xl"</p>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Padding Options</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <UiCard padding="none" class="border-2 border-dashed border-gray-300">
+          <ui-card padding="none" class="border-2 border-dashed border-gray-300">
             <div class="p-2 bg-blue-50 text-blue-800 text-sm">No Padding (padding="none")</div>
-          </UiCard>
+          </ui-card>
 
-          <UiCard padding="sm">
+          <ui-card padding="sm">
             <h4 class="font-medium mb-2">Small Padding</h4>
             <p class="text-sm text-gray-600">padding="sm"</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard padding="md">
+          <ui-card padding="md">
             <h4 class="font-medium mb-2">Medium Padding</h4>
             <p class="text-sm text-gray-600">padding="md" (default)</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard padding="lg">
+          <ui-card padding="lg">
             <h4 class="font-medium mb-2">Large Padding</h4>
             <p class="text-sm text-gray-600">padding="lg"</p>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Interactive Cards</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <UiCard hover>
+          <ui-card hover>
             <h3 class="text-lg font-medium text-gray-900 mb-2">Hover Effect</h3>
             <p class="text-gray-600">This card has hover animations enabled.</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard clickable @click="showClickAlert">
+          <ui-card clickable @click="showClickAlert">
             <h3 class="text-lg font-medium text-gray-900 mb-2">Clickable Card</h3>
             <p class="text-gray-600">Click this card to trigger an action.</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard clickable hover @click="showClickAlert">
+          <ui-card clickable hover @click="showClickAlert">
             <h3 class="text-lg font-medium text-gray-900 mb-2">Clickable + Hover</h3>
             <p class="text-gray-600">Combines click and hover effects.</p>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Card States</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <UiCard>
+          <ui-card>
             <h3 class="text-lg font-medium text-gray-900 mb-2">Normal State</h3>
             <p class="text-gray-600">Regular card appearance.</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard loading>
+          <ui-card loading>
             <h3 class="text-lg font-medium text-gray-900 mb-2">Loading State</h3>
             <p class="text-gray-600">Card with loading animation.</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard disabled>
+          <ui-card disabled>
             <h3 class="text-lg font-medium text-gray-900 mb-2">Disabled State</h3>
             <p class="text-gray-600">Card that's disabled and not interactive.</p>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Cards with Media</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiCard>
+          <ui-card>
             <template #media>
               <div
                 class="aspect-video bg-gradient-to-r from-purple-400 to-pink-600 flex items-center justify-center"
@@ -163,9 +163,9 @@
             </template>
             <h3 class="text-lg font-medium text-gray-900 mb-2">Card with Media</h3>
             <p class="text-gray-600">This card includes a media section above the content.</p>
-          </UiCard>
+          </ui-card>
 
-          <UiCard padding="none">
+          <ui-card padding="none">
             <template #media>
               <div
                 class="aspect-video bg-gradient-to-r from-blue-400 to-green-500 flex items-center justify-center"
@@ -179,14 +179,14 @@
                 Media section extends to card edges, content has manual padding.
               </p>
             </div>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Cards with Actions</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiCard>
+          <ui-card>
             <template #header>
               <h3 class="text-lg font-medium text-gray-900">Product Card</h3>
             </template>
@@ -198,12 +198,12 @@
               <span class="text-sm text-gray-500">In Stock</span>
             </div>
             <template #actions>
-              <UiButton variant="outline" size="sm">Add to Wishlist</UiButton>
-              <UiButton size="sm">Add to Cart</UiButton>
+              <ui-button variant="outline" size="sm">Add to Wishlist</ui-button>
+              <ui-button size="sm">Add to Cart</ui-button>
             </template>
-          </UiCard>
+          </ui-card>
 
-          <UiCard>
+          <ui-card>
             <template #header>
               <div class="flex items-center justify-between">
                 <h3 class="text-lg font-medium text-gray-900">User Profile</h3>
@@ -225,17 +225,17 @@
               <p class="text-sm text-gray-500">Last seen 2 minutes ago</p>
             </template>
             <template #actions>
-              <UiButton variant="outline" size="sm">Message</UiButton>
-              <UiButton size="sm">View Profile</UiButton>
+              <ui-button variant="outline" size="sm">Message</ui-button>
+              <ui-button size="sm">View Profile</ui-button>
             </template>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Complex Card Examples</h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <UiCard shadow="lg">
+          <ui-card shadow="lg">
             <template #header>
               <div class="flex items-center justify-between">
                 <h3 class="text-lg font-medium text-gray-900">Dashboard Stats</h3>
@@ -264,12 +264,12 @@
               </div>
             </div>
             <template #actions>
-              <UiButton variant="outline" size="sm">Export</UiButton>
-              <UiButton size="sm">View Details</UiButton>
+              <ui-button variant="outline" size="sm">Export</ui-button>
+              <ui-button size="sm">View Details</ui-button>
             </template>
-          </UiCard>
+          </ui-card>
 
-          <UiCard shadow="lg">
+          <ui-card shadow="lg">
             <template #header>
               <h3 class="text-lg font-medium text-gray-900">Recent Activity</h3>
             </template>
@@ -295,9 +295,9 @@
               </div>
             </div>
             <template #actions>
-              <UiButton variant="outline" size="sm">View All</UiButton>
+              <ui-button variant="outline" size="sm">View All</ui-button>
             </template>
-          </UiCard>
+          </ui-card>
         </div>
       </section>
     </div>

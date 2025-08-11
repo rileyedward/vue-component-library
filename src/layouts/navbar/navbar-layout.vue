@@ -18,7 +18,7 @@ const toggleSidebar = () => {
 
 <template>
   <div class="min-h-screen bg-gray-50 flex flex-col">
-    <UiNavbar :title="props.config.title" @toggle-sidebar="toggleSidebar">
+    <ui-navbar :title="props.config.title" @toggle-sidebar="toggleSidebar">
       <template #right>
         <div class="flex items-center space-x-4">
           <button
@@ -32,7 +32,7 @@ const toggleSidebar = () => {
           </button>
         </div>
       </template>
-    </UiNavbar>
+    </ui-navbar>
 
     <main class="flex-1 p-4">
       <div class="max-w-7xl mx-auto">

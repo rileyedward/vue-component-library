@@ -48,7 +48,7 @@ const itemsWithDisabled = [
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Dropdown</h2>
         <div class="max-w-xs">
-          <UiDropdown
+          <ui-dropdown
             v-model="selectedValue"
             :items="basicItems"
             placeholder="Select an option"
@@ -64,7 +64,7 @@ const itemsWithDisabled = [
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Dropdown with Icons</h2>
         <div class="max-w-xs">
-          <UiDropdown
+          <ui-dropdown
             v-model="selectedIconValue"
             :items="itemsWithIcons"
             :icon="Star"
@@ -81,7 +81,7 @@ const itemsWithDisabled = [
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Dropdown with Disabled Options</h2>
         <div class="max-w-xs">
-          <UiDropdown
+          <ui-dropdown
             v-model="selectedDisabledValue"
             :items="itemsWithDisabled"
             placeholder="Some options disabled"
@@ -97,7 +97,7 @@ const itemsWithDisabled = [
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Dropdown</h2>
         <div class="max-w-xs">
-          <UiDropdown
+          <ui-dropdown
             :items="basicItems"
             placeholder="Dropdown is disabled"
             :disabled="true"
@@ -110,7 +110,7 @@ const itemsWithDisabled = [
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Dropdown with Home Icon</h2>
         <div class="max-w-xs">
-          <UiDropdown
+          <ui-dropdown
             :items="basicItems"
             placeholder="With home icon"
             :icon="Home"

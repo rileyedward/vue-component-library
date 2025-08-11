@@ -55,13 +55,13 @@ const selectNone = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Checkboxes</h2>
         <div class="space-y-4">
-          <UiCheckbox v-model="basicCheckbox" label="Basic checkbox" @change="handleChange" />
-          <UiCheckbox
+          <ui-checkbox v-model="basicCheckbox" label="Basic checkbox" @change="handleChange" />
+          <ui-checkbox
             v-model="checkedCheckbox"
             label="Pre-checked checkbox"
             description="This checkbox starts in a checked state"
           />
-          <UiCheckbox
+          <ui-checkbox
             v-model="indeterminateCheckbox"
             :indeterminate="true"
             label="Indeterminate checkbox"
@@ -76,23 +76,23 @@ const selectNone = () => {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Default Variant</h3>
-            <UiCheckbox
+            <ui-checkbox
               v-model="basicCheckbox"
               variant="default"
               label="Default variant"
               description="Filled background when checked"
             />
-            <UiCheckbox v-model="checkedCheckbox" variant="default" label="Checked default" />
+            <ui-checkbox v-model="checkedCheckbox" variant="default" label="Checked default" />
           </div>
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Outlined Variant</h3>
-            <UiCheckbox
+            <ui-checkbox
               v-model="basicCheckbox"
               variant="outlined"
               label="Outlined variant"
               description="Transparent background with colored border"
             />
-            <UiCheckbox v-model="checkedCheckbox" variant="outlined" label="Checked outlined" />
+            <ui-checkbox v-model="checkedCheckbox" variant="outlined" label="Checked outlined" />
           </div>
         </div>
       </section>
@@ -101,19 +101,19 @@ const selectNone = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Checkbox Sizes</h2>
         <div class="space-y-4">
-          <UiCheckbox
+          <ui-checkbox
             v-model="basicCheckbox"
             size="sm"
             label="Small checkbox"
             description="Compact size for dense layouts"
           />
-          <UiCheckbox
+          <ui-checkbox
             v-model="checkedCheckbox"
             size="md"
             label="Medium checkbox (default)"
             description="Standard size for most use cases"
           />
-          <UiCheckbox
+          <ui-checkbox
             v-model="basicCheckbox"
             size="lg"
             label="Large checkbox"
@@ -128,12 +128,12 @@ const selectNone = () => {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Normal States</h3>
-            <UiCheckbox
+            <ui-checkbox
               v-model="basicCheckbox"
               label="Normal checkbox"
               description="Can be checked and unchecked"
             />
-            <UiCheckbox
+            <ui-checkbox
               v-model="requiredCheckbox"
               label="Required checkbox"
               description="This field is required"
@@ -142,13 +142,13 @@ const selectNone = () => {
           </div>
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Disabled States</h3>
-            <UiCheckbox
+            <ui-checkbox
               v-model="disabledCheckbox"
               label="Disabled unchecked"
               description="Cannot be interacted with"
               disabled
             />
-            <UiCheckbox
+            <ui-checkbox
               v-model="disabledCheckedCheckbox"
               label="Disabled checked"
               description="Checked but cannot be changed"
@@ -161,7 +161,7 @@ const selectNone = () => {
       <!-- Error State -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Error State</h2>
-        <UiCheckbox
+        <ui-checkbox
           v-model="errorCheckbox"
           label="Terms and Conditions"
           description="You must accept the terms to continue"
@@ -190,25 +190,25 @@ const selectNone = () => {
               Select None
             </button>
           </div>
-          <UiCheckbox
+          <ui-checkbox
             v-model="multipleCheckboxes.option1"
             label="Option 1"
             description="First option in the group"
             value="option1"
           />
-          <UiCheckbox
+          <ui-checkbox
             v-model="multipleCheckboxes.option2"
             label="Option 2"
             description="Second option in the group"
             value="option2"
           />
-          <UiCheckbox
+          <ui-checkbox
             v-model="multipleCheckboxes.option3"
             label="Option 3"
             description="Third option in the group"
             value="option3"
           />
-          <UiCheckbox
+          <ui-checkbox
             v-model="multipleCheckboxes.option4"
             label="Option 4"
             description="Fourth option in the group"
@@ -222,12 +222,12 @@ const selectNone = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
         <form class="space-y-6" @submit.prevent="console.log('Form submitted!', formCheckboxes)">
           <div class="space-y-4">
-            <UiCheckbox
+            <ui-checkbox
               v-model="formCheckboxes.newsletter"
               label="Subscribe to newsletter"
               description="Receive updates about new features and promotions"
             />
-            <UiCheckbox
+            <ui-checkbox
               v-model="formCheckboxes.terms"
               label="I agree to the Terms of Service"
               description="Please read and accept our terms of service"
@@ -236,7 +236,7 @@ const selectNone = () => {
                 !formCheckboxes.terms ? 'You must accept the terms to continue' : undefined
               "
             />
-            <UiCheckbox
+            <ui-checkbox
               v-model="formCheckboxes.privacy"
               label="I agree to the Privacy Policy"
               description="Please read and accept our privacy policy"
@@ -247,7 +247,7 @@ const selectNone = () => {
                   : undefined
               "
             />
-            <UiCheckbox
+            <ui-checkbox
               v-model="formCheckboxes.marketing"
               label="Allow marketing communications"
               description="We may send you promotional emails (you can unsubscribe anytime)"
@@ -269,9 +269,9 @@ const selectNone = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Different Sizes Comparison</h2>
         <div class="flex items-center gap-8">
-          <UiCheckbox v-model="checkedCheckbox" size="sm" label="Small" />
-          <UiCheckbox v-model="checkedCheckbox" size="md" label="Medium" />
-          <UiCheckbox v-model="checkedCheckbox" size="lg" label="Large" />
+          <ui-checkbox v-model="checkedCheckbox" size="sm" label="Small" />
+          <ui-checkbox v-model="checkedCheckbox" size="md" label="Medium" />
+          <ui-checkbox v-model="checkedCheckbox" size="lg" label="Large" />
         </div>
       </section>
     </div>

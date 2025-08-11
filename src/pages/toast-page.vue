@@ -149,69 +149,73 @@ const showNonDismissibleToast = () => {
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Variants</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="showToast('info', 'Information', 'This is an informational message.')">
+          <ui-button @click="showToast('info', 'Information', 'This is an informational message.')">
             Show Info Toast
-          </UiButton>
-          <UiButton
+          </ui-button>
+          <ui-button
             variant="success"
             @click="showToast('success', 'Success', 'Operation completed successfully!')"
           >
             Show Success Toast
-          </UiButton>
-          <UiButton
+          </ui-button>
+          <ui-button
             variant="warning"
             @click="showToast('warning', 'Warning', 'Please review your input.')"
           >
             Show Warning Toast
-          </UiButton>
-          <UiButton variant="danger" @click="showToast('error', 'Error', 'Something went wrong.')">
+          </ui-button>
+          <ui-button variant="danger" @click="showToast('error', 'Error', 'Something went wrong.')">
             Show Error Toast
-          </UiButton>
+          </ui-button>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Positions</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <UiButton size="sm" @click="showPositionToast('top-left')">Top Left</UiButton>
-          <UiButton size="sm" @click="showPositionToast('top-center')">Top Center</UiButton>
-          <UiButton size="sm" @click="showPositionToast('top-right')">Top Right</UiButton>
-          <UiButton size="sm" @click="showPositionToast('bottom-left')">Bottom Left</UiButton>
-          <UiButton size="sm" @click="showPositionToast('bottom-center')">Bottom Center</UiButton>
-          <UiButton size="sm" @click="showPositionToast('bottom-right')">Bottom Right</UiButton>
+          <ui-button size="sm" @click="showPositionToast('top-left')">Top Left</ui-button>
+          <ui-button size="sm" @click="showPositionToast('top-center')">Top Center</ui-button>
+          <ui-button size="sm" @click="showPositionToast('top-right')">Top Right</ui-button>
+          <ui-button size="sm" @click="showPositionToast('bottom-left')">Bottom Left</ui-button>
+          <ui-button size="sm" @click="showPositionToast('bottom-center')">Bottom Center</ui-button>
+          <ui-button size="sm" @click="showPositionToast('bottom-right')">Bottom Right</ui-button>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Duration & Persistence</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="outline" @click="showDurationToast(2000)"> 2 Second Toast </UiButton>
-          <UiButton variant="outline" @click="showDurationToast(10000)"> 10 Second Toast </UiButton>
-          <UiButton variant="outline" @click="showPersistentToast()"> Persistent Toast </UiButton>
+          <ui-button variant="outline" @click="showDurationToast(2000)"> 2 Second Toast </ui-button>
+          <ui-button variant="outline" @click="showDurationToast(10000)">
+            10 Second Toast
+          </ui-button>
+          <ui-button variant="outline" @click="showPersistentToast()"> Persistent Toast </ui-button>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="outline" @click="showCustomIconToast()"> Custom Icon Toast </UiButton>
-          <UiButton variant="outline" @click="showSlotContentToast()">
+          <ui-button variant="outline" @click="showCustomIconToast()">
+            Custom Icon Toast
+          </ui-button>
+          <ui-button variant="outline" @click="showSlotContentToast()">
             Rich Content Toast
-          </UiButton>
+          </ui-button>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Non-dismissible</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="outline" @click="showNonDismissibleToast()">
+          <ui-button variant="outline" @click="showNonDismissibleToast()">
             Non-dismissible Toast
-          </UiButton>
+          </ui-button>
         </div>
       </section>
     </div>
 
-    <UiToast
+    <ui-toast
       v-for="toast in toasts"
       :key="toast.id"
       :variant="toast.variant"
@@ -226,6 +230,6 @@ const showNonDismissibleToast = () => {
       @close="removeToast(toast.id)"
     >
       <div v-if="toast.content" v-html="toast.content" />
-    </UiToast>
+    </ui-toast>
   </div>
 </template>

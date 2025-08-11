@@ -67,31 +67,36 @@ const disabledTabs = [
       <!-- Basic Tabs -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Tabs</h2>
-        <UiTab v-model="selectedTab" :items="basicTabs" @change="handleChange">
+        <ui-tab v-model="selectedTab" :items="basicTabs" @change="handleChange">
           <template #default="{ activeTab }">
             <div class="p-4 bg-gray-50 rounded-md">
               <p>Content for {{ activeTab?.label }} tab</p>
             </div>
           </template>
-        </UiTab>
+        </ui-tab>
       </section>
 
       <!-- Pills Tabs -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Pills Tabs</h2>
-        <UiTab v-model="selectedPillsTab" :items="pillsTabs" variant="pills" @change="handleChange">
+        <ui-tab
+          v-model="selectedPillsTab"
+          :items="pillsTabs"
+          variant="pills"
+          @change="handleChange"
+        >
           <template #default="{ activeTab }">
             <div class="p-4 bg-gray-50 rounded-md">
               <p>Content for {{ activeTab?.label }} tab</p>
             </div>
           </template>
-        </UiTab>
+        </ui-tab>
       </section>
 
       <!-- Underline Tabs -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Underline Tabs</h2>
-        <UiTab
+        <ui-tab
           v-model="selectedUnderlineTab"
           :items="underlineTabs"
           variant="underline"
@@ -102,25 +107,25 @@ const disabledTabs = [
               <p>Content for {{ activeTab?.label }} tab</p>
             </div>
           </template>
-        </UiTab>
+        </ui-tab>
       </section>
 
       <!-- Tabs with Icons -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Tabs with Icons</h2>
-        <UiTab v-model="selectedIconTab" :items="iconTabs" @change="handleChange">
+        <ui-tab v-model="selectedIconTab" :items="iconTabs" @change="handleChange">
           <template #default="{ activeTab }">
             <div class="p-4 bg-gray-50 rounded-md">
               <p>Content for {{ activeTab?.label }} tab</p>
             </div>
           </template>
-        </UiTab>
+        </ui-tab>
       </section>
 
       <!-- Full Width Tabs -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Full Width Tabs</h2>
-        <UiTab
+        <ui-tab
           v-model="selectedFullWidthTab"
           :items="fullWidthTabs"
           :full-width="true"
@@ -131,31 +136,31 @@ const disabledTabs = [
               <p>Content for {{ activeTab?.label }} tab</p>
             </div>
           </template>
-        </UiTab>
+        </ui-tab>
       </section>
 
       <!-- Disabled Tabs -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Tabs</h2>
-        <UiTab v-model="selectedTab" :items="disabledTabs" @change="handleChange">
+        <ui-tab v-model="selectedTab" :items="disabledTabs" @change="handleChange">
           <template #default="{ activeTab }">
             <div class="p-4 bg-gray-50 rounded-md">
               <p>Content for {{ activeTab?.label }} tab</p>
             </div>
           </template>
-        </UiTab>
+        </ui-tab>
       </section>
 
       <!-- Disabled Tab Component -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Tab Component</h2>
-        <UiTab v-model="selectedTab" :items="basicTabs" :disabled="true" @change="handleChange">
+        <ui-tab v-model="selectedTab" :items="basicTabs" :disabled="true" @change="handleChange">
           <template #default="{ activeTab }">
             <div class="p-4 bg-gray-50 rounded-md">
               <p>Content for {{ activeTab?.label }} tab</p>
             </div>
           </template>
-        </UiTab>
+        </ui-tab>
       </section>
     </div>
   </div>

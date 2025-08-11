@@ -37,14 +37,14 @@ const handleEnter = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Inputs</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiInput
+          <ui-input
             v-model="basicInput"
             label="Basic Input"
             placeholder="Enter some text..."
             helper-text="This is a basic input field"
             @input="handleInput"
           />
-          <UiInput
+          <ui-input
             v-model="emailInput"
             type="email"
             label="Email"
@@ -59,19 +59,19 @@ const handleEnter = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Input Variants</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <UiInput
+          <ui-input
             v-model="basicInput"
             variant="default"
             label="Default"
             placeholder="Default variant..."
           />
-          <UiInput
+          <ui-input
             v-model="basicInput"
             variant="outlined"
             label="Outlined"
             placeholder="Outlined variant..."
           />
-          <UiInput
+          <ui-input
             v-model="basicInput"
             variant="filled"
             label="Filled"
@@ -84,9 +84,9 @@ const handleEnter = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Input Sizes</h2>
         <div class="space-y-4">
-          <UiInput v-model="basicInput" size="sm" label="Small" placeholder="Small input..." />
-          <UiInput v-model="basicInput" size="md" label="Medium" placeholder="Medium input..." />
-          <UiInput v-model="basicInput" size="lg" label="Large" placeholder="Large input..." />
+          <ui-input v-model="basicInput" size="sm" label="Small" placeholder="Small input..." />
+          <ui-input v-model="basicInput" size="md" label="Medium" placeholder="Medium input..." />
+          <ui-input v-model="basicInput" size="lg" label="Large" placeholder="Large input..." />
         </div>
       </section>
 
@@ -94,14 +94,14 @@ const handleEnter = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Input Types</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiInput
+          <ui-input
             v-model="passwordInput"
             type="password"
             label="Password"
             placeholder="Enter password..."
             :prefix-icon="Lock"
           />
-          <UiInput
+          <ui-input
             v-model="numberInput"
             type="number"
             label="Number"
@@ -109,7 +109,7 @@ const handleEnter = () => {
             :min="0"
             :max="100"
           />
-          <UiInput
+          <ui-input
             v-model="searchInput"
             type="search"
             label="Search"
@@ -117,7 +117,7 @@ const handleEnter = () => {
             :prefix-icon="Search"
             @enter="handleEnter"
           />
-          <UiInput
+          <ui-input
             v-model="phoneInput"
             type="tel"
             label="Phone"
@@ -131,13 +131,13 @@ const handleEnter = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Inputs with Icons</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiInput
+          <ui-input
             v-model="basicInput"
             label="Prefix Icon"
             placeholder="Username..."
             :prefix-icon="User"
           />
-          <UiInput
+          <ui-input
             v-model="basicInput"
             label="Suffix Icon"
             placeholder="Search..."
@@ -150,25 +150,25 @@ const handleEnter = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Input States</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiInput
+          <ui-input
             v-model="disabledInput"
             label="Disabled"
             disabled
             helper-text="This input is disabled"
           />
-          <UiInput
+          <ui-input
             v-model="readonlyInput"
             label="Readonly"
             readonly
             helper-text="This input is readonly"
           />
-          <UiInput
+          <ui-input
             v-model="errorInput"
             label="Error State"
             placeholder="This has an error..."
             error-text="This field is required"
           />
-          <UiInput
+          <ui-input
             v-model="requiredInput"
             label="Required Field"
             placeholder="This is required..."
@@ -181,7 +181,7 @@ const handleEnter = () => {
       <!-- Full Width Input -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Full Width Input</h2>
-        <UiInput
+        <ui-input
           v-model="basicInput"
           label="Full Width Input"
           placeholder="This input takes the full width..."
@@ -195,10 +195,10 @@ const handleEnter = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
         <form class="space-y-6" @submit.prevent="console.log('Form submitted!')">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UiInput v-model="basicInput" label="First Name" placeholder="John" required />
-            <UiInput v-model="basicInput" label="Last Name" placeholder="Doe" required />
+            <ui-input v-model="basicInput" label="First Name" placeholder="John" required />
+            <ui-input v-model="basicInput" label="Last Name" placeholder="Doe" required />
           </div>
-          <UiInput
+          <ui-input
             v-model="emailInput"
             type="email"
             label="Email Address"
@@ -207,7 +207,7 @@ const handleEnter = () => {
             full-width
             required
           />
-          <UiInput
+          <ui-input
             v-model="passwordInput"
             type="password"
             label="Password"

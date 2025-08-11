@@ -151,9 +151,9 @@ const handleBlur = (event: FocusEvent): void => {
     />
 
     <div :class="checkboxClasses">
-      <Check v-if="modelValue && !indeterminate" :class="iconSize" />
+      <check v-if="modelValue && !indeterminate" :class="iconSize" />
 
-      <Minus v-else-if="indeterminate" :class="iconSize" />
+      <minus v-else-if="indeterminate" :class="iconSize" />
     </div>
 
     <div v-if="label || description" class="flex-1 min-w-0">

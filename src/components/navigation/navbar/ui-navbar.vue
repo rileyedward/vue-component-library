@@ -60,7 +60,7 @@ const navbarClasses = computed(() => {
               @click="toggleSidebar"
             >
               <span class="sr-only">Toggle sidebar</span>
-              <MenuIcon class="h-6 w-6" />
+              <menu-icon class="h-6 w-6" />
             </button>
           </div>
 

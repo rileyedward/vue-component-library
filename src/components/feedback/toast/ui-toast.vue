@@ -188,7 +188,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Teleport to="body">
+  <teleport to="body">
     <div
       v-if="isVisible || $slots.default"
       :class="toastClasses"
@@ -218,8 +218,8 @@ onUnmounted(() => {
         class="flex-shrink-0 p-0.5 hover:bg-gray-100 rounded transition-colors text-gray-400 hover:text-gray-600"
         @click="handleDismiss"
       >
-        <X class="w-4 h-4" />
+        <x class="w-4 h-4" />
       </button>
     </div>
-  </Teleport>
+  </teleport>
 </template>

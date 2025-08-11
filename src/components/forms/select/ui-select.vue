@@ -170,7 +170,7 @@ const handleBlur = (event: FocusEvent): void => {
           v-if="suffixIcon"
           :class="[iconClasses, 'text-gray-400 ml-2']"
         />
-        <ChevronDown
+        <chevron-down
           v-else
           :class="[
             iconClasses,

@@ -125,7 +125,7 @@ const handleDismiss = (): void => {
       class="flex-shrink-0 p-0.5 hover:bg-black/10 rounded transition-colors"
       @click="handleDismiss"
     >
-      <X :class="iconSize" />
+      <x :class="iconSize" />
     </button>
   </div>
 </template>

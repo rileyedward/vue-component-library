@@ -11,18 +11,18 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Basic Drawer</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="openDrawer('basic')">Open Basic Drawer</UiButton>
+          <ui-button @click="openDrawer('basic')">Open Basic Drawer</ui-button>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Drawer Widths</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton size="sm" @click="openDrawer('small')">Small Drawer</UiButton>
-          <UiButton size="sm" @click="openDrawer('medium')">Medium Drawer</UiButton>
-          <UiButton size="sm" @click="openDrawer('large')">Large Drawer</UiButton>
-          <UiButton size="sm" variant="outline" @click="openDrawer('fullWidth')"
-            >Full Width Drawer</UiButton
+          <ui-button size="sm" @click="openDrawer('small')">Small Drawer</ui-button>
+          <ui-button size="sm" @click="openDrawer('medium')">Medium Drawer</ui-button>
+          <ui-button size="sm" @click="openDrawer('large')">Large Drawer</ui-button>
+          <ui-button size="sm" variant="outline" @click="openDrawer('fullWidth')"
+            >Full Width Drawer</ui-button
           >
         </div>
       </section>
@@ -30,24 +30,28 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Drawer Features</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="outline" @click="openDrawer('persistent')">Persistent Drawer</UiButton>
-          <UiButton variant="outline" @click="openDrawer('noClose')">Non-closeable Drawer</UiButton>
+          <ui-button variant="outline" @click="openDrawer('persistent')"
+            >Persistent Drawer</ui-button
+          >
+          <ui-button variant="outline" @click="openDrawer('noClose')"
+            >Non-closeable Drawer</ui-button
+          >
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="success" @click="openDrawer('form')">Form Drawer</UiButton>
-          <UiButton variant="secondary" @click="openDrawer('richContent')"
-            >Rich Content Drawer</UiButton
+          <ui-button variant="success" @click="openDrawer('form')">Form Drawer</ui-button>
+          <ui-button variant="secondary" @click="openDrawer('richContent')"
+            >Rich Content Drawer</ui-button
           >
         </div>
       </section>
     </div>
 
     <!-- Basic Drawer -->
-    <UiDrawer
+    <ui-drawer
       v-model:show="drawers.basic"
       title="Basic Drawer"
       description="This is a simple drawer with basic content."
@@ -57,13 +61,13 @@
         or other components.
       </p>
       <template #footer>
-        <UiButton variant="outline" @click="drawers.basic = false">Cancel</UiButton>
-        <UiButton @click="drawers.basic = false">Save Changes</UiButton>
+        <ui-button variant="outline" @click="drawers.basic = false">Cancel</ui-button>
+        <ui-button @click="drawers.basic = false">Save Changes</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Small Drawer -->
-    <UiDrawer
+    <ui-drawer
       v-model:show="drawers.small"
       width="300px"
       title="Small Drawer"
@@ -73,20 +77,20 @@
         This is a small drawer perfect for simple forms or brief messages.
       </p>
       <template #footer>
-        <UiButton @click="drawers.small = false">OK</UiButton>
+        <ui-button @click="drawers.small = false">OK</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Medium Drawer -->
-    <UiDrawer v-model:show="drawers.medium" width="400px" title="Medium Drawer">
+    <ui-drawer v-model:show="drawers.medium" width="400px" title="Medium Drawer">
       <p class="text-gray-700">This is a medium-sized drawer, which is the default size.</p>
       <template #footer>
-        <UiButton variant="outline" @click="drawers.medium = false">Close</UiButton>
+        <ui-button variant="outline" @click="drawers.medium = false">Close</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Large Drawer -->
-    <UiDrawer v-model:show="drawers.large" width="600px" title="Large Drawer">
+    <ui-drawer v-model:show="drawers.large" width="600px" title="Large Drawer">
       <p class="text-gray-700">This is a large drawer that provides more space for content.</p>
       <div class="mt-4 p-4 bg-gray-50 rounded-lg">
         <h4 class="font-medium text-gray-900">Example Content Area</h4>
@@ -95,12 +99,12 @@
         </p>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="drawers.large = false">Close</UiButton>
+        <ui-button variant="outline" @click="drawers.large = false">Close</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Full Width Drawer -->
-    <UiDrawer v-model:show="drawers.fullWidth" width="100%" title="Full Width Drawer">
+    <ui-drawer v-model:show="drawers.fullWidth" width="100%" title="Full Width Drawer">
       <p class="text-gray-700">This drawer takes up the full width of the screen.</p>
       <div class="mt-6 space-y-4">
         <div
@@ -116,12 +120,12 @@
         </div>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="drawers.fullWidth = false">Close</UiButton>
+        <ui-button variant="outline" @click="drawers.fullWidth = false">Close</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Persistent Drawer -->
-    <UiDrawer
+    <ui-drawer
       v-model:show="drawers.persistent"
       persistent
       :close-on-overlay-click="false"
@@ -134,12 +138,12 @@
         the drawer or pressing Escape will not close it.
       </p>
       <template #footer>
-        <UiButton @click="drawers.persistent = false">Close Drawer</UiButton>
+        <ui-button @click="drawers.persistent = false">Close Drawer</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Non-closeable Drawer -->
-    <UiDrawer
+    <ui-drawer
       v-model:show="drawers.noClose"
       :closeable="false"
       title="Non-closeable Drawer"
@@ -150,46 +154,46 @@
         to close it.
       </p>
       <template #footer>
-        <UiButton @click="drawers.noClose = false">Done</UiButton>
+        <ui-button @click="drawers.noClose = false">Done</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Form Drawer -->
-    <UiDrawer
+    <ui-drawer
       v-model:show="drawers.form"
       title="User Profile"
       description="Update your profile information."
     >
       <form class="space-y-4" @submit.prevent="handleFormSubmit">
-        <UiInput
+        <ui-input
           v-model="formData.name"
           label="Full Name"
           placeholder="Enter your full name"
           required
         />
-        <UiInput
+        <ui-input
           v-model="formData.email"
           type="email"
           label="Email Address"
           placeholder="Enter your email"
           required
         />
-        <UiTextarea
+        <ui-textarea
           v-model="formData.bio"
           label="Bio"
           placeholder="Tell us about yourself"
           rows="4"
         />
-        <UiSelect v-model="formData.country" label="Country" :options="countryOptions" />
+        <ui-select v-model="formData.country" label="Country" :options="countryOptions" />
       </form>
       <template #footer>
-        <UiButton variant="outline" @click="drawers.form = false">Cancel</UiButton>
-        <UiButton @click="handleFormSubmit">Save Profile</UiButton>
+        <ui-button variant="outline" @click="drawers.form = false">Cancel</ui-button>
+        <ui-button @click="handleFormSubmit">Save Profile</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
 
     <!-- Rich Content Drawer -->
-    <UiDrawer v-model:show="drawers.richContent" width="500px" title="Rich Content Drawer">
+    <ui-drawer v-model:show="drawers.richContent" width="500px" title="Rich Content Drawer">
       <div class="space-y-6">
         <div>
           <h4 class="text-lg font-medium text-gray-900 mb-3">User Activity</h4>
@@ -236,10 +240,10 @@
         </div>
       </div>
       <template #footer>
-        <UiButton variant="outline" @click="drawers.richContent = false">Close</UiButton>
-        <UiButton>View All</UiButton>
+        <ui-button variant="outline" @click="drawers.richContent = false">Close</ui-button>
+        <ui-button>View All</ui-button>
       </template>
-    </UiDrawer>
+    </ui-drawer>
   </div>
 </template>
 

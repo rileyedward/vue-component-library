@@ -180,7 +180,7 @@ const onChartDestroyed = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Bar Chart</h2>
         <div class="h-96">
-          <UiChart
+          <ui-chart
             type="bar"
             :data="barChartData"
             :options="barChartOptions"
@@ -195,7 +195,7 @@ const onChartDestroyed = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Line Chart</h2>
         <div class="h-96">
-          <UiChart
+          <ui-chart
             type="line"
             :data="lineChartData"
             :options="lineChartOptions"
@@ -213,7 +213,7 @@ const onChartDestroyed = () => {
           <!-- Pie Chart -->
           <div class="h-96">
             <h3 class="text-md font-medium text-gray-800 mb-4">Pie Chart</h3>
-            <UiChart
+            <ui-chart
               type="pie"
               :data="pieChartData"
               :options="pieChartOptions"
@@ -226,7 +226,7 @@ const onChartDestroyed = () => {
           <!-- Doughnut Chart -->
           <div class="h-96">
             <h3 class="text-md font-medium text-gray-800 mb-4">Doughnut Chart</h3>
-            <UiChart
+            <ui-chart
               type="doughnut"
               :data="doughnutChartData"
               :options="doughnutChartOptions"
@@ -244,7 +244,7 @@ const onChartDestroyed = () => {
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           <div class="h-64">
             <h3 class="text-sm font-medium text-gray-800 mb-2">Mini Bar Chart</h3>
-            <UiChart
+            <ui-chart
               type="bar"
               :data="{
                 labels: ['Q1', 'Q2', 'Q3', 'Q4'],
@@ -269,7 +269,7 @@ const onChartDestroyed = () => {
 
           <div class="h-64">
             <h3 class="text-sm font-medium text-gray-800 mb-2">Mini Line Chart</h3>
-            <UiChart
+            <ui-chart
               type="line"
               :data="{
                 labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
@@ -294,7 +294,7 @@ const onChartDestroyed = () => {
 
           <div class="h-64">
             <h3 class="text-sm font-medium text-gray-800 mb-2">Mini Pie Chart</h3>
-            <UiChart
+            <ui-chart
               type="pie"
               :data="{
                 labels: ['A', 'B', 'C'],

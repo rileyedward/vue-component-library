@@ -31,13 +31,13 @@ const handleLoadingClick = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Button Variants</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton variant="primary" @click="handleClick">Primary</UiButton>
-          <UiButton variant="secondary" @click="handleClick">Secondary</UiButton>
-          <UiButton variant="outline" @click="handleClick">Outline</UiButton>
-          <UiButton variant="success" @click="handleClick">Success</UiButton>
-          <UiButton variant="danger" @click="handleClick">Danger</UiButton>
-          <UiButton variant="warning" @click="handleClick">Warning</UiButton>
-          <UiButton variant="info" @click="handleClick">Info</UiButton>
+          <ui-button variant="primary" @click="handleClick">Primary</ui-button>
+          <ui-button variant="secondary" @click="handleClick">Secondary</ui-button>
+          <ui-button variant="outline" @click="handleClick">Outline</ui-button>
+          <ui-button variant="success" @click="handleClick">Success</ui-button>
+          <ui-button variant="danger" @click="handleClick">Danger</ui-button>
+          <ui-button variant="warning" @click="handleClick">Warning</ui-button>
+          <ui-button variant="info" @click="handleClick">Info</ui-button>
         </div>
       </section>
 
@@ -45,10 +45,10 @@ const handleLoadingClick = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Button Sizes</h2>
         <div class="flex flex-wrap items-center gap-4">
-          <UiButton size="sm" @click="handleClick">Small</UiButton>
-          <UiButton size="md" @click="handleClick">Medium</UiButton>
-          <UiButton size="lg" @click="handleClick">Large</UiButton>
-          <UiButton size="xl" @click="handleClick">Extra Large</UiButton>
+          <ui-button size="sm" @click="handleClick">Small</ui-button>
+          <ui-button size="md" @click="handleClick">Medium</ui-button>
+          <ui-button size="lg" @click="handleClick">Large</ui-button>
+          <ui-button size="xl" @click="handleClick">Extra Large</ui-button>
         </div>
       </section>
 
@@ -56,11 +56,13 @@ const handleLoadingClick = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Buttons with Icons</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton :prefix-icon="Heart" variant="danger" @click="handleClick"> Like </UiButton>
-          <UiButton :suffix-icon="Download" variant="primary" @click="handleClick">
+          <ui-button :prefix-icon="Heart" variant="danger" @click="handleClick"> Like </ui-button>
+          <ui-button :suffix-icon="Download" variant="primary" @click="handleClick">
             Download
-          </UiButton>
-          <UiButton :prefix-icon="Plus" variant="success" @click="handleClick"> Add Item </UiButton>
+          </ui-button>
+          <ui-button :prefix-icon="Plus" variant="success" @click="handleClick">
+            Add Item
+          </ui-button>
         </div>
       </section>
 
@@ -68,18 +70,18 @@ const handleLoadingClick = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Button States</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="handleClick">Normal</UiButton>
-          <UiButton disabled @click="handleClick">Disabled</UiButton>
-          <UiButton :loading="loading" @click="handleLoadingClick">
+          <ui-button @click="handleClick">Normal</ui-button>
+          <ui-button disabled @click="handleClick">Disabled</ui-button>
+          <ui-button :loading="loading" @click="handleLoadingClick">
             {{ loading ? 'Loading...' : 'Click to Load' }}
-          </UiButton>
+          </ui-button>
         </div>
       </section>
 
       <!-- Full Width Button -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Full Width Button</h2>
-        <UiButton full-width variant="primary" @click="handleClick"> Full Width Button </UiButton>
+        <ui-button full-width variant="primary" @click="handleClick"> Full Width Button </ui-button>
       </section>
 
       <!-- Button Types -->
@@ -87,9 +89,9 @@ const handleLoadingClick = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Button Types</h2>
         <form class="space-y-4" @submit.prevent="console.log('Form submitted!')">
           <div class="flex gap-4">
-            <UiButton type="submit" variant="primary">Submit</UiButton>
-            <UiButton type="reset" variant="outline">Reset</UiButton>
-            <UiButton type="button" variant="secondary">Button</UiButton>
+            <ui-button type="submit" variant="primary">Submit</ui-button>
+            <ui-button type="reset" variant="outline">Reset</ui-button>
+            <ui-button type="button" variant="secondary">Button</ui-button>
           </div>
         </form>
       </section>

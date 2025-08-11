@@ -75,7 +75,7 @@ const handleClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Selects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             label="Basic Select"
@@ -85,7 +85,7 @@ const handleClose = () => {
             @open="handleOpen"
             @close="handleClose"
           />
-          <UiSelect
+          <ui-select
             v-model="countrySelect"
             :options="countryOptions"
             label="Country Select"
@@ -99,21 +99,21 @@ const handleClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Select Variants</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             variant="default"
             label="Default"
             placeholder="Default variant..."
           />
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             variant="outlined"
             label="Outlined"
             placeholder="Outlined variant..."
           />
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             variant="filled"
@@ -127,21 +127,21 @@ const handleClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Select Sizes</h2>
         <div class="space-y-4">
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             size="sm"
             label="Small"
             placeholder="Small select..."
           />
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             size="md"
             label="Medium"
             placeholder="Medium select..."
           />
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             size="lg"
@@ -155,14 +155,14 @@ const handleClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Selects with Icons</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             label="Prefix Icon"
             placeholder="Select with prefix icon..."
             :prefix-icon="User"
           />
-          <UiSelect
+          <ui-select
             v-model="countrySelect"
             :options="countryOptions"
             label="Location Select"
@@ -176,7 +176,7 @@ const handleClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Specialized Selects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiSelect
+          <ui-select
             v-model="prioritySelect"
             :options="priorityOptions"
             label="Priority Level"
@@ -184,7 +184,7 @@ const handleClose = () => {
             :prefix-icon="Star"
             helper-text="Choose the priority level"
           />
-          <UiSelect
+          <ui-select
             v-model="statusSelect"
             :options="statusOptions"
             label="Status"
@@ -198,21 +198,21 @@ const handleClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Select States</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiSelect
+          <ui-select
             v-model="disabledSelect"
             :options="basicOptions"
             label="Disabled"
             disabled
             helper-text="This select is disabled"
           />
-          <UiSelect
+          <ui-select
             v-model="errorSelect"
             :options="basicOptions"
             label="Error State"
             placeholder="This has an error..."
             error-text="This field is required"
           />
-          <UiSelect
+          <ui-select
             v-model="requiredSelect"
             :options="basicOptions"
             label="Required Field"
@@ -220,7 +220,7 @@ const handleClose = () => {
             required
             helper-text="This field is required"
           />
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="basicOptions"
             label="Pre-selected"
@@ -234,14 +234,14 @@ const handleClose = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Long Options List</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="longOptions"
             label="Scrollable Options"
             placeholder="Select from many options..."
             helper-text="This dropdown has many options and is scrollable"
           />
-          <UiSelect
+          <ui-select
             v-model="basicSelect"
             :options="longOptions.slice(0, 5)"
             label="Long Labels"
@@ -254,7 +254,7 @@ const handleClose = () => {
       <!-- Full Width Select -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Full Width Select</h2>
-        <UiSelect
+        <ui-select
           v-model="countrySelect"
           :options="countryOptions"
           label="Full Width Select"
@@ -269,7 +269,7 @@ const handleClose = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
         <form class="space-y-6" @submit.prevent="console.log('Form submitted!')">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UiSelect
+            <ui-select
               v-model="countrySelect"
               :options="countryOptions"
               label="Country"
@@ -277,7 +277,7 @@ const handleClose = () => {
               :prefix-icon="MapPin"
               required
             />
-            <UiSelect
+            <ui-select
               v-model="prioritySelect"
               :options="priorityOptions"
               label="Priority"
@@ -286,7 +286,7 @@ const handleClose = () => {
               required
             />
           </div>
-          <UiSelect
+          <ui-select
             v-model="statusSelect"
             :options="statusOptions"
             label="Account Status"

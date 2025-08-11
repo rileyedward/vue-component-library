@@ -27,22 +27,22 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Tooltips</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip content="This is a basic tooltip" @show="onTooltipShow" @hide="onTooltipHide">
-            <UiButton variant="primary">Hover me</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="This is a basic tooltip" @show="onTooltipShow" @hide="onTooltipHide">
+            <ui-button variant="primary">Hover me</ui-button>
+          </ui-tooltip>
 
-          <UiTooltip content="Tooltips work with any content">
+          <ui-tooltip content="Tooltips work with any content">
             <span
               class="inline-flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-md text-gray-700"
             >
-              <Info class="h-4 w-4" />
+              <info class="h-4 w-4" />
               Hover for info
             </span>
-          </UiTooltip>
+          </ui-tooltip>
 
-          <UiTooltip content="Even plain text works">
+          <ui-tooltip content="Even plain text works">
             <span class="text-blue-600 underline cursor-help">Underlined text</span>
-          </UiTooltip>
+          </ui-tooltip>
         </div>
       </section>
 
@@ -52,23 +52,23 @@ const onTooltipHide = () => {
         <div class="flex justify-center">
           <div class="grid grid-cols-3 gap-8 items-center">
             <div></div>
-            <UiTooltip content="Tooltip on top" placement="top">
-              <UiButton variant="outline">Top</UiButton>
-            </UiTooltip>
+            <ui-tooltip content="Tooltip on top" placement="top">
+              <ui-button variant="outline">Top</ui-button>
+            </ui-tooltip>
             <div></div>
 
-            <UiTooltip content="Tooltip on left" placement="left">
-              <UiButton variant="outline">Left</UiButton>
-            </UiTooltip>
+            <ui-tooltip content="Tooltip on left" placement="left">
+              <ui-button variant="outline">Left</ui-button>
+            </ui-tooltip>
             <div class="text-center text-gray-500 text-sm">Hover buttons</div>
-            <UiTooltip content="Tooltip on right" placement="right">
-              <UiButton variant="outline">Right</UiButton>
-            </UiTooltip>
+            <ui-tooltip content="Tooltip on right" placement="right">
+              <ui-button variant="outline">Right</ui-button>
+            </ui-tooltip>
 
             <div></div>
-            <UiTooltip content="Tooltip on bottom" placement="bottom">
-              <UiButton variant="outline">Bottom</UiButton>
-            </UiTooltip>
+            <ui-tooltip content="Tooltip on bottom" placement="bottom">
+              <ui-button variant="outline">Bottom</ui-button>
+            </ui-tooltip>
             <div></div>
           </div>
         </div>
@@ -78,13 +78,13 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Tooltip Themes</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip content="Dark theme tooltip (default)" theme="dark">
-            <UiButton variant="secondary">Dark Theme</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="Dark theme tooltip (default)" theme="dark">
+            <ui-button variant="secondary">Dark Theme</ui-button>
+          </ui-tooltip>
 
-          <UiTooltip content="Light theme tooltip" theme="light">
-            <UiButton variant="secondary">Light Theme</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="Light theme tooltip" theme="light">
+            <ui-button variant="secondary">Light Theme</ui-button>
+          </ui-tooltip>
         </div>
       </section>
 
@@ -92,17 +92,17 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Tooltip with Delay</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip content="Appears immediately" :delay="0">
-            <UiButton variant="info">No delay</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="Appears immediately" :delay="0">
+            <ui-button variant="info">No delay</ui-button>
+          </ui-tooltip>
 
-          <UiTooltip content="Appears after 500ms delay" :delay="500">
-            <UiButton variant="info">500ms delay</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="Appears after 500ms delay" :delay="500">
+            <ui-button variant="info">500ms delay</ui-button>
+          </ui-tooltip>
 
-          <UiTooltip content="Appears after 1 second delay" :delay="1000">
-            <UiButton variant="info">1s delay</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="Appears after 1 second delay" :delay="1000">
+            <ui-button variant="info">1s delay</ui-button>
+          </ui-tooltip>
         </div>
       </section>
 
@@ -110,13 +110,13 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Arrow Options</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip content="Tooltip with arrow (default)" :arrow="true">
-            <UiButton variant="success">With Arrow</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="Tooltip with arrow (default)" :arrow="true">
+            <ui-button variant="success">With Arrow</ui-button>
+          </ui-tooltip>
 
-          <UiTooltip content="Tooltip without arrow" :arrow="false">
-            <UiButton variant="success">No Arrow</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="Tooltip without arrow" :arrow="false">
+            <ui-button variant="success">No Arrow</ui-button>
+          </ui-tooltip>
         </div>
       </section>
 
@@ -124,13 +124,13 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled Tooltip</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip content="This tooltip is enabled" :disabled="false">
-            <UiButton variant="warning">Enabled Tooltip</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="This tooltip is enabled" :disabled="false">
+            <ui-button variant="warning">Enabled Tooltip</ui-button>
+          </ui-tooltip>
 
-          <UiTooltip content="This tooltip is disabled" :disabled="true">
-            <UiButton variant="warning" disabled>Disabled Tooltip</UiButton>
-          </UiTooltip>
+          <ui-tooltip content="This tooltip is disabled" :disabled="true">
+            <ui-button variant="warning" disabled>Disabled Tooltip</ui-button>
+          </ui-tooltip>
         </div>
       </section>
 
@@ -138,32 +138,32 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Tooltips with Icons</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip content="Get help with this feature">
+          <ui-tooltip content="Get help with this feature">
             <button
               class="inline-flex items-center gap-2 px-3 py-2 text-blue-600 hover:text-blue-800 transition-colors"
             >
-              <HelpCircle class="h-5 w-5" />
+              <help-circle class="h-5 w-5" />
               Help
             </button>
-          </UiTooltip>
+          </ui-tooltip>
 
-          <UiTooltip content="Important information about this item">
+          <ui-tooltip content="Important information about this item">
             <button
               class="inline-flex items-center gap-2 px-3 py-2 text-amber-600 hover:text-amber-800 transition-colors"
             >
-              <AlertCircle class="h-5 w-5" />
+              <alert-circle class="h-5 w-5" />
               Warning
             </button>
-          </UiTooltip>
+          </ui-tooltip>
 
-          <UiTooltip content="This action completed successfully">
+          <ui-tooltip content="This action completed successfully">
             <button
               class="inline-flex items-center gap-2 px-3 py-2 text-green-600 hover:text-green-800 transition-colors"
             >
-              <CheckCircle class="h-5 w-5" />
+              <check-circle class="h-5 w-5" />
               Success
             </button>
-          </UiTooltip>
+          </ui-tooltip>
         </div>
       </section>
 
@@ -171,11 +171,11 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Long Content Tooltip</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip
+          <ui-tooltip
             content="This is a very long tooltip content that will wrap to multiple lines when the text becomes too long to fit in a single line. The tooltip has a maximum width and will break words appropriately."
           >
-            <UiButton variant="primary">Long Content</UiButton>
-          </UiTooltip>
+            <ui-button variant="primary">Long Content</ui-button>
+          </ui-tooltip>
         </div>
       </section>
 
@@ -185,9 +185,9 @@ const onTooltipHide = () => {
         <div class="space-y-4">
           <div class="flex items-center gap-2">
             <label for="email" class="text-sm font-medium text-gray-700">Email Address</label>
-            <UiTooltip content="We'll never share your email with anyone else">
-              <Info class="h-4 w-4 text-gray-400 cursor-help" />
-            </UiTooltip>
+            <ui-tooltip content="We'll never share your email with anyone else">
+              <info class="h-4 w-4 text-gray-400 cursor-help" />
+            </ui-tooltip>
           </div>
           <input
             id="email"

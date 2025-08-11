@@ -80,8 +80,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Teleport to="body">
-    <Transition
+  <teleport to="body">
+    <transition
       enter-active-class="transition-opacity duration-300"
       enter-from-class="opacity-0"
       enter-to-class="opacity-100"
@@ -90,7 +90,7 @@ onUnmounted(() => {
       leave-to-class="opacity-0"
     >
       <div v-if="show" :class="overlayClasses" @click="handleOverlayClick">
-        <Transition
+        <transition
           enter-active-class="transition-all duration-300"
           enter-from-class="translate-x-full"
           enter-to-class="translate-x-0"
@@ -127,7 +127,7 @@ onUnmounted(() => {
                 class="ml-4 p-1 hover:bg-gray-100 rounded-full transition-colors text-gray-400 hover:text-gray-600"
                 @click="handleClose"
               >
-                <X class="w-5 h-5" />
+                <x class="w-5 h-5" />
               </button>
             </div>
 
@@ -142,8 +142,8 @@ onUnmounted(() => {
               <slot name="footer" />
             </div>
           </div>
-        </Transition>
+        </transition>
       </div>
-    </Transition>
-  </Teleport>
+    </transition>
+  </teleport>
 </template>

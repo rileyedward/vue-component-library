@@ -67,7 +67,7 @@ export default defineConfigWithVueTs(
       'vue/component-definition-name-casing': ['error', 'PascalCase'],
       'vue/component-name-in-template-casing': [
         'error',
-        'PascalCase',
+        'kebab-case',
         {
           registeredComponentsOnly: false,
         },

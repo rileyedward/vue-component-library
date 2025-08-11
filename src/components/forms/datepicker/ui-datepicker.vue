@@ -343,7 +343,7 @@ onUnmounted(() => {
           v-if="suffixIcon"
           :class="[iconClasses, 'text-gray-400 ml-2']"
         />
-        <Calendar v-else :class="[iconClasses, 'text-gray-400 ml-2']" />
+        <calendar v-else :class="[iconClasses, 'text-gray-400 ml-2']" />
       </button>
 
       <div v-if="isOpen" ref="calendarRef" :class="calendarClasses">
@@ -353,7 +353,7 @@ onUnmounted(() => {
             class="p-1 hover:bg-gray-100 rounded transition-colors"
             @click="handlePreviousMonth"
           >
-            <ChevronLeft class="w-4 h-4" />
+            <chevron-left class="w-4 h-4" />
           </button>
 
           <h3 class="text-sm font-medium text-gray-900">
@@ -365,7 +365,7 @@ onUnmounted(() => {
             class="p-1 hover:bg-gray-100 rounded transition-colors"
             @click="handleNextMonth"
           >
-            <ChevronRight class="w-4 h-4" />
+            <chevron-right class="w-4 h-4" />
           </button>
         </div>
 

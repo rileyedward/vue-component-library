@@ -39,21 +39,21 @@ const handleChange = (value: string | number | boolean, event: Event) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Radio Buttons</h2>
         <div class="space-y-4">
           <p class="text-sm text-gray-600 mb-4">Selected: {{ selectedOption }}</p>
-          <UiRadio
+          <ui-radio
             v-model="selectedOption"
             value="option1"
             name="basic-radio"
             label="Option 1"
             @change="handleChange"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedOption"
             value="option2"
             name="basic-radio"
             label="Option 2"
             description="This option is pre-selected"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedOption"
             value="option3"
             name="basic-radio"
@@ -70,7 +70,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Default Variant</h3>
             <p class="text-sm text-gray-600 mb-4">Selected: {{ selectedVariant }}</p>
-            <UiRadio
+            <ui-radio
               v-model="selectedVariant"
               value="default"
               name="variant-default"
@@ -78,7 +78,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
               label="Default variant"
               description="Filled background when selected"
             />
-            <UiRadio
+            <ui-radio
               v-model="selectedVariant"
               value="default2"
               name="variant-default"
@@ -89,7 +89,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Outlined Variant</h3>
             <p class="text-sm text-gray-600 mb-4">Selected: {{ selectedVariant }}</p>
-            <UiRadio
+            <ui-radio
               v-model="selectedVariant"
               value="outlined"
               name="variant-outlined"
@@ -97,7 +97,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
               label="Outlined variant"
               description="Transparent background with colored border"
             />
-            <UiRadio
+            <ui-radio
               v-model="selectedVariant"
               value="outlined2"
               name="variant-outlined"
@@ -113,7 +113,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Radio Sizes</h2>
         <div class="space-y-4">
           <p class="text-sm text-gray-600 mb-4">Selected size: {{ selectedSize }}</p>
-          <UiRadio
+          <ui-radio
             v-model="selectedSize"
             value="sm"
             name="size-radio"
@@ -121,7 +121,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
             label="Small radio"
             description="Compact size for dense layouts"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedSize"
             value="md"
             name="size-radio"
@@ -129,7 +129,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
             label="Medium radio (default)"
             description="Standard size for most use cases"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedSize"
             value="lg"
             name="size-radio"
@@ -146,14 +146,14 @@ const handleChange = (value: string | number | boolean, event: Event) => {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Normal States</h3>
-            <UiRadio
+            <ui-radio
               v-model="selectedCategory"
               value="category1"
               name="normal-radio"
               label="Normal radio"
               description="Can be selected"
             />
-            <UiRadio
+            <ui-radio
               v-model="selectedCategory"
               value="category2"
               name="normal-radio"
@@ -164,7 +164,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
           </div>
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Disabled States</h3>
-            <UiRadio
+            <ui-radio
               v-model="disabledSelection"
               value="disabled1"
               name="disabled-radio"
@@ -172,7 +172,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
               description="Cannot be interacted with"
               disabled
             />
-            <UiRadio
+            <ui-radio
               v-model="disabledSelection"
               value="option1"
               name="disabled-radio"
@@ -189,12 +189,12 @@ const handleChange = (value: string | number | boolean, event: Event) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Color Preferences</h2>
         <p class="text-sm text-gray-600 mb-4">Favorite color: {{ selectedColor }}</p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <UiRadio v-model="selectedColor" value="red" name="color-radio" label="Red" />
-          <UiRadio v-model="selectedColor" value="blue" name="color-radio" label="Blue" />
-          <UiRadio v-model="selectedColor" value="green" name="color-radio" label="Green" />
-          <UiRadio v-model="selectedColor" value="yellow" name="color-radio" label="Yellow" />
-          <UiRadio v-model="selectedColor" value="purple" name="color-radio" label="Purple" />
-          <UiRadio v-model="selectedColor" value="orange" name="color-radio" label="Orange" />
+          <ui-radio v-model="selectedColor" value="red" name="color-radio" label="Red" />
+          <ui-radio v-model="selectedColor" value="blue" name="color-radio" label="Blue" />
+          <ui-radio v-model="selectedColor" value="green" name="color-radio" label="Green" />
+          <ui-radio v-model="selectedColor" value="yellow" name="color-radio" label="Yellow" />
+          <ui-radio v-model="selectedColor" value="purple" name="color-radio" label="Purple" />
+          <ui-radio v-model="selectedColor" value="orange" name="color-radio" label="Orange" />
         </div>
       </section>
 
@@ -203,21 +203,21 @@ const handleChange = (value: string | number | boolean, event: Event) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Subscription Plans</h2>
         <p class="text-sm text-gray-600 mb-4">Selected plan: {{ selectedPlan }}</p>
         <div class="space-y-4">
-          <UiRadio
+          <ui-radio
             v-model="selectedPlan"
             value="free"
             name="plan-radio"
             label="Free Plan"
             description="Basic features with limited usage"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedPlan"
             value="pro"
             name="plan-radio"
             label="Pro Plan ($19/month)"
             description="Advanced features with unlimited usage"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedPlan"
             value="enterprise"
             name="plan-radio"
@@ -232,21 +232,21 @@ const handleChange = (value: string | number | boolean, event: Event) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Payment Frequency</h2>
         <p class="text-sm text-gray-600 mb-4">Selected frequency: {{ selectedPayment }}</p>
         <div class="flex flex-wrap gap-6">
-          <UiRadio
+          <ui-radio
             v-model="selectedPayment"
             value="monthly"
             name="payment-radio"
             label="Monthly"
             description="Pay every month"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedPayment"
             value="quarterly"
             name="payment-radio"
             label="Quarterly"
             description="Pay every 3 months (5% discount)"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedPayment"
             value="yearly"
             name="payment-radio"
@@ -263,22 +263,28 @@ const handleChange = (value: string | number | boolean, event: Event) => {
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Gender</h3>
             <div class="flex flex-wrap gap-6">
-              <UiRadio v-model="formData.gender" value="male" name="gender" label="Male" required />
-              <UiRadio
+              <ui-radio
+                v-model="formData.gender"
+                value="male"
+                name="gender"
+                label="Male"
+                required
+              />
+              <ui-radio
                 v-model="formData.gender"
                 value="female"
                 name="gender"
                 label="Female"
                 required
               />
-              <UiRadio
+              <ui-radio
                 v-model="formData.gender"
                 value="other"
                 name="gender"
                 label="Other"
                 required
               />
-              <UiRadio
+              <ui-radio
                 v-model="formData.gender"
                 value="prefer-not-to-say"
                 name="gender"
@@ -291,7 +297,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Experience Level</h3>
             <div class="space-y-3">
-              <UiRadio
+              <ui-radio
                 v-model="formData.experience"
                 value="beginner"
                 name="experience"
@@ -299,7 +305,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
                 description="0-1 years of experience"
                 required
               />
-              <UiRadio
+              <ui-radio
                 v-model="formData.experience"
                 value="intermediate"
                 name="experience"
@@ -307,7 +313,7 @@ const handleChange = (value: string | number | boolean, event: Event) => {
                 description="2-5 years of experience"
                 required
               />
-              <UiRadio
+              <ui-radio
                 v-model="formData.experience"
                 value="advanced"
                 name="experience"
@@ -321,28 +327,28 @@ const handleChange = (value: string | number | boolean, event: Event) => {
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900">Preferred Contact Method</h3>
             <div class="space-y-3">
-              <UiRadio
+              <ui-radio
                 v-model="formData.contact"
                 value="email"
                 name="contact"
                 label="Email"
                 description="Receive updates via email"
               />
-              <UiRadio
+              <ui-radio
                 v-model="formData.contact"
                 value="sms"
                 name="contact"
                 label="SMS"
                 description="Receive updates via text message"
               />
-              <UiRadio
+              <ui-radio
                 v-model="formData.contact"
                 value="phone"
                 name="contact"
                 label="Phone Call"
                 description="Receive updates via phone call"
               />
-              <UiRadio
+              <ui-radio
                 v-model="formData.contact"
                 value="none"
                 name="contact"
@@ -368,21 +374,21 @@ const handleChange = (value: string | number | boolean, event: Event) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Size Comparison</h2>
         <div class="flex items-center gap-8">
-          <UiRadio
+          <ui-radio
             v-model="selectedSize"
             value="sm-compare"
             name="size-compare"
             size="sm"
             label="Small"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedSize"
             value="md-compare"
             name="size-compare"
             size="md"
             label="Medium"
           />
-          <UiRadio
+          <ui-radio
             v-model="selectedSize"
             value="lg-compare"
             name="size-compare"

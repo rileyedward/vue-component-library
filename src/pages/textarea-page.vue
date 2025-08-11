@@ -30,14 +30,14 @@ const handleInput = (value: string) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Textareas</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Basic Textarea"
             placeholder="Enter your message..."
             helper-text="This is a basic textarea field"
             @input="handleInput"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="longTextarea"
             label="Pre-filled Textarea"
             helper-text="This textarea has initial content"
@@ -50,19 +50,19 @@ const handleInput = (value: string) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Textarea Variants</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             variant="default"
             label="Default"
             placeholder="Default variant..."
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             variant="outlined"
             label="Outlined"
             placeholder="Outlined variant..."
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             variant="filled"
             label="Filled"
@@ -75,21 +75,21 @@ const handleInput = (value: string) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Textarea Sizes</h2>
         <div class="space-y-4">
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             size="sm"
             label="Small"
             placeholder="Small textarea..."
             :rows="3"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             size="md"
             label="Medium"
             placeholder="Medium textarea..."
             :rows="4"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             size="lg"
             label="Large"
@@ -103,21 +103,21 @@ const handleInput = (value: string) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Rows & Columns</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Small (2 rows)"
             placeholder="Small textarea with 2 rows..."
             :rows="2"
             helper-text="This textarea has 2 rows"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Large (8 rows)"
             placeholder="Large textarea with 8 rows..."
             :rows="8"
             helper-text="This textarea has 8 rows"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Custom Columns"
             placeholder="Textarea with specific columns..."
@@ -125,7 +125,7 @@ const handleInput = (value: string) => {
             :cols="30"
             helper-text="This textarea has custom column width"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Wide Textarea"
             placeholder="Wide textarea..."
@@ -140,28 +140,28 @@ const handleInput = (value: string) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Resize Options</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="No Resize"
             placeholder="This textarea cannot be resized..."
             resize="none"
             helper-text="Resize is disabled"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Vertical Resize"
             placeholder="This textarea can be resized vertically..."
             resize="vertical"
             helper-text="Can resize vertically only"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Horizontal Resize"
             placeholder="This textarea can be resized horizontally..."
             resize="horizontal"
             helper-text="Can resize horizontally only"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="basicTextarea"
             label="Both Resize"
             placeholder="This textarea can be resized in both directions..."
@@ -175,25 +175,25 @@ const handleInput = (value: string) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Textarea States</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiTextarea
+          <ui-textarea
             v-model="disabledTextarea"
             label="Disabled"
             disabled
             helper-text="This textarea is disabled"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="readonlyTextarea"
             label="Readonly"
             readonly
             helper-text="This textarea is readonly"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="errorTextarea"
             label="Error State"
             placeholder="This has an error..."
             error-text="This field is required"
           />
-          <UiTextarea
+          <ui-textarea
             v-model="requiredTextarea"
             label="Required Field"
             placeholder="This is required..."
@@ -206,7 +206,7 @@ const handleInput = (value: string) => {
       <!-- Full Width Textarea -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Full Width Textarea</h2>
-        <UiTextarea
+        <ui-textarea
           v-model="basicTextarea"
           label="Full Width Textarea"
           placeholder="This textarea takes the full width..."
@@ -221,21 +221,21 @@ const handleInput = (value: string) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
         <form class="space-y-6" @submit.prevent="console.log('Form submitted!')">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UiTextarea
+            <ui-textarea
               v-model="basicTextarea"
               label="Short Description"
               placeholder="Brief description..."
               :rows="3"
               required
             />
-            <UiTextarea
+            <ui-textarea
               v-model="basicTextarea"
               label="Additional Notes"
               placeholder="Any additional information..."
               :rows="3"
             />
           </div>
-          <UiTextarea
+          <ui-textarea
             v-model="longTextarea"
             label="Detailed Description"
             placeholder="Provide a detailed description..."

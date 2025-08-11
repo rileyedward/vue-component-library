@@ -99,7 +99,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic DatePicker</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Basic DatePicker"
             placeholder="Select a date..."
@@ -108,7 +108,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
             @open="handleOpen"
             @close="handleClose"
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="preselectedDate"
             label="Pre-selected Date"
             helper-text="This datepicker has a default value"
@@ -146,19 +146,19 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">DatePicker Variants</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             variant="default"
             label="Default"
             placeholder="Default variant..."
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             variant="outlined"
             label="Outlined"
             placeholder="Outlined variant..."
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             variant="filled"
             label="Filled"
@@ -171,19 +171,19 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">DatePicker Sizes</h2>
         <div class="space-y-4">
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             size="sm"
             label="Small"
             placeholder="Small datepicker..."
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             size="md"
             label="Medium"
             placeholder="Medium datepicker..."
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             size="lg"
             label="Large"
@@ -196,14 +196,14 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">DatePicker with Icons</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Appointment Date"
             placeholder="Select appointment date..."
             :prefix-icon="Clock"
             helper-text="Choose your preferred appointment date"
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Event Location Date"
             placeholder="Select event date..."
@@ -217,7 +217,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Date Constraints</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiDatePicker
+          <ui-date-picker
             v-model="minMaxDate"
             label="Date Range (7 days ago to 30 days from now)"
             placeholder="Select within range..."
@@ -225,7 +225,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
             :max-date="maxDate"
             helper-text="You can only select dates within the specified range"
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Future Dates Only"
             placeholder="Select future date..."
@@ -244,14 +244,14 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled and Enabled Dates</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiDatePicker
+          <ui-date-picker
             v-model="disabledDatesSelection"
             label="Weekends Disabled"
             placeholder="Select weekday..."
             :disabled-dates="disabledDates"
             helper-text="Weekends are disabled for the next 30 days"
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="enabledDatesSelection"
             label="Specific Dates Only"
             placeholder="Select enabled date..."
@@ -275,26 +275,26 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">DatePicker States</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiDatePicker
+          <ui-date-picker
             v-model="disabledDate"
             label="Disabled"
             disabled
             helper-text="This datepicker is disabled"
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="readonlyDate"
             label="Readonly"
             readonly
             helper-text="This datepicker is readonly"
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="errorDate"
             label="Error State"
             placeholder="This has an error..."
             error-text="Please select a valid date"
             required
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Required Field"
             placeholder="This is required..."
@@ -308,14 +308,14 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Week Start Options</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Week Starts Sunday (Default)"
             placeholder="Sunday first..."
             :first-day-of-week="0"
             helper-text="Calendar week starts on Sunday"
           />
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Week Starts Monday"
             placeholder="Monday first..."
@@ -328,7 +328,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
       <!-- Full Width DatePicker -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Full Width DatePicker</h2>
-        <UiDatePicker
+        <ui-date-picker
           v-model="basicDate"
           label="Full Width DatePicker"
           placeholder="This datepicker takes the full width..."
@@ -343,7 +343,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Form Example</h2>
         <form class="space-y-6" @submit.prevent="console.log('Form submitted!', formDate)">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UiDatePicker
+            <ui-date-picker
               v-model="formDate"
               label="Birth Date"
               placeholder="Select birth date..."
@@ -351,7 +351,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
               required
               :error-text="!formDate ? 'Birth date is required' : undefined"
             />
-            <UiDatePicker
+            <ui-date-picker
               v-model="basicDate"
               label="Appointment Date"
               placeholder="Select appointment..."
@@ -360,7 +360,7 @@ const setToday = (dateRef: Ref<Date | null>) => {
               helper-text="Choose a future date for your appointment"
             />
           </div>
-          <UiDatePicker
+          <ui-date-picker
             v-model="basicDate"
             label="Event Date"
             placeholder="Select event date..."
@@ -386,14 +386,14 @@ const setToday = (dateRef: Ref<Date | null>) => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Advanced Examples</h2>
         <div class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <UiDatePicker
+            <ui-date-picker
               v-model="basicDate"
               label="Business Days Only"
               placeholder="Select business day..."
               :disabled-dates="disabledDates"
               helper-text="Weekends are automatically excluded"
             />
-            <UiDatePicker
+            <ui-date-picker
               v-model="basicDate"
               label="Next 30 Days"
               placeholder="Select within 30 days..."

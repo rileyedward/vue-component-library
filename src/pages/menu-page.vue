@@ -82,7 +82,7 @@ const collapsibleMenuItems = [
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Vertical Menu</h2>
         <div class="max-w-xs">
-          <UiMenu
+          <ui-menu
             v-model:active-item="activeItem"
             :items="verticalMenuItems"
             @select="handleSelect"
@@ -94,14 +94,14 @@ const collapsibleMenuItems = [
       <!-- Horizontal Menu -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Horizontal Menu</h2>
-        <UiMenu :items="horizontalMenuItems" variant="horizontal" @select="handleSelect" />
+        <ui-menu :items="horizontalMenuItems" variant="horizontal" @select="handleSelect" />
       </section>
 
       <!-- Menu with Title -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Menu with Title</h2>
         <div class="max-w-xs">
-          <UiMenu :items="verticalMenuItems" title="Navigation" @select="handleSelect" />
+          <ui-menu :items="verticalMenuItems" title="Navigation" @select="handleSelect" />
         </div>
       </section>
 
@@ -109,7 +109,7 @@ const collapsibleMenuItems = [
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Collapsible Menu</h2>
         <div class="max-w-xs">
-          <UiMenu
+          <ui-menu
             :items="collapsibleMenuItems"
             title="Collapsible Menu"
             :collapsible="true"

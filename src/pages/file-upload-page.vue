@@ -42,7 +42,7 @@ const handleFileRemoved = (file: File) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic File Upload</h2>
         <div class="max-w-md">
-          <UiFileUpload
+          <ui-file-upload
             v-model="singleFile"
             label="Upload a file"
             helper-text="Max file size: 5MB"
@@ -58,7 +58,7 @@ const handleFileRemoved = (file: File) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Multiple File Upload</h2>
         <div class="max-w-md">
-          <UiFileUpload
+          <ui-file-upload
             v-model="multipleFiles"
             multiple
             label="Upload multiple files"
@@ -76,7 +76,7 @@ const handleFileRemoved = (file: File) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Image Upload</h2>
         <div class="max-w-md">
-          <UiFileUpload
+          <ui-file-upload
             v-model="imageFiles"
             multiple
             accept="image/*"
@@ -95,7 +95,7 @@ const handleFileRemoved = (file: File) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">PDF Upload</h2>
         <div class="max-w-md">
-          <UiFileUpload
+          <ui-file-upload
             v-model="pdfFiles"
             accept=".pdf,application/pdf"
             label="Upload PDF"
@@ -113,7 +113,7 @@ const handleFileRemoved = (file: File) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">With Error State</h2>
         <div class="max-w-md">
-          <UiFileUpload
+          <ui-file-upload
             v-model="singleFile"
             label="Upload a file"
             :error="errorState"
@@ -131,7 +131,7 @@ const handleFileRemoved = (file: File) => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Disabled State</h2>
         <div class="max-w-md">
-          <UiFileUpload
+          <ui-file-upload
             v-model="singleFile"
             disabled
             label="Upload a file (disabled)"

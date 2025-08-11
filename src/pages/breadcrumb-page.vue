@@ -33,25 +33,25 @@ const itemsWithIcons = [
       <!-- Basic Breadcrumb -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Basic Breadcrumb</h2>
-        <UiBreadcrumb :items="basicItems" @navigate="handleNavigate" />
+        <ui-breadcrumb :items="basicItems" @navigate="handleNavigate" />
       </section>
 
       <!-- Breadcrumb with Icons -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Breadcrumb with Icons</h2>
-        <UiBreadcrumb :items="itemsWithIcons" @navigate="handleNavigate" />
+        <ui-breadcrumb :items="itemsWithIcons" @navigate="handleNavigate" />
       </section>
 
       <!-- Breadcrumb with Custom Separator -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Custom Separator</h2>
-        <UiBreadcrumb :items="basicItems" separator=">" @navigate="handleNavigate" />
+        <ui-breadcrumb :items="basicItems" separator=">" @navigate="handleNavigate" />
       </section>
 
       <!-- Breadcrumb without Home Icon -->
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Without Home Icon</h2>
-        <UiBreadcrumb :items="basicItems" :show-home-icon="false" @navigate="handleNavigate" />
+        <ui-breadcrumb :items="basicItems" :show-home-icon="false" @navigate="handleNavigate" />
       </section>
     </div>
   </div>
