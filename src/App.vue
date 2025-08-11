@@ -2,7 +2,18 @@
 import './app.css';
 import { ref } from 'vue';
 import UiSidebar from '@/components/navigation/sidebar/ui-sidebar.vue';
-import { Home, Layout, Circle, Type, CheckSquare, Calendar, Bell, AlertTriangle, MessageSquare, CreditCard } from 'lucide-vue-next';
+import {
+  Home,
+  Layout,
+  Circle,
+  Type,
+  CheckSquare,
+  Calendar,
+  Bell,
+  AlertTriangle,
+  MessageSquare,
+  CreditCard,
+} from 'lucide-vue-next';
 
 // Define navigation items with icons for the sidebar
 const sidebarItems = [
@@ -19,7 +30,7 @@ const sidebarItems = [
       { label: 'Radio', route: '/radio', icon: CheckSquare },
       { label: 'MultiSelect', route: '/multiselect', icon: CheckSquare },
       { label: 'DatePicker', route: '/datepicker', icon: Calendar },
-    ]
+    ],
   },
   {
     label: 'Navigation',
@@ -28,7 +39,7 @@ const sidebarItems = [
       { label: 'Breadcrumb', route: '/breadcrumb', icon: Layout },
       { label: 'Dropdown', route: '/dropdown', icon: Layout },
       { label: 'Menu', route: '/menu', icon: Layout },
-    ]
+    ],
   },
   {
     label: 'Feedback',
@@ -37,7 +48,7 @@ const sidebarItems = [
       { label: 'Alert', route: '/alert', icon: AlertTriangle },
       { label: 'Toast', route: '/toast', icon: Bell },
       { label: 'Modal', route: '/modal', icon: MessageSquare },
-    ]
+    ],
   },
   {
     label: 'Layout',
@@ -45,7 +56,7 @@ const sidebarItems = [
     children: [
       { label: 'Card', route: '/card', icon: CreditCard },
       { label: 'Container', route: '/container', icon: Layout },
-    ]
+    ],
   },
 ];
 
@@ -55,11 +66,7 @@ const activeRoute = ref('');
 <template>
   <div class="min-h-screen bg-gray-50 flex">
     <!-- Sidebar -->
-    <UiSidebar
-      :items="sidebarItems"
-      v-model:activeRoute="activeRoute"
-      title="Component Library"
-    />
+    <UiSidebar :items="sidebarItems" v-model:activeRoute="activeRoute" title="Component Library" />
 
     <!-- Main Content -->
     <main class="flex-1 md:ml-[250px] p-4">
