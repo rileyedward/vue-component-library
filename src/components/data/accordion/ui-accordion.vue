@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { ChevronDown, ChevronUp } from 'lucide-vue-next';
-import type { UiAccordionProps as Props, UiAccordionEmits as Emits, AccordionItem } from './ui-accordion';
+import type {
+  UiAccordionProps as Props,
+  UiAccordionEmits as Emits,
+  AccordionItem,
+} from './ui-accordion';
 
 const props = withDefaults(defineProps<Props>(), {
   multiple: false,
@@ -68,11 +72,7 @@ const getHeaderClasses = (index: number, item: AccordionItem) => {
 
 <template>
   <div class="w-full">
-    <div
-      v-for="(item, index) in items"
-      :key="index"
-      :class="getItemClasses(index, item)"
-    >
+    <div v-for="(item, index) in items" :key="index" :class="getItemClasses(index, item)">
       <button
         type="button"
         :class="getHeaderClasses(index, item)"
@@ -86,10 +86,7 @@ const getHeaderClasses = (index: number, item: AccordionItem) => {
         <component :is="openItems[index] ? ChevronUp : ChevronDown" class="w-4 h-4 ml-2" />
       </button>
 
-      <div
-        v-if="openItems[index]"
-        class="px-4 py-3 text-sm text-gray-700"
-      >
+      <div v-if="openItems[index]" class="px-4 py-3 text-sm text-gray-700">
         <div v-if="typeof item.content === 'string'" v-html="item.content"></div>
         <slot v-else :name="`content-${index}`"></slot>
       </div>

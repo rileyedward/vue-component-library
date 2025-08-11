@@ -62,11 +62,7 @@ const pieChartData = ref<ChartData>({
         'rgba(54, 162, 235, 0.8)',
         'rgba(255, 205, 86, 0.8)',
       ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 205, 86, 1)',
-      ],
+      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 205, 86, 1)'],
       borderWidth: 1,
     },
   ],
@@ -174,7 +170,8 @@ const onChartDestroyed = () => {
     <header class="mb-8">
       <h1 class="text-3xl font-bold text-gray-900 mb-2">Chart Component</h1>
       <p class="text-gray-600">
-        A flexible chart component built with Chart.js supporting various chart types including bar, line, pie, and doughnut charts.
+        A flexible chart component built with Chart.js supporting various chart types including bar,
+        line, pie, and doughnut charts.
       </p>
     </header>
 
@@ -251,19 +248,21 @@ const onChartDestroyed = () => {
               type="bar"
               :data="{
                 labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-                datasets: [{
-                  label: 'Quarterly Sales',
-                  data: [120, 150, 180, 200],
-                  backgroundColor: 'rgba(59, 130, 246, 0.5)',
-                  borderColor: 'rgba(59, 130, 246, 1)',
-                  borderWidth: 1
-                }]
+                datasets: [
+                  {
+                    label: 'Quarterly Sales',
+                    data: [120, 150, 180, 200],
+                    backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    borderWidth: 1,
+                  },
+                ],
               }"
               :options="{
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: { legend: { display: false } },
-                scales: { y: { beginAtZero: true } }
+                scales: { y: { beginAtZero: true } },
               }"
             />
           </div>
@@ -274,19 +273,21 @@ const onChartDestroyed = () => {
               type="line"
               :data="{
                 labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                datasets: [{
-                  label: 'Weekly Growth',
-                  data: [10, 25, 35, 50],
-                  borderColor: 'rgba(16, 185, 129, 1)',
-                  backgroundColor: 'rgba(16, 185, 129, 0.1)',
-                  tension: 0.4
-                }]
+                datasets: [
+                  {
+                    label: 'Weekly Growth',
+                    data: [10, 25, 35, 50],
+                    borderColor: 'rgba(16, 185, 129, 1)',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.4,
+                  },
+                ],
               }"
               :options="{
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: { legend: { display: false } },
-                scales: { y: { beginAtZero: true } }
+                scales: { y: { beginAtZero: true } },
               }"
             />
           </div>
@@ -297,19 +298,21 @@ const onChartDestroyed = () => {
               type="pie"
               :data="{
                 labels: ['A', 'B', 'C'],
-                datasets: [{
-                  data: [30, 50, 20],
-                  backgroundColor: [
-                    'rgba(239, 68, 68, 0.8)',
-                    'rgba(34, 197, 94, 0.8)',
-                    'rgba(59, 130, 246, 0.8)'
-                  ]
-                }]
+                datasets: [
+                  {
+                    data: [30, 50, 20],
+                    backgroundColor: [
+                      'rgba(239, 68, 68, 0.8)',
+                      'rgba(34, 197, 94, 0.8)',
+                      'rgba(59, 130, 246, 0.8)',
+                    ],
+                  },
+                ],
               }"
               :options="{
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { legend: { display: false } },
               }"
             />
           </div>

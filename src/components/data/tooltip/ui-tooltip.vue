@@ -165,17 +165,10 @@ onBeforeUnmount(() => {
     <div ref="triggerRef" class="cursor-help">
       <slot />
     </div>
-    
-    <div
-      ref="tooltipRef"
-      :class="[tooltipClasses, tooltipPosition]"
-      role="tooltip"
-    >
+
+    <div ref="tooltipRef" :class="[tooltipClasses, tooltipPosition]" role="tooltip">
       {{ content }}
-      <div
-        v-if="arrow"
-        :class="arrowClasses"
-      />
+      <div v-if="arrow" :class="arrowClasses" />
     </div>
   </div>
 </template>

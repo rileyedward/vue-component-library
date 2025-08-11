@@ -17,7 +17,8 @@ const onTooltipHide = () => {
     <header class="mb-8">
       <h1 class="text-3xl font-bold text-gray-900 mb-2">Tooltip Component</h1>
       <p class="text-gray-600">
-        A simple tooltip component that appears on hover or focus to provide additional context or information.
+        A simple tooltip component that appears on hover or focus to provide additional context or
+        information.
       </p>
     </header>
 
@@ -31,7 +32,9 @@ const onTooltipHide = () => {
           </UiTooltip>
 
           <UiTooltip content="Tooltips work with any content">
-            <span class="inline-flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-md text-gray-700">
+            <span
+              class="inline-flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-md text-gray-700"
+            >
               <Info class="h-4 w-4" />
               Hover for info
             </span>
@@ -136,21 +139,27 @@ const onTooltipHide = () => {
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Tooltips with Icons</h2>
         <div class="flex flex-wrap gap-6">
           <UiTooltip content="Get help with this feature">
-            <button class="inline-flex items-center gap-2 px-3 py-2 text-blue-600 hover:text-blue-800 transition-colors">
+            <button
+              class="inline-flex items-center gap-2 px-3 py-2 text-blue-600 hover:text-blue-800 transition-colors"
+            >
               <HelpCircle class="h-5 w-5" />
               Help
             </button>
           </UiTooltip>
 
           <UiTooltip content="Important information about this item">
-            <button class="inline-flex items-center gap-2 px-3 py-2 text-amber-600 hover:text-amber-800 transition-colors">
+            <button
+              class="inline-flex items-center gap-2 px-3 py-2 text-amber-600 hover:text-amber-800 transition-colors"
+            >
               <AlertCircle class="h-5 w-5" />
               Warning
             </button>
           </UiTooltip>
 
           <UiTooltip content="This action completed successfully">
-            <button class="inline-flex items-center gap-2 px-3 py-2 text-green-600 hover:text-green-800 transition-colors">
+            <button
+              class="inline-flex items-center gap-2 px-3 py-2 text-green-600 hover:text-green-800 transition-colors"
+            >
               <CheckCircle class="h-5 w-5" />
               Success
             </button>
@@ -162,7 +171,9 @@ const onTooltipHide = () => {
       <section class="bg-white rounded-lg shadow-sm border p-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-6">Long Content Tooltip</h2>
         <div class="flex flex-wrap gap-6">
-          <UiTooltip content="This is a very long tooltip content that will wrap to multiple lines when the text becomes too long to fit in a single line. The tooltip has a maximum width and will break words appropriately.">
+          <UiTooltip
+            content="This is a very long tooltip content that will wrap to multiple lines when the text becomes too long to fit in a single line. The tooltip has a maximum width and will break words appropriately."
+          >
             <UiButton variant="primary">Long Content</UiButton>
           </UiTooltip>
         </div>

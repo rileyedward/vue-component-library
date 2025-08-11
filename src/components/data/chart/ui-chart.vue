@@ -31,7 +31,7 @@ Chart.register(
   BarController,
   LineController,
   PieController,
-  DoughnutController
+  DoughnutController,
 );
 
 const props = withDefaults(defineProps<Props>(), {
@@ -96,7 +96,7 @@ watch(
   () => {
     updateChart();
   },
-  { deep: true }
+  { deep: true },
 );
 
 watch(
@@ -104,7 +104,7 @@ watch(
   () => {
     updateChart();
   },
-  { deep: true }
+  { deep: true },
 );
 
 watch(
@@ -112,7 +112,7 @@ watch(
   () => {
     destroyChart();
     createChart();
-  }
+  },
 );
 
 onMounted(() => {
@@ -126,11 +126,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="ui-chart">
-    <canvas
-      ref="canvasRef"
-      :width="width"
-      :height="height"
-    />
+    <canvas ref="canvasRef" :width="width" :height="height" />
   </div>
 </template>
 

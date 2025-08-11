@@ -44,9 +44,7 @@ const getTabClasses = (item: TabItem) => {
     return [
       ...baseClasses,
       'rounded-full',
-      isActive
-        ? 'bg-purple-500 text-white'
-        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100',
+      isActive ? 'bg-purple-500 text-white' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100',
     ];
   } else if (props.variant === 'underline') {
     return [
@@ -67,7 +65,7 @@ const getTabClasses = (item: TabItem) => {
     class="flex"
     :class="[
       fullWidth ? 'w-full' : '',
-      variant === 'underline' ? 'border-b border-gray-200' : 'space-x-1'
+      variant === 'underline' ? 'border-b border-gray-200' : 'space-x-1',
     ]"
   >
     <button
