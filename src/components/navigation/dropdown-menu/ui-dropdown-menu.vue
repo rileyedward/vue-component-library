@@ -4,7 +4,7 @@ import type {
   UiDropdownMenuProps as Props,
   UiDropdownMenuEmits as Emits,
   DropdownMenuItem,
-} from './ui-dropdown-menu';
+} from './ui-dropdown-menu.ts';
 
 const props = withDefaults(defineProps<Props>(), {
   placement: 'bottom',
