@@ -242,8 +242,8 @@ const renderCellContent = (column: TableColumn, row: TableRow, index: number) =>
         </tr>
 
         <tr
-          v-else
           v-for="(row, index) in data"
+          v-else
           :key="index"
           :class="getRowClasses(index)"
           @click="handleRowClick(row, index)"

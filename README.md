@@ -61,21 +61,25 @@ Ensure you have the following prerequisites installed on your system. You can ve
 ### Development Commands
 
 - **Development server**: Start the component showcase
+
   ```bash
   npm run dev
   ```
 
 - **Build for production**: Create optimized build
+
   ```bash
   npm run build
   ```
 
 - **Type checking**: Run TypeScript checks
+
   ```bash
   npm run type-check
   ```
 
 - **Linting**: Check code quality with ESLint
+
   ```bash
   npm run lint
   ```
@@ -97,21 +101,14 @@ Each component can be copied directly into your Vue 3 project. Components are or
 
 ```vue
 <script setup>
-import UiButton from './components/forms/button/ui-button.vue'
-import UiTable from './components/layout/table/ui-table.vue'
+import UiButton from './components/forms/button/ui-button.vue';
+import UiTable from './components/layout/table/ui-table.vue';
 </script>
 
 <template>
-  <ui-button variant="primary" @click="handleClick">
-    Click me
-  </ui-button>
-  
-  <ui-table 
-    :columns="tableColumns" 
-    :data="tableData" 
-    selectable 
-    @row-click="handleRowClick"
-  />
+  <ui-button variant="primary" @click="handleClick"> Click me </ui-button>
+
+  <ui-table :columns="tableColumns" :data="tableData" selectable @row-click="handleRowClick" />
 </template>
 ```
 
