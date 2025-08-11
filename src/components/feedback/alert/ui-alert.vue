@@ -52,7 +52,7 @@ const alertClasses = computed<string>(() => {
 
 const iconClasses = computed<string>(() => {
   const classes: string[] = ['flex-shrink-0 mt-0.5'];
-  
+
   switch (props.variant) {
     case 'info':
       classes.push('text-blue-500');
@@ -103,20 +103,17 @@ const handleDismiss = (): void => {
 
 <template>
   <div v-if="isVisible" :class="alertClasses" role="alert">
-    <component
-      :is="icon || defaultIcon"
-      :class="[iconClasses, iconSize]"
-    />
+    <component :is="icon || defaultIcon" :class="[iconClasses, iconSize]" />
 
     <div class="flex-1 min-w-0">
       <h4 v-if="title" class="font-medium mb-1">
         {{ title }}
       </h4>
-      
+
       <div v-if="description" class="opacity-90">
         {{ description }}
       </div>
-      
+
       <div v-else-if="$slots.default" class="opacity-90">
         <slot />
       </div>

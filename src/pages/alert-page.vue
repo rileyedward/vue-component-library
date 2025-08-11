@@ -9,34 +9,65 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Variants</h2>
         <div class="space-y-4">
-          <UiAlert variant="info" title="Information" description="This is an informational message." />
-          <UiAlert variant="success" title="Success" description="Operation completed successfully!" />
-          <UiAlert variant="warning" title="Warning" description="Please review your input before continuing." />
-          <UiAlert variant="error" title="Error" description="Something went wrong. Please try again." />
+          <UiAlert
+            variant="info"
+            title="Information"
+            description="This is an informational message."
+          />
+          <UiAlert
+            variant="success"
+            title="Success"
+            description="Operation completed successfully!"
+          />
+          <UiAlert
+            variant="warning"
+            title="Warning"
+            description="Please review your input before continuing."
+          />
+          <UiAlert
+            variant="error"
+            title="Error"
+            description="Something went wrong. Please try again."
+          />
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Sizes</h2>
         <div class="space-y-4">
-          <UiAlert size="sm" variant="info" title="Small Alert" description="This is a small alert message." />
-          <UiAlert size="md" variant="info" title="Medium Alert" description="This is a medium alert message." />
-          <UiAlert size="lg" variant="info" title="Large Alert" description="This is a large alert message." />
+          <UiAlert
+            size="sm"
+            variant="info"
+            title="Small Alert"
+            description="This is a small alert message."
+          />
+          <UiAlert
+            size="md"
+            variant="info"
+            title="Medium Alert"
+            description="This is a medium alert message."
+          />
+          <UiAlert
+            size="lg"
+            variant="info"
+            title="Large Alert"
+            description="This is a large alert message."
+          />
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Dismissible</h2>
         <div class="space-y-4">
-          <UiAlert 
-            variant="info" 
-            title="Dismissible Alert" 
+          <UiAlert
+            variant="info"
+            title="Dismissible Alert"
             description="This alert can be dismissed by clicking the X button."
             dismissible
           />
-          <UiAlert 
-            variant="warning" 
-            title="Another Dismissible Alert" 
+          <UiAlert
+            variant="warning"
+            title="Another Dismissible Alert"
             description="Click the X to close this alert."
             dismissible
           />
@@ -46,9 +77,9 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Icons</h2>
         <div class="space-y-4">
-          <UiAlert 
-            variant="success" 
-            title="Custom Icon" 
+          <UiAlert
+            variant="success"
+            title="Custom Icon"
             description="This alert uses a custom icon."
             :icon="StarIcon"
             dismissible

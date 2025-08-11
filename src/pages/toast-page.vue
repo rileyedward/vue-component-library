@@ -2,7 +2,9 @@
   <div class="max-w-4xl mx-auto p-6 space-y-8">
     <div class="border-b border-gray-200 pb-6">
       <h1 class="text-3xl font-bold text-gray-900">Toast Component</h1>
-      <p class="text-gray-600 mt-2">Display temporary notifications that appear and disappear automatically.</p>
+      <p class="text-gray-600 mt-2">
+        Display temporary notifications that appear and disappear automatically.
+      </p>
     </div>
 
     <div class="space-y-8">
@@ -12,10 +14,16 @@
           <UiButton @click="showToast('info', 'Information', 'This is an informational message.')">
             Show Info Toast
           </UiButton>
-          <UiButton @click="showToast('success', 'Success', 'Operation completed successfully!')" variant="success">
+          <UiButton
+            @click="showToast('success', 'Success', 'Operation completed successfully!')"
+            variant="success"
+          >
             Show Success Toast
           </UiButton>
-          <UiButton @click="showToast('warning', 'Warning', 'Please review your input.')" variant="warning">
+          <UiButton
+            @click="showToast('warning', 'Warning', 'Please review your input.')"
+            variant="warning"
+          >
             Show Warning Toast
           </UiButton>
           <UiButton @click="showToast('error', 'Error', 'Something went wrong.')" variant="danger">
@@ -39,24 +47,16 @@
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Duration & Persistence</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="showDurationToast(2000)" variant="outline">
-            2 Second Toast
-          </UiButton>
-          <UiButton @click="showDurationToast(10000)" variant="outline">
-            10 Second Toast
-          </UiButton>
-          <UiButton @click="showPersistentToast()" variant="outline">
-            Persistent Toast
-          </UiButton>
+          <UiButton @click="showDurationToast(2000)" variant="outline"> 2 Second Toast </UiButton>
+          <UiButton @click="showDurationToast(10000)" variant="outline"> 10 Second Toast </UiButton>
+          <UiButton @click="showPersistentToast()" variant="outline"> Persistent Toast </UiButton>
         </div>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
         <div class="flex flex-wrap gap-4">
-          <UiButton @click="showCustomIconToast()" variant="outline">
-            Custom Icon Toast
-          </UiButton>
+          <UiButton @click="showCustomIconToast()" variant="outline"> Custom Icon Toast </UiButton>
           <UiButton @click="showSlotContentToast()" variant="outline">
             Rich Content Toast
           </UiButton>
@@ -101,7 +101,13 @@ import UiToast from '../components/feedback/toast/ui-toast.vue';
 interface Toast {
   id: number;
   variant: 'info' | 'success' | 'warning' | 'error';
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
+  position?:
+    | 'top-right'
+    | 'top-left'
+    | 'bottom-right'
+    | 'bottom-left'
+    | 'top-center'
+    | 'bottom-center';
   duration?: number;
   title?: string;
   description?: string;
@@ -125,7 +131,7 @@ const addToast = (toast: Omit<Toast, 'id' | 'show'>) => {
 };
 
 const removeToast = (id: number) => {
-  const index = toasts.value.findIndex(toast => toast.id === id);
+  const index = toasts.value.findIndex((toast) => toast.id === id);
   if (index > -1) {
     toasts.value.splice(index, 1);
   }

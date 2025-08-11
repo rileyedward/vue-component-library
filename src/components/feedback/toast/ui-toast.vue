@@ -87,7 +87,7 @@ const toastClasses = computed<string>(() => {
 
 const iconClasses = computed<string>(() => {
   const classes: string[] = ['flex-shrink-0 w-5 h-5'];
-  
+
   switch (props.variant) {
     case 'info':
       classes.push('text-blue-500');
@@ -108,7 +108,7 @@ const iconClasses = computed<string>(() => {
 
 const titleClasses = computed<string>(() => {
   const classes: string[] = ['font-medium text-sm'];
-  
+
   switch (props.variant) {
     case 'info':
       classes.push('text-blue-800');
@@ -148,7 +148,7 @@ const handleDismiss = (): void => {
     clearTimeout(timeoutId);
     timeoutId = null;
   }
-  
+
   setTimeout(() => {
     emit('close');
     emit('dismiss');
@@ -196,20 +196,17 @@ onUnmounted(() => {
       @mouseenter="pauseTimer"
       @mouseleave="resumeTimer"
     >
-      <component
-        :is="icon || defaultIcon"
-        :class="iconClasses"
-      />
+      <component :is="icon || defaultIcon" :class="iconClasses" />
 
       <div class="flex-1 min-w-0">
         <h4 v-if="title" :class="titleClasses">
           {{ title }}
         </h4>
-        
+
         <div v-if="description" class="text-gray-600 text-sm mt-1">
           {{ description }}
         </div>
-        
+
         <div v-else-if="$slots.default" class="text-gray-600 text-sm mt-1">
           <slot />
         </div>
