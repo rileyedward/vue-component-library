@@ -74,6 +74,8 @@ const config: SidebarLayoutConfig = {
       icon: BarChart3,
       children: [
         { label: 'Chart', route: '/chart', icon: BarChart3 },
+        { label: 'Tooltip', route: '/tooltip', icon: MessageSquare },
+        { label: 'Accordion', route: '/accordion', icon: BarChart3 },
       ],
     },
   ],

@@ -11,6 +11,10 @@ import {
   Tooltip,
   Legend,
   ArcElement,
+  BarController,
+  LineController,
+  PieController,
+  DoughnutController,
 } from 'chart.js';
 import type { UiChartProps as Props, UiChartEmits as Emits } from './ui-chart';
 
@@ -23,7 +27,11 @@ Chart.register(
   Title,
   Tooltip,
   Legend,
-  ArcElement
+  ArcElement,
+  BarController,
+  LineController,
+  PieController,
+  DoughnutController
 );
 
 const props = withDefaults(defineProps<Props>(), {

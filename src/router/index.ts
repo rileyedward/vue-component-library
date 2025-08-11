@@ -24,6 +24,8 @@ import MenuPage from '@/pages/menu-page.vue';
 import DrawerPage from '@/pages/drawer-page.vue';
 import TabPage from '@/pages/tab-page.vue';
 import ChartPage from '@/pages/chart-page.vue';
+import AccordionPage from '@/pages/accordion-page.vue';
+import TooltipPage from '@/pages/tooltip-page.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -152,6 +154,16 @@ const router = createRouter({
       path: '/chart',
       name: 'chart',
       component: ChartPage,
+    },
+    {
+      path: '/accordion',
+      name: 'accordion',
+      component: AccordionPage,
+    },
+    {
+      path: '/tooltip',
+      name: 'tooltip',
+      component: TooltipPage,
     },
   ],
 });
