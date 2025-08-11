@@ -180,7 +180,6 @@ const calendarDays = computed(() => {
   const month = currentMonth.value.getMonth();
 
   const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month + 1, 0);
 
   const startDate = new Date(firstDay);
   const dayOfWeek = (firstDay.getDay() - props.firstDayOfWeek + 7) % 7;

@@ -1,3 +1,61 @@
+<script setup lang="ts">
+import { reactive } from 'vue';
+import UiButton from '../components/forms/button/ui-button.vue';
+import UiInput from '../components/forms/input/ui-input.vue';
+import UiSelect from '../components/forms/select/ui-select.vue';
+import UiModal from '../components/feedback/modal/ui-modal.vue';
+
+const modals = reactive({
+  basic: false,
+  small: false,
+  medium: false,
+  large: false,
+  xlarge: false,
+  fullscreen: false,
+  centered: false,
+  scrollable: false,
+  persistent: false,
+  noClose: false,
+  form: false,
+  confirmation: false,
+  richContent: false,
+});
+
+const formData = reactive({
+  name: '',
+  email: '',
+  password: '',
+  role: '',
+});
+
+const roleOptions = [
+  { label: 'Admin', value: 'admin' },
+  { label: 'Editor', value: 'editor' },
+  { label: 'Viewer', value: 'viewer' },
+];
+
+const openModal = (modalName: keyof typeof modals) => {
+  modals[modalName] = true;
+};
+
+const handleFormSubmit = () => {
+  console.log('Form submitted:', formData);
+  modals.form = false;
+  // Reset form
+  Object.assign(formData, {
+    name: '',
+    email: '',
+    password: '',
+    role: '',
+  });
+};
+
+const handleDelete = () => {
+  console.log('Account deleted');
+  modals.confirmation = false;
+};
+</script>
+
 <template>
   <div class="max-w-4xl mx-auto p-6 space-y-8">
     <div class="border-b border-gray-200 pb-6">
@@ -305,61 +363,3 @@
     </UiModal>
   </div>
 </template>
-
-<script setup lang="ts">
-import { reactive, ref } from 'vue';
-import UiButton from '../components/forms/button/ui-button.vue';
-import UiInput from '../components/forms/input/ui-input.vue';
-import UiSelect from '../components/forms/select/ui-select.vue';
-import UiModal from '../components/feedback/modal/ui-modal.vue';
-
-const modals = reactive({
-  basic: false,
-  small: false,
-  medium: false,
-  large: false,
-  xlarge: false,
-  fullscreen: false,
-  centered: false,
-  scrollable: false,
-  persistent: false,
-  noClose: false,
-  form: false,
-  confirmation: false,
-  richContent: false,
-});
-
-const formData = reactive({
-  name: '',
-  email: '',
-  password: '',
-  role: '',
-});
-
-const roleOptions = [
-  { label: 'Admin', value: 'admin' },
-  { label: 'Editor', value: 'editor' },
-  { label: 'Viewer', value: 'viewer' },
-];
-
-const openModal = (modalName: keyof typeof modals) => {
-  modals[modalName] = true;
-};
-
-const handleFormSubmit = () => {
-  console.log('Form submitted:', formData);
-  modals.form = false;
-  // Reset form
-  Object.assign(formData, {
-    name: '',
-    email: '',
-    password: '',
-    role: '',
-  });
-};
-
-const handleDelete = () => {
-  console.log('Account deleted');
-  modals.confirmation = false;
-};
-</script>

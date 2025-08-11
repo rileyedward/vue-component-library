@@ -47,8 +47,8 @@ disabledDates.value = generateDisabledDates();
 const enabledDates = ref<Date[]>([]);
 
 // Generate specific enabled dates
-const generateEnabledDates = () => {
-  const dates = [];
+const generateEnabledDates = (): Date[] => {
+  const dates: Date[] = [];
   const today = new Date();
 
   // Enable specific dates: today, +3 days, +7 days, +14 days
@@ -75,11 +75,11 @@ const handleClose = () => {
   console.log('DatePicker closed');
 };
 
-const resetDate = (dateRef: any) => {
+const resetDate = (dateRef: Ref<Date | null>) => {
   dateRef.value = null;
 };
 
-const setToday = (dateRef: any) => {
+const setToday = (dateRef: Ref<Date | null>) => {
   dateRef.value = new Date();
 };
 </script>

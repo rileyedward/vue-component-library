@@ -1,100 +1,6 @@
-<template>
-  <div class="max-w-4xl mx-auto p-6 space-y-8">
-    <div class="border-b border-gray-200 pb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Toast Component</h1>
-      <p class="text-gray-600 mt-2">
-        Display temporary notifications that appear and disappear automatically.
-      </p>
-    </div>
-
-    <div class="space-y-8">
-      <section>
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Variants</h2>
-        <div class="flex flex-wrap gap-4">
-          <UiButton @click="showToast('info', 'Information', 'This is an informational message.')">
-            Show Info Toast
-          </UiButton>
-          <UiButton
-            @click="showToast('success', 'Success', 'Operation completed successfully!')"
-            variant="success"
-          >
-            Show Success Toast
-          </UiButton>
-          <UiButton
-            @click="showToast('warning', 'Warning', 'Please review your input.')"
-            variant="warning"
-          >
-            Show Warning Toast
-          </UiButton>
-          <UiButton @click="showToast('error', 'Error', 'Something went wrong.')" variant="danger">
-            Show Error Toast
-          </UiButton>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Positions</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <UiButton @click="showPositionToast('top-left')" size="sm">Top Left</UiButton>
-          <UiButton @click="showPositionToast('top-center')" size="sm">Top Center</UiButton>
-          <UiButton @click="showPositionToast('top-right')" size="sm">Top Right</UiButton>
-          <UiButton @click="showPositionToast('bottom-left')" size="sm">Bottom Left</UiButton>
-          <UiButton @click="showPositionToast('bottom-center')" size="sm">Bottom Center</UiButton>
-          <UiButton @click="showPositionToast('bottom-right')" size="sm">Bottom Right</UiButton>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Duration & Persistence</h2>
-        <div class="flex flex-wrap gap-4">
-          <UiButton @click="showDurationToast(2000)" variant="outline"> 2 Second Toast </UiButton>
-          <UiButton @click="showDurationToast(10000)" variant="outline"> 10 Second Toast </UiButton>
-          <UiButton @click="showPersistentToast()" variant="outline"> Persistent Toast </UiButton>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
-        <div class="flex flex-wrap gap-4">
-          <UiButton @click="showCustomIconToast()" variant="outline"> Custom Icon Toast </UiButton>
-          <UiButton @click="showSlotContentToast()" variant="outline">
-            Rich Content Toast
-          </UiButton>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Non-dismissible</h2>
-        <div class="flex flex-wrap gap-4">
-          <UiButton @click="showNonDismissibleToast()" variant="outline">
-            Non-dismissible Toast
-          </UiButton>
-        </div>
-      </section>
-    </div>
-
-    <UiToast
-      v-for="toast in toasts"
-      :key="toast.id"
-      :variant="toast.variant"
-      :position="toast.position"
-      :duration="toast.duration"
-      :title="toast.title"
-      :description="toast.description"
-      :dismissible="toast.dismissible"
-      :persistent="toast.persistent"
-      :icon="toast.icon"
-      :show="toast.show"
-      @close="removeToast(toast.id)"
-    >
-      <div v-if="toast.content" v-html="toast.content" />
-    </UiToast>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Star as StarIcon } from 'lucide-vue-next';
+import { type LucideIcon, Star as StarIcon } from 'lucide-vue-next';
 import UiButton from '../components/forms/button/ui-button.vue';
 import UiToast from '../components/feedback/toast/ui-toast.vue';
 
@@ -113,7 +19,7 @@ interface Toast {
   description?: string;
   dismissible?: boolean;
   persistent?: boolean;
-  icon?: any;
+  icon?: LucideIcon;
   show: boolean;
   content?: string;
 }
@@ -229,3 +135,97 @@ const showNonDismissibleToast = () => {
   });
 };
 </script>
+
+<template>
+  <div class="max-w-4xl mx-auto p-6 space-y-8">
+    <div class="border-b border-gray-200 pb-6">
+      <h1 class="text-3xl font-bold text-gray-900">Toast Component</h1>
+      <p class="text-gray-600 mt-2">
+        Display temporary notifications that appear and disappear automatically.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Variants</h2>
+        <div class="flex flex-wrap gap-4">
+          <UiButton @click="showToast('info', 'Information', 'This is an informational message.')">
+            Show Info Toast
+          </UiButton>
+          <UiButton
+            @click="showToast('success', 'Success', 'Operation completed successfully!')"
+            variant="success"
+          >
+            Show Success Toast
+          </UiButton>
+          <UiButton
+            @click="showToast('warning', 'Warning', 'Please review your input.')"
+            variant="warning"
+          >
+            Show Warning Toast
+          </UiButton>
+          <UiButton @click="showToast('error', 'Error', 'Something went wrong.')" variant="danger">
+            Show Error Toast
+          </UiButton>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Positions</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <UiButton @click="showPositionToast('top-left')" size="sm">Top Left</UiButton>
+          <UiButton @click="showPositionToast('top-center')" size="sm">Top Center</UiButton>
+          <UiButton @click="showPositionToast('top-right')" size="sm">Top Right</UiButton>
+          <UiButton @click="showPositionToast('bottom-left')" size="sm">Bottom Left</UiButton>
+          <UiButton @click="showPositionToast('bottom-center')" size="sm">Bottom Center</UiButton>
+          <UiButton @click="showPositionToast('bottom-right')" size="sm">Bottom Right</UiButton>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Duration & Persistence</h2>
+        <div class="flex flex-wrap gap-4">
+          <UiButton @click="showDurationToast(2000)" variant="outline"> 2 Second Toast </UiButton>
+          <UiButton @click="showDurationToast(10000)" variant="outline"> 10 Second Toast </UiButton>
+          <UiButton @click="showPersistentToast()" variant="outline"> Persistent Toast </UiButton>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Custom Content</h2>
+        <div class="flex flex-wrap gap-4">
+          <UiButton @click="showCustomIconToast()" variant="outline"> Custom Icon Toast </UiButton>
+          <UiButton @click="showSlotContentToast()" variant="outline">
+            Rich Content Toast
+          </UiButton>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Non-dismissible</h2>
+        <div class="flex flex-wrap gap-4">
+          <UiButton @click="showNonDismissibleToast()" variant="outline">
+            Non-dismissible Toast
+          </UiButton>
+        </div>
+      </section>
+    </div>
+
+    <UiToast
+      v-for="toast in toasts"
+      :key="toast.id"
+      :variant="toast.variant"
+      :position="toast.position"
+      :duration="toast.duration"
+      :title="toast.title"
+      :description="toast.description"
+      :dismissible="toast.dismissible"
+      :persistent="toast.persistent"
+      :icon="toast.icon"
+      :show="toast.show"
+      @close="removeToast(toast.id)"
+    >
+      <div v-if="toast.content" v-html="toast.content" />
+    </UiToast>
+  </div>
+</template>

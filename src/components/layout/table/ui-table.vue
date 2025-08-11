@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <!-- TODO... -->
+  <table>
+    <!-- TODO... -->
+  </table>
 </template>
