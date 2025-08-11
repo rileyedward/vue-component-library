@@ -208,7 +208,9 @@ const sidebarClasses = computed(() => {
               placement="top"
               @select="handleProfileAction"
             >
-              <div class="flex items-center px-2 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-md cursor-pointer">
+              <div
+                class="flex items-center px-2 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-md cursor-pointer"
+              >
                 <user class="mr-3 flex-shrink-0 h-6 w-6" />
                 <span class="flex-1">{{ profileMenu.userName }}</span>
                 <chevron-up class="flex-shrink-0 h-5 w-5" />
@@ -312,7 +314,9 @@ const sidebarClasses = computed(() => {
               placement="top"
               @select="handleProfileAction"
             >
-              <div class="flex items-center px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-md cursor-pointer">
+              <div
+                class="flex items-center px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-md cursor-pointer"
+              >
                 <user class="mr-3 flex-shrink-0 h-5 w-5" />
                 <span class="flex-1">{{ profileMenu.userName }}</span>
                 <chevron-up class="flex-shrink-0 h-4 w-4" />
