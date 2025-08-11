@@ -144,6 +144,7 @@ const handleKeydown = (event: KeyboardEvent): void => {
     @keyup="handleKeyup"
     @keydown="handleKeydown"
   >
+    <!-- Prefix Icon -->
     <component
       v-if="prefixIcon && !loading"
       :is="prefixIcon"
@@ -155,6 +156,7 @@ const handleKeydown = (event: KeyboardEvent): void => {
       }"
     />
 
+    <!-- Loading Icon Icon -->
     <div
       v-if="loading"
       :class="{
@@ -166,10 +168,12 @@ const handleKeydown = (event: KeyboardEvent): void => {
       class="animate-spin rounded-full border-2 border-current border-t-transparent"
     />
 
+    <!-- Label -->
     <span v-if="label || $slots.default">
       <slot>{{ label }}</slot>
     </span>
 
+    <!-- Suffix Icon -->
     <component
       v-if="suffixIcon && !loading"
       :is="suffixIcon"
