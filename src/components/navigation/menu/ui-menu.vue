@@ -111,7 +111,6 @@ const menuClasses = computed(() => {
             />
           </a>
 
-          <!-- Submenu for vertical layout -->
           <div
             v-if="item.children && item.children.length > 0 && variant === 'vertical'"
             :class="[
@@ -148,7 +147,6 @@ const menuClasses = computed(() => {
             </ul>
           </div>
 
-          <!-- Submenu for horizontal layout -->
           <ul
             v-if="item.children && item.children.length > 0 && variant === 'horizontal'"
             class="absolute left-0 top-full bg-white border border-gray-200 rounded-md shadow-lg min-w-[200px] z-10 hidden group-hover:block"

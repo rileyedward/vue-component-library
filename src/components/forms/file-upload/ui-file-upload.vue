@@ -21,7 +21,6 @@ const fileInputRef = ref<HTMLInputElement | null>(null);
 const isDragging = ref(false);
 const files = ref<File[]>([]);
 
-// Initialize files from modelValue
 watch(() => props.modelValue, (newValue) => {
   if (newValue) {
     if (Array.isArray(newValue)) {
@@ -34,7 +33,6 @@ watch(() => props.modelValue, (newValue) => {
   }
 }, { immediate: true });
 
-// Update modelValue when files change
 watch(files, (newFiles) => {
   if (props.multiple) {
     emit('update:modelValue', [...newFiles]);
@@ -96,19 +94,16 @@ const handleFileInput = (event: Event) => {
   const selectedFiles = Array.from(input.files);
   handleFiles(selectedFiles);
 
-  // Reset input value to allow selecting the same file again
   input.value = '';
 };
 
 const handleFiles = (newFiles: File[]) => {
   if (props.disabled) return;
 
-  // Filter files by accepted types if specified
   let validFiles = props.accept
     ? newFiles.filter(file => isFileTypeAccepted(file))
     : newFiles;
 
-  // Check file size
   validFiles = validFiles.filter(file => {
     const isValid = file.size <= props.maxSize;
     if (!isValid) {
@@ -117,20 +112,17 @@ const handleFiles = (newFiles: File[]) => {
     return isValid;
   });
 
-  // Check max files limit
   if (props.multiple) {
     if (files.value.length + validFiles.length > props.maxFiles) {
       emit('error', `You can only upload a maximum of ${props.maxFiles} files`);
       validFiles = validFiles.slice(0, props.maxFiles - files.value.length);
     }
 
-    // Add valid files to the list
     validFiles.forEach(file => {
       files.value.push(file);
       emit('file-added', file);
     });
   } else {
-    // Single file mode - replace existing file
     if (validFiles.length > 0) {
       const file = validFiles[0];
       files.value = [file];
@@ -158,13 +150,10 @@ const isFileTypeAccepted = (file: File): boolean => {
   const fileExtension = `.${file.name.split('.').pop()?.toLowerCase()}`;
 
   return acceptedTypes.some(type => {
-    // Check for exact mime type match
     if (fileType === type) return true;
 
-    // Check for wildcard mime type (e.g., image/*)
     if (type.endsWith('/*') && fileType.startsWith(type.replace('*', ''))) return true;
 
-    // Check for file extension match
     if (type.startsWith('.') && fileExtension === type) return true;
 
     return false;
@@ -242,7 +231,6 @@ const getFilePreview = (file: File) => {
       </div>
     </div>
 
-    <!-- File Preview -->
     <div v-if="showPreview && files.length > 0" class="mt-4 space-y-2">
       <div
         v-for="(file, index) in files"

@@ -122,7 +122,6 @@ const iconClasses = computed(() => {
     </div>
 
     <div :class="containerClasses" @click="toggle">
-      <!-- Left Text/Icon -->
       <div v-if="leftText || leftIcon" class="mr-2">
         <component
           v-if="leftIcon"
@@ -147,7 +146,6 @@ const iconClasses = computed(() => {
         ></span>
       </button>
 
-      <!-- Right Text/Icon -->
       <div v-if="rightText || rightIcon" class="ml-2">
         <component
           v-if="rightIcon"
@@ -158,7 +156,6 @@ const iconClasses = computed(() => {
       </div>
     </div>
 
-    <!-- Helper Text or Error -->
     <div v-if="helperText && !error" class="mt-1 text-xs text-gray-500">
       {{ helperText }}
     </div>

@@ -87,7 +87,7 @@ const sidebarClasses = computed(() => {
     'bg-white border-r border-gray-200 h-screen',
     'transition-all duration-300 ease-in-out',
     'overflow-y-auto',
-    'w-full', // Use full width of the container
+    'w-full',
   ];
 });
 </script>
